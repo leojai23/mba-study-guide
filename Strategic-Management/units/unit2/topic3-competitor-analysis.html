@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Competitor Analysis | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#0f6e6e;--accent-dark:#0a4f4f;--accent-light:#e4f4f2;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d9e6e4;--card-shadow:0 1px 3px rgba(15,110,110,.12);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Strategic Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Environmental Analysis &amp; Competitive Advantage</h3>
+        <ol>
+          <li><a href="topic1-business-environment.html">1. Business Environment &amp; External Analysis</a></li><li><a href="topic2-industry-analysis.html">2. Industry Analysis &amp; Porter's Five Forces</a></li><li><a class="active" href="topic3-competitor-analysis.html">3. Competitor Analysis</a></li><li><a href="topic4-diamond-model-strategic-groups.html">4. Porter's Diamond Model &amp; Strategic Groups</a></li><li><a href="topic5-internal-appraisal.html">5. Internal Appraisal Techniques</a></li><li><a href="topic6-resources-and-capabilities.html">6. Resources &amp; Capabilities</a></li><li><a href="topic7-core-competence-vrio.html">7. Core Competence &amp; VRIO Framework</a></li><li><a href="topic8-competitive-advantage.html">8. Competitive Advantage &amp; Generic Strategies</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Strategic Management</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 3</div>
+    <h1><span class="unit-tag">Unit 2</span>Competitor Analysis</h1>
+    <p class="subtitle">Book: <em>Strategic Management</em> (BA4301, Anna University MBA Sem III) &mdash; Dr. G. Pandi Selvi &amp; Dr. M. Hemalatha, Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>A firm cannot plan its own strategy without understanding its rivals. This topic covers where competitor information comes from and the systematic framework used to analyse a competitor's likely moves.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>3.1 Introduction to Competitor Analysis</h3>
+<p>Competitor analysis is the process of identifying key competitors, assessing their objectives, strategies, strengths and weaknesses, and predicting their responses &mdash; so the firm can formulate and adjust its own strategy accordingly.</p>
+
+<h3>3.2 Sources of Information for Competitor Analysis</h3>
+<table class="compare">
+<tr><th>Recorded Data</th><th>Observable Data</th><th>Opportunistic Data</th></tr>
+<tr><td>Published annual reports, government filings, press releases, patent filings</td><td>Products, pricing, advertising, hiring patterns, trade show presence</td><td>Information gathered informally through customers, suppliers, trade contacts, and industry conversations</td></tr>
+</table>
+
+<h3>3.3 Competitor Analysis Framework (Four Components)</h3>
+<ol>
+<li><strong>Competitor's Objectives:</strong> What financial and strategic goals is the competitor pursuing (growth, market share, profitability)?</li>
+<li><strong>Competitor's Assumptions:</strong> What does the competitor believe about itself and the industry &mdash; including any blind spots or biases?</li>
+<li><strong>Competitor's Strategy:</strong> What is the competitor actually doing to compete &mdash; pricing, product, promotion, distribution?</li>
+<li><strong>Competitor's Resources &amp; Capabilities:</strong> What strengths and weaknesses does the competitor have in finance, marketing, operations, R&amp;D, and management?</li>
+</ol>
+<p>Together, these four elements build a "Competitor Response Profile" &mdash; a prediction of how the competitor is likely to react to industry changes or to the firm's own strategic moves.</p>
+
+<h3>3.4 Factors Affecting Competition Analysis</h3>
+<ul>
+<li>Competitor's objectives and assumptions.</li>
+<li>Competitor's current strategy and capabilities.</li>
+<li>How dynamic and unpredictable the competitive environment is.</li>
+</ul>
+
+<h3>3.5 Steps in Competition Analysis</h3>
+<ol>
+<li>Define the competitors to be analysed.</li>
+<li>Analyse competitors' strengths and weaknesses.</li>
+<li>Study the market and its wants relative to competitors.</li>
+<li>Build strategic plans to improve the firm's own competitive position.</li>
+</ol>
+
+<h3>3.6 Importance of Competition Analysis</h3>
+<p>It helps a firm identify the strategic gaps and opportunities left open by competitors, build a strong marketplace position, and design offensive or defensive strategies with a clear, systematic knowledge of rivals rather than guesswork.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Competitor Analysis</dt><dd>The systematic process of identifying competitors and assessing their objectives, assumptions, strategies, and capabilities.</dd><dt>Competitor Response Profile</dt><dd>A prediction of how a competitor is likely to react, built from its objectives, assumptions, strategy, and resources/capabilities.</dd><dt>Recorded Data</dt><dd>Formally published competitor information such as annual reports and regulatory filings.</dd><dt>Observable Data</dt><dd>Competitor information gathered by directly observing their products, pricing, and market activity.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Competitor analysis = identify rivals + assess their objectives, assumptions, strategy, resources/capabilities.</li><li>Information sources: Recorded (annual reports, filings), Observable (products, pricing, ads), Opportunistic (informal trade contacts).</li><li>Four-part framework builds a 'Competitor Response Profile' to predict how a rival will react.</li><li>Steps: define competitors &rarr; analyse strengths/weaknesses &rarr; study the market &rarr; build a plan to improve competitive position.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Explain the framework used for analysing a competitor.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">It examines four elements: the competitor's Objectives (financial/strategic goals), Assumptions (beliefs about itself and the industry), Strategy (current competitive actions), and Resources/Capabilities (strengths and weaknesses) &mdash; together forming a Competitor Response Profile.</div></details></li><li>What are the sources of information used in competitor analysis?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Recorded data (annual reports, government filings, patents), Observable data (products, pricing, advertising, hiring), and Opportunistic data (informal information from customers, suppliers, and trade contacts).</div></details></li><li>Describe the steps involved in competition analysis.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Define which competitors to analyse, assess their strengths and weaknesses, study the market and customer wants relative to competitors, then build strategic plans to strengthen the firm's own competitive position.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Environmental Analysis &amp; Competitive Advantage") of the course textbook &mdash; Strategic Management (BA4301), Dr. G. Pandi Selvi &amp; Dr. M. Hemalatha, Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic2-industry-analysis.html">&larr; Industry Analysis &amp; Porter's Five Forces</a><a href="topic4-diamond-model-strategic-groups.html">Porter's Diamond Model &amp; Strategic Groups &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>
