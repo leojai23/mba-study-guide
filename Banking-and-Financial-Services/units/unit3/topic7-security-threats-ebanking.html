@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Security Threats in E-Banking | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 3 &middot; Development in Banking Technology</h3>
+        <ol>
+          <li><a href="topic1-payment-settlement-systems.html">1. Payment &amp; Settlement Systems</a></li><li><a href="topic2-paper-and-electronic-payments.html">2. Paper-Based &amp; Electronic Payments</a></li><li><a href="topic3-electronic-internet-banking.html">3. Electronic &amp; Internet Banking</a></li><li><a href="topic4-plastic-money-cards.html">4. Plastic Money &amp; Cards</a></li><li><a href="topic5-emoney-and-atms.html">5. E-Money &amp; ATMs</a></li><li><a href="topic6-it-act-and-rbi-vision.html">6. IT Act 2000 &amp; RBI's Digital Payments Vision</a></li><li><a class="active" href="topic7-security-threats-ebanking.html">7. Security Threats in E-Banking</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 3</a> &rsaquo; Topic 7</div>
+    <h1><span class="unit-tag">Unit 3</span>Security Threats in E-Banking</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>The digital convenience of e-banking comes with new risks. This closing topic of Unit 3 catalogues the major cyber-security threats facing e-banking customers and banks, and the countermeasures and RBI initiatives used to tackle them.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>7.1 Security Threats in E-Banking</h3>
+<p>As technology continues to transform the banking landscape, cybercrimes have also become a significant challenge. Scammers pretend to be a trustworthy officer of the bank to trick customers into revealing sensitive information.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Types of Threats</h4>
+<ol>
+<li><strong>Phishing:</strong> A scam where the fraudster sends fake emails/messages pretending to be from the bank, to trick users into revealing login credentials or card details.</li>
+<li><strong>Pharming:</strong> Under this type of fraud, the attacker redirects a user from a legitimate website to a fake, fraudulent website without the user's knowledge, to capture their login details.</li>
+<li><strong>Vishing:</strong> Similar to phishing, but conducted over the phone (voice), where a fraudster impersonates a bank official to extract sensitive information.</li>
+<li><strong>Malware:</strong> Malicious software installed on a device (often without the user's knowledge) that can capture or corrupt data, or provide unauthorised access to an attacker.</li>
+<li><strong>Trojan Horse/Trojan:</strong> A malicious program disguised as legitimate software, which the user installs voluntarily, allowing the attacker to access the system without the user's knowledge, in the guise of an antivirus or other trusted software.</li>
+<li><strong>Virus:</strong> A malicious program that copies itself and spreads through the internet, potentially damaging files and stealing personal information from the infected system.</li>
+<li><strong>Worm:</strong> Similar to a virus, but a worm can replicate itself and spread across a network without needing to attach itself to a host file or program.</li>
+<li><strong>Keystroke Logger (Keylogger):</strong> Software or hardware that captures and logs every keystroke typed by a user, including passwords, and sends this data to the attacker.</li>
+<li><strong>Identity Theft:</strong> Under this crime, the fraudster obtains and uses another person's personal/financial information to commit fraud, such as opening accounts or making purchases in the victim's name.</li>
+<li><strong>Card Skimming:</strong> Attaching a small device (skimmer) to an ATM or POS terminal to steal card data (and a hidden camera to capture the PIN) as the card is used.</li>
+<li><strong>Denial of Service (DoS) Attack:</strong> An attack aimed at making an online service/website unavailable to its legitimate users, by overwhelming it with excessive traffic.</li>
+<li><strong>Password Cracking:</strong> Using techniques (brute-force, common-word dictionaries, etc.) to guess/decrypt a user's password.</li>
+<li><strong>Packet Sniffers:</strong> Tools that intercept and capture data packets travelling across a network, potentially exposing sensitive information if not encrypted.</li>
+<li><strong>Lottery Fraud:</strong> A scam where a victim is told they've won a lottery/prize, and is asked to pay a "processing fee" or share bank details to claim it.</li>
+<li><strong>Social Engineering:</strong> Manipulating people psychologically into divulging confidential information, rather than technically breaking into a system.</li>
+</ol>
+
+<h3>7.2 RBI's Initiatives in Tackling Security Threats</h3>
+<p>The RBI has mandated several security measures for banks to protect their customers, including:</p>
+<ol>
+<li><strong>Two-Factor Authentication (2FA):</strong> Requiring two independent forms of identification (e.g. password + OTP) before authorising a transaction.</li>
+<li><strong>Encrypted Data:</strong> Mandating that sensitive data (passwords, card numbers) is encrypted, both in transit and storage, so that it is unreadable if intercepted.</li>
+<li><strong>Login Details:</strong> Advising customers to never share their login credentials, PINs, or OTPs with anyone, including bank staff.</li>
+<li><strong>Digital Certificates:</strong> Requiring secure website certificates (SSL/TLS) to encrypt the connection between the customer's browser and the bank's servers.</li>
+<li><strong>Virtual Keyboard:</strong> Offering an on-screen virtual keyboard for entering passwords, to defeat keystroke loggers.</li>
+<li><strong>Session Timeout:</strong> Automatically logging a user out after a period of inactivity, to prevent unauthorised access if a device is left unattended.</li>
+<li><strong>Insta-Alerts:</strong> Sending instant SMS/email alerts for every transaction, so customers can quickly identify unauthorised activity.</li>
+<li><strong>Extended Validation (EV) SSL Certificates:</strong> Providing a higher level of website authentication, visibly identifying a genuine bank site to users.</li>
+</ol>
+
+<h3>7.3 Security Measures Available to Customers</h3>
+<ul>
+<li>Enable transaction/login alerts, use strong and unique passwords, and change them periodically.</li>
+<li>Never click on suspicious links or share OTPs/PINs over phone or email.</li>
+<li>Use only official banking apps and secure (HTTPS) websites.</li>
+<li>Regularly monitor bank statements for unauthorised transactions and report them immediately.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Phishing</dt><dd>A scam using fake emails/messages impersonating a bank to steal login credentials.</dd><dt>Pharming</dt><dd>Redirecting a user to a fraudulent website without their knowledge to capture login details.</dd><dt>Vishing</dt><dd>Voice-based phishing conducted over a phone call.</dd><dt>Card Skimming</dt><dd>Using a hidden device to steal card data (and a camera for the PIN) at an ATM/POS terminal.</dd><dt>Two-Factor Authentication (2FA)</dt><dd>Requiring two independent forms of identity verification before authorising a transaction.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Key e-banking threats: Phishing, Pharming, Vishing, Malware, Trojan, Virus, Worm, Keylogger, Identity Theft, Card Skimming, DoS Attack, Password Cracking, Packet Sniffers, Lottery Fraud, Social Engineering.</li><li>RBI countermeasures: Two-Factor Authentication, Data Encryption, secure login practices, Digital/SSL Certificates, Virtual Keyboards, Session Timeouts, Insta-Alerts, EV SSL Certificates.</li><li>Customer-side precautions: strong unique passwords, avoiding suspicious links, using official apps/HTTPS sites, monitoring statements regularly.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Explain any five common security threats in e-banking.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Phishing (fake bank emails to steal credentials), Pharming (redirecting to a fake website), Vishing (phone-based phishing), Card Skimming (device stealing card data at ATMs/POS), and Keystroke Logging (capturing typed passwords).</div></details></li><li>What measures has the RBI mandated to tackle e-banking security threats?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Two-Factor Authentication, mandatory data encryption, guidance against sharing login credentials, secure SSL/digital certificates for banking websites, virtual keyboards to defeat keyloggers, automatic session timeouts, and instant transaction alerts.</div></details></li><li>What precautions should a customer take to stay safe while using e-banking?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Use strong, unique, regularly-changed passwords; avoid clicking suspicious links or sharing OTPs/PINs; use only official banking apps and secure (HTTPS) websites; and regularly monitor bank statements to catch unauthorised transactions early.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 3 ("Development in Banking Technology") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic6-it-act-and-rbi-vision.html">&larr; IT Act 2000 &amp; RBI's Digital Payments Vision</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>

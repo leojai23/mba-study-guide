@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>E-Money &amp; ATMs | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 3 &middot; Development in Banking Technology</h3>
+        <ol>
+          <li><a href="topic1-payment-settlement-systems.html">1. Payment &amp; Settlement Systems</a></li><li><a href="topic2-paper-and-electronic-payments.html">2. Paper-Based &amp; Electronic Payments</a></li><li><a href="topic3-electronic-internet-banking.html">3. Electronic &amp; Internet Banking</a></li><li><a href="topic4-plastic-money-cards.html">4. Plastic Money &amp; Cards</a></li><li><a class="active" href="topic5-emoney-and-atms.html">5. E-Money &amp; ATMs</a></li><li><a href="topic6-it-act-and-rbi-vision.html">6. IT Act 2000 &amp; RBI's Digital Payments Vision</a></li><li><a href="topic7-security-threats-ebanking.html">7. Security Threats in E-Banking</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 3</a> &rsaquo; Topic 5</div>
+    <h1><span class="unit-tag">Unit 3</span>E-Money &amp; ATMs</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Beyond cards, this topic covers E-Money (fully digital value stored electronically) and ATMs (Automated Teller Machines), including how they work and their advantages and disadvantages for both banks and customers.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>5.1 Concept of E-Money</h3>
+<p>E-Money or electronic money refers to money or a monetary value that is stored electronically, representing a claim on the issuer, used for making payments electronically. E-Money is backed by a physical currency and can be transferred easily using computer networks, mobile phones, or a banking device.</p>
+
+<h3>5.2 Features of E-Money</h3>
+<ol>
+<li><strong>Medium of Exchange:</strong> Electronic money is used as a medium of exchange, just like physical paper currency, to pay for goods and/or services.</li>
+<li><strong>Standard of Deferred Payment:</strong> Electronic money is used as a means to record deferred payment, i.e. the value of the money can be transacted physically at a later date.</li>
+<li><strong>Unit of Account:</strong> Electronic money is used as a common unit of value between different currencies. Let's take an example: a smartphone or a banking device is used to represent value while transacting online.</li>
+</ol>
+
+<h3>5.3 Types of E-Money</h3>
+<ol>
+<li><strong>Hardware-Based E-Money:</strong> Value is stored on a physical device such as a smart card or a magnetic-stripe card, which the user carries and uses at compatible terminals.</li>
+<li><strong>Software-Based E-Money:</strong> Value is stored electronically on a computer system or specialised software, used to store and transfer electronic value (e.g. digital wallets and e-money accounts accessed via apps).</li>
+</ol>
+<p>E-Money currencies include Bitcoin and other cryptocurrencies (also called "electronic currency"), which are reversible or non-reversible, and used across various online systems and platforms outside traditional banking networks.</p>
+
+<h3>5.4 Introduction to ATMs</h3>
+<p>An Automated Teller Machine (ATM) is a computerised machine that provides the customers of a bank with the facility of accessing their bank account for a diverse range of financial transactions, without the need for a human bank teller to be physically present.</p>
+
+<h3>5.5 Types of ATMs</h3>
+<ol>
+<li><strong>Onsite ATM:</strong> Installed within the premises of a bank branch.</li>
+<li><strong>Offsite ATM:</strong> Installed outside the bank's own premises, at locations like shopping malls, railway stations, airports, etc., to reach a wider customer base.</li>
+<li><strong>Mobile ATM:</strong> A vehicle equipped as an ATM that travels to locations to provide banking access, often used for events or temporary needs.</li>
+<li><strong>Cash Dispenser:</strong> A basic ATM that offers cash withdrawal only, and does not provide other services like mini-statements or deposits.</li>
+</ol>
+
+<h3>5.6 Working of ATMs</h3>
+<p>Typically, an ATM has the capacity to hold 200,000 to 200,000+ notes and can dispense up to Rs. 2.5 lakh (or more) in cash, depending on configuration. The internal cassettes are refilled by bank staff or cash management companies. ATMs are equipped with a card reader, cash dispensing mechanism, and secure network connectivity to verify the customer's PIN and account balance before processing a transaction.</p>
+
+<h3>5.7 Features of ATMs</h3>
+<ol>
+<li>24x7 availability (subject to individual machine refilling/maintenance schedules).</li>
+<li>Enables withdrawal, deposit, balance enquiry, mini-statements, and fund transfers.</li>
+<li>Ample number of services available &mdash; PIN change, mobile recharge, and cheque book requests at many machines.</li>
+<li>Confidential and secure &mdash; PIN-based authentication for each transaction.</li>
+</ol>
+
+<h3>5.8 Advantages of ATMs</h3>
+<ul>
+<li><strong>Convenience for Customers:</strong> Customers can withdraw cash beyond the hours of the bank branch, at any time, including holidays.</li>
+<li><strong>Efficient Cash Management:</strong> Reduces the workload of bank tellers by handling routine transactions like withdrawals.</li>
+<li><strong>Wide Reach:</strong> Offsite ATMs extend the bank's presence to more geographic areas without setting up full branches.</li>
+</ul>
+
+<h3>5.9 Disadvantages of ATMs</h3>
+<ul>
+<li><strong>To the Banks:</strong> Installation and maintenance costs (hardware, cash replenishment, network, security) can be substantial.</li>
+<li><strong>Large Number of Requests:</strong> Difficulty predicting cash demand accurately can lead to a machine running out of cash or holding excess idle cash.</li>
+<li><strong>Operating in Multiple Currencies:</strong> Cross-border ATM operations bring in currency conversion complications and additional charges for customers.</li>
+</ul>
+
+<h3>5.10 Forecasting Cash Demand at ATMs</h3>
+<p>Efficient cash demand forecasting models are generally based on non-stationary behaviour of an ATM's historical cash withdrawal patterns and identification of unexpected demands, such as overlaid with non-stationary factors like payday cycles, weekly, monthly, and annual cycles.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>E-Money</dt><dd>Electronically stored monetary value, representing a claim on the issuer, used to make digital payments.</dd><dt>Hardware-Based E-Money</dt><dd>E-money stored on a physical device such as a smart/magnetic-stripe card.</dd><dt>Software-Based E-Money</dt><dd>E-money stored and transacted via computer systems or apps (e.g. digital wallets).</dd><dt>ATM (Automated Teller Machine)</dt><dd>A computerised machine allowing customers to perform banking transactions without a human teller.</dd><dt>Onsite/Offsite ATM</dt><dd>ATMs located within a bank branch's own premises (onsite) or at external public locations (offsite).</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>E-Money features: medium of exchange, standard of deferred payment, unit of account.</li><li>E-Money types: Hardware-based (cards) vs Software-based (digital wallets/apps); cryptocurrencies also count as e-money.</li><li>ATM types: Onsite, Offsite, Mobile, Cash Dispenser.</li><li>ATM advantages: 24x7 convenience, reduced teller workload, wider geographic reach.</li><li>ATM disadvantages: installation/maintenance cost, unpredictable cash demand, cross-currency complications.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What is e-money? Explain its features.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">E-money is monetary value stored electronically, representing a claim on the issuer, used for digital payments. Its features are: it serves as a medium of exchange, a standard of deferred payment, and a unit of account.</div></details></li><li>Distinguish between hardware-based and software-based e-money.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Hardware-based e-money stores value on a physical device such as a smart card or magnetic-stripe card. Software-based e-money stores value electronically on a computer system or app, such as a digital wallet.</div></details></li><li>Explain the different types of ATMs.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Onsite ATMs (within a bank branch), Offsite ATMs (at external public locations like malls/stations), Mobile ATMs (vehicle-based, for temporary access), and Cash Dispensers (cash withdrawal only, no other services).</div></details></li><li>What are the advantages and disadvantages of ATMs?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Advantages include 24x7 customer convenience, reduced workload for bank tellers, and wider geographic reach via offsite ATMs. Disadvantages include high installation/maintenance costs, difficulty forecasting cash demand accurately, and complications when operating across different currencies.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 3 ("Development in Banking Technology") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic4-plastic-money-cards.html">&larr; Plastic Money &amp; Cards</a><a href="topic6-it-act-and-rbi-vision.html">IT Act 2000 &amp; RBI's Digital Payments Vision &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

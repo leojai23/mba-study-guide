@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plastic Money &amp; Cards | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 3 &middot; Development in Banking Technology</h3>
+        <ol>
+          <li><a href="topic1-payment-settlement-systems.html">1. Payment &amp; Settlement Systems</a></li><li><a href="topic2-paper-and-electronic-payments.html">2. Paper-Based &amp; Electronic Payments</a></li><li><a href="topic3-electronic-internet-banking.html">3. Electronic &amp; Internet Banking</a></li><li><a class="active" href="topic4-plastic-money-cards.html">4. Plastic Money &amp; Cards</a></li><li><a href="topic5-emoney-and-atms.html">5. E-Money &amp; ATMs</a></li><li><a href="topic6-it-act-and-rbi-vision.html">6. IT Act 2000 &amp; RBI's Digital Payments Vision</a></li><li><a href="topic7-security-threats-ebanking.html">7. Security Threats in E-Banking</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 3</a> &rsaquo; Topic 4</div>
+    <h1><span class="unit-tag">Unit 3</span>Plastic Money &amp; Cards</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Plastic money transformed everyday payments. This topic covers the different card types banks issue, their features, and the key differences between the two most common cards: debit and credit.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>4.1 Concept of Plastic Money</h3>
+<p>Plastic money or polymer money is a new and easier way of paying for goods and services. Plastic money was first introduced in the 1950s and is now an essential form of ready payment, used in place of cash.</p>
+
+<h3>4.2 Features of Plastic Money</h3>
+<ol>
+<li><strong>Eliminates the Need for Carrying Huge Cash:</strong> A plastic card eliminates the need to carry huge sums of cash for making payments.</li>
+<li><strong>No Paperwork Required:</strong> Since plastic money does not require any paperwork to be made for carrying huge sums of cash, it is a very convenient option.</li>
+<li><strong>Fixed Interest Rates:</strong> Almost every plastic money product has introduced credit cards with certain deviations in fixed price levels &mdash; a fixed credit card interest rate. But if the market evaluates like a new product, people would use the standard interest rate on cash borrowings.</li>
+</ol>
+
+<h3>4.3 Types of Plastic Money</h3>
+<table class="compare">
+<tr><th>Type</th><th>Description</th></tr>
+<tr><td><strong>ATM Card</strong></td><td>A card used to withdraw cash from a bank's automated teller machine (ATM).</td></tr>
+<tr><td><strong>Debit Card</strong></td><td>Debits the cardholder's own bank account directly and immediately at the time of purchase or ATM withdrawal.</td></tr>
+<tr><td><strong>Credit Card</strong></td><td>A credit card allows the customer to borrow money from the issuing institution, up to a pre-approved limit, for purchases now and pay for it later.</td></tr>
+<tr><td><strong>Smart Card</strong></td><td>A card embedded with a computer chip that stores and transacts data, offering additional security and functionality (e.g. loyalty programs).</td></tr>
+<tr><td><strong>Photo Card</strong></td><td>A card with a photograph of the cardholder printed on it, adding an additional layer of identity verification for the merchant.</td></tr>
+<tr><td><strong>Charge Card</strong></td><td>Similar to a credit card, but the full balance must be paid off each month/billing period; no interest is charged, but late payment penalties can be severe.</td></tr>
+<tr><td><strong>Affinity Card</strong></td><td>A credit card issued in partnership with an organisation (e.g. a charity or club); a portion of purchases is donated/credited to the partner organisation.</td></tr>
+<tr><td><strong>Co-Branded Card</strong></td><td>Jointly issued by a bank and another company (e.g. an airline or retailer), offering rewards/benefits specific to that partner brand.</td></tr>
+<tr><td><strong>Gold Card</strong></td><td>A premium credit card category, issued to customers meeting a higher income/creditworthiness threshold, with enhanced benefits.</td></tr>
+<tr><td><strong>Store Card</strong></td><td>Issued by a specific retailer, usable only at that retailer's own outlets.</td></tr>
+</table>
+
+<h3>4.4 Advantages and Disadvantages of Plastic Money</h3>
+<p><strong>Advantages:</strong> Reduced risk of loss/theft compared to cash; limited options for overspending (with credit limits); convenient, widely accepted globally.</p>
+<p><strong>Disadvantages:</strong> Risk of loss or theft of the card itself (and resulting fraud); too much reliance on credit can lead to overspending and debt accumulation; various charges/fees (annual fees, late payment fees, foreign transaction fees) apply.</p>
+
+<h3>4.5 Credit Cards</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Features of Credit Cards</h4>
+<ul>
+<li>Allows the cardholder to make purchases and pay for them later, within an interest-free period if the balance is paid in full.</li>
+<li>Comes with a pre-approved credit limit set by the issuing bank based on the cardholder's creditworthiness.</li>
+<li>Cardholders can also access cash via a cash advance facility (usually at a higher interest rate with no interest-free period).</li>
+</ul>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Types of Credit Cards</h4>
+<ol>
+<li><strong>Bank Credit Card:</strong> Issued directly by a bank (e.g. Visa, MasterCard branded).</li>
+<li><strong>Gold Cards:</strong> Premium cards with a higher credit limit and additional privileges.</li>
+<li><strong>Japan Credit Bureau (JCB) Cards:</strong> Issued by the Japan Credit Bureau, mostly used in the Asia-Pacific region.</li>
+<li><strong>Add-On Cards:</strong> Supplementary cards issued to family members under the primary cardholder's account.</li>
+<li><strong>Fuel Cards:</strong> Co-branded with fuel companies, offering discounts/rewards on fuel purchases.</li>
+</ol>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Advantages of Credit Cards</h4>
+<ul>
+<li>Convenient for making purchases (even expensive/impulse ones) online and offline.</li>
+<li>Various reward programs (cashback, points, air miles) attached to spending.</li>
+<li>Builds a credit history when used and repaid responsibly.</li>
+</ul>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Disadvantages of Credit Cards</h4>
+<ul>
+<li>High interest rates charged if the outstanding balance is not paid in full each month.</li>
+<li>Risk of overspending beyond one's means, due to the ease of using credit.</li>
+<li>Various charges: annual fees, late payment fees, over-limit fees, foreign transaction fees.</li>
+</ul>
+
+<h3>4.6 Debit Cards</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Features of Debit Cards</h4>
+<ul>
+<li>Directly linked to the cardholder's bank account; the amount is debited immediately upon use.</li>
+<li>Can be used at ATMs for cash withdrawal, and at merchant outlets for purchases (Point of Sale, POS).</li>
+<li>No credit is extended; the cardholder can only spend what is available in the linked account.</li>
+</ul>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Types of Debit Cards</h4>
+<ol>
+<li><strong>Online Debit Card:</strong> Requires PIN entry for every transaction; funds are debited in real-time.</li>
+<li><strong>Offline Debit Card:</strong> Processed like a credit card transaction (signature-based); funds are debited with a slight delay.</li>
+<li><strong>Prepaid Debit Card:</strong> Loaded with a fixed amount of money in advance; not directly linked to a bank account.</li>
+</ol>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Advantages of Debit Cards</h4>
+<ul>
+<li>Reduces the risk of overspending since only available funds can be used.</li>
+<li>No interest charges since it is not a borrowing instrument.</li>
+<li>Widely accepted, and convenient for both ATM withdrawal and purchases.</li>
+</ul>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Disadvantages of Debit Cards</h4>
+<ul>
+<li>No interest-free credit period, unlike a credit card.</li>
+<li>Lower fraud protection compared to credit cards in some cases.</li>
+<li>Overdraft charges may apply if a transaction exceeds the available account balance.</li>
+</ul>
+
+<h3>4.7 Difference between Debit Cards and Credit Cards</h3>
+<table class="compare">
+<tr><th>Basis</th><th>Debit Card</th><th>Credit Card</th></tr>
+<tr><td>Nature</td><td>"Pay Now" &mdash; money is debited from the cardholder's own account instantly.</td><td>"Pay Later" &mdash; money is essentially borrowed from the issuer, to be repaid later.</td></tr>
+<tr><td>Mode of Operation</td><td>Real-time debit from a linked bank account.</td><td>Credit facility drawn from a pre-approved credit limit.</td></tr>
+</table>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Plastic Money</dt><dd>Payment cards (ATM, debit, credit, and other card types) used in place of physical cash.</dd><dt>Debit Card</dt><dd>A card that debits the cardholder's own bank account immediately upon use &mdash; a 'pay now' instrument.</dd><dt>Credit Card</dt><dd>A card allowing the cardholder to borrow up to a pre-approved limit and repay later &mdash; a 'pay later' instrument.</dd><dt>Charge Card</dt><dd>Similar to a credit card, but the full balance must be repaid each billing period, with no revolving interest.</dd><dt>Affinity Card</dt><dd>A card issued in partnership with an organisation, where a portion of spending benefits that partner.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Plastic money eliminates the need to carry cash, requires no paperwork, and often carries fixed interest structures.</li><li>Card types: ATM, Debit, Credit, Smart, Photo, Charge, Affinity, Co-Branded, Gold, Store.</li><li>Credit Card = 'Pay Later' (borrow up to a limit); Debit Card = 'Pay Now' (debits own account instantly).</li><li>Debit Card types: Online (PIN, real-time), Offline (signature, delayed debit), Prepaid (pre-loaded, not account-linked).</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Distinguish between a debit card and a credit card.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A debit card is a 'Pay Now' instrument that debits money directly and instantly from the cardholder's own bank account. A credit card is a 'Pay Later' instrument that lets the cardholder borrow up to a pre-approved limit from the issuer, to be repaid later, often with interest if not paid in full.</div></details></li><li>Explain the various types of credit cards.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Bank Credit Cards (issued directly by banks), Gold Cards (premium, higher limits), JCB Cards (Asia-Pacific focused), Add-On Cards (for family members under a primary account), and Fuel Cards (co-branded with fuel companies for rewards).</div></details></li><li>What are the advantages and disadvantages of plastic money?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Advantages include not needing to carry cash, convenience, and wide acceptance. Disadvantages include the risk of loss/theft leading to fraud, the temptation to overspend on credit, and various fees (annual, late payment, foreign transaction) that can apply.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 3 ("Development in Banking Technology") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic3-electronic-internet-banking.html">&larr; Electronic &amp; Internet Banking</a><a href="topic5-emoney-and-atms.html">E-Money &amp; ATMs &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

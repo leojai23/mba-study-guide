@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment &amp; Settlement Systems | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 3 &middot; Development in Banking Technology</h3>
+        <ol>
+          <li><a class="active" href="topic1-payment-settlement-systems.html">1. Payment &amp; Settlement Systems</a></li><li><a href="topic2-paper-and-electronic-payments.html">2. Paper-Based &amp; Electronic Payments</a></li><li><a href="topic3-electronic-internet-banking.html">3. Electronic &amp; Internet Banking</a></li><li><a href="topic4-plastic-money-cards.html">4. Plastic Money &amp; Cards</a></li><li><a href="topic5-emoney-and-atms.html">5. E-Money &amp; ATMs</a></li><li><a href="topic6-it-act-and-rbi-vision.html">6. IT Act 2000 &amp; RBI's Digital Payments Vision</a></li><li><a href="topic7-security-threats-ebanking.html">7. Security Threats in E-Banking</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 3</a> &rsaquo; Topic 1</div>
+    <h1><span class="unit-tag">Unit 3</span>Payment &amp; Settlement Systems</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Unit 1 introduced NEFT and RTGS briefly as examples of electronic payment systems. This topic goes deeper into how India's payment and settlement infrastructure actually works, mechanically and step-by-step.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>1.1 Payment and Settlement System in India</h3>
+<p>Payment and Settlement Systems in India are covered by, and used, both by electronic and paper-based instruments. They are regulated by the Payment and Settlement Systems Act, 2007 and supervised by the Board for Regulation and Supervision of Payment and Settlement Systems (BPSS), a sub-committee of the RBI's Central Board.</p>
+<p>Systems used for payment and settlement in India include: Paper Clearing, Retail Electronic Clearing (ECS, NEFT), Large Value Clearing (RTGS), Card Payment Networks, Prepaid Payment Instruments (PPIs), National Electronic Toll Collection (NETC), the National Automated Clearing House (NACH), and Unified Payments Interface (UPI).</p>
+
+<h3>1.2 Features of RTGS</h3>
+<ol>
+<li>RTGS is a large-value funds transfer system where transactions are settled individually, continuously, in "real time" (not batched), and are final and irrevocable once settled.</li>
+<li>The minimum amount to be remitted through RTGS is &#8377;2 lakh; there is no upper ceiling.</li>
+<li>Transactions are settled in the books of the RBI, providing the highest form of settlement finality.</li>
+<li>Charges may be levied by the RBI on outward transactions, per a prescribed schedule.</li>
+</ol>
+
+<h3>1.3 Objectives of RTGS</h3>
+<ul>
+<li>To provide real-time gross settlement to reduce risks in the interbank settlement system.</li>
+<li>To widen the range of services available to include multiple value-dated transactions (as far as intangible/tangible services are concerned).</li>
+<li>To bring the existing and future settlement systems on par with international standards.</li>
+</ul>
+
+<h3>1.4 Process of RTGS</h3>
+<ol>
+<li>The remitting customer fills in the RTGS request form providing the beneficiary's details.</li>
+<li>The remitting bank prepares a message and sends it to the Reserve Bank of India, which handles it centrally.</li>
+<li>After a due process step (message and settlement), the identity of the beneficiary is verified along with instructions and message details, and the amount is credited to the beneficiary's account.</li>
+</ol>
+
+<h3>1.5 Advantages and Disadvantages of RTGS</h3>
+<p><strong>Advantages:</strong> Certainty in the movement of funds within RTGS since the fund transfer is final and irrevocable; faster collection of funds credited (real-time, not deferred); reduced credit and liquidity risk since settlement is transaction-by-transaction.</p>
+<p><strong>Disadvantages:</strong> Higher processing charges than NEFT for smaller amounts; a minimum threshold amount is required; less cost-effective for very small-value, high-frequency transactions.</p>
+
+<h3>1.6 National Electronic Funds Transfer (NEFT) &mdash; Process and Features</h3>
+<p>NEFT refers to an electronic payment system where a person can transfer funds from an account at one bank to an account of another individual or firm/company held at any other participating bank branch. NEFT operates in hourly settlement batches (earlier half-hourly), and has moved to a 24x7 basis in recent years, unlike RTGS's continuous settlement.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Process of Sending Money via NEFT</h4>
+<ol>
+<li>Step 1: Customer fills in an NEFT application form authorising a bank branch to debit their account and remit a specified amount to the beneficiary.</li>
+<li>Step 2: The originating bank branch prepares a message and sends it to its NEFT service centre.</li>
+<li>Step 3: The NEFT Clearing Centre (National Clearing Cell of the RBI) sorts messages by destination bank and forwards them accordingly.</li>
+</ol>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Role of Sending Bank, Clearing Centre &amp; Receiving Bank</h4>
+<p>The Sending Bank debits the remitter's account and generates the outward message; the Clearing Centre (NCC/National Payments Corporation) processes and routes messages to the destination bank; the Receiving Bank credits the beneficiary's account upon receipt, or returns the transaction if the account/details do not match.</p>
+
+<h3>1.7 RTGS vs NEFT</h3>
+<table class="compare">
+<tr><th>Basis</th><th>RTGS</th><th>NEFT</th></tr>
+<tr><td>Full Form</td><td>Real Time Gross Settlement</td><td>National Electronic Funds Transfer</td></tr>
+<tr><td>Settlement</td><td>Real-time, transaction-by-transaction (gross)</td><td>Batch-wise, deferred net settlement</td></tr>
+<tr><td>Amount</td><td>Minimum &#8377;2 lakh, no upper limit</td><td>No minimum or maximum limit (typically used for smaller amounts)</td></tr>
+<tr><td>Speed</td><td>Immediate/near-immediate</td><td>Within the current settlement batch (near real-time since the move to 24x7)</td></tr>
+<tr><td>Best suited for</td><td>High-value, time-critical transfers</td><td>Retail, smaller-value transfers</td></tr>
+</table>
+
+<h3>1.8 Disadvantages of Electronic Fund Transfer (EFT) Systems</h3>
+<ul>
+<li>Expense associated with instituting the electronic infrastructure.</li>
+<li>No physical, tangible instrument (e.g. cheque) is produced, which some users/businesses find inconvenient for record-keeping.</li>
+<li>Fear of technical/system errors, delays, or fraud.</li>
+<li>Loss of control by the user over the exact date/time of payment once authorised.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>RTGS (Real Time Gross Settlement)</dt><dd>A payment system settling large-value transactions individually and immediately, with a minimum transfer amount of &#8377;2 lakh.</dd><dt>NEFT (National Electronic Funds Transfer)</dt><dd>A nation-wide, batch-settled electronic funds transfer system, now operating on a near-24x7 basis.</dd><dt>BPSS</dt><dd>The Board for Regulation and Supervision of Payment and Settlement Systems, a sub-committee of the RBI Central Board.</dd><dt>Payment and Settlement Systems Act, 2007</dt><dd>The legislation regulating payment and settlement systems in India.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Payment/settlement systems regulated by the Payment and Settlement Systems Act, 2007, supervised by BPSS (RBI sub-committee).</li><li>RTGS: real-time, gross (individual) settlement, min. &#8377;2 lakh, no upper limit, final &amp; irrevocable.</li><li>NEFT: batch-settled (now near 24x7), no minimum/maximum, suited to smaller retail transfers.</li><li>RTGS vs NEFT: RTGS = high-value/time-critical; NEFT = retail/smaller-value.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Explain the process of RTGS.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The remitting customer submits an RTGS request with beneficiary details; the remitting bank prepares and sends a settlement message to the RBI; after verification, the RBI settles the transaction and the beneficiary's account is credited in real time.</div></details></li><li>Distinguish between RTGS and NEFT.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">RTGS settles each transaction individually and immediately (gross settlement) with a minimum amount of &#8377;2 lakh, suited to high-value transfers. NEFT settles transactions in batches (now near 24x7) with no minimum/maximum amount, suited to smaller retail transfers.</div></details></li><li>What are the disadvantages of electronic fund transfer systems?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The expense of building electronic infrastructure, absence of a physical instrument for record-keeping, fear of technical errors/fraud, and the user's loss of control over the exact payment timing once authorised.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 3 ("Development in Banking Technology") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><span></span><a href="topic2-paper-and-electronic-payments.html">Paper-Based &amp; Electronic Payments &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>
