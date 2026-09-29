@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Asset-Liability Management (ALM) | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Managing Bank Funds/Products &amp; Risk Management</h3>
+        <ol>
+          <li><a href="topic1-capital-adequacy-and-deposits.html">1. Capital Adequacy &amp; Deposits</a></li><li><a href="topic2-loan-management.html">2. Loan Management</a></li><li><a href="topic3-investment-management.html">3. Investment Management</a></li><li><a class="active" href="topic4-asset-liability-management.html">4. Asset-Liability Management (ALM)</a></li><li><a href="topic5-financial-distress.html">5. Financial Distress &amp; Prediction Models</a></li><li><a href="topic6-risk-management-interest-rate-risk.html">6. Risk Management &amp; Interest Rate Risk</a></li><li><a href="topic7-forex-and-credit-risk.html">7. Forex Risk &amp; Credit Risk</a></li><li><a href="topic8-market-operational-solvency-risk.html">8. Market, Operational &amp; Solvency Risk</a></li><li><a href="topic9-non-performing-assets.html">9. Non-Performing Assets (NPAs)</a></li><li><a href="topic10-mergers-and-acquisitions.html">10. Mergers &amp; Acquisitions of Banks</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 4</div>
+    <h1><span class="unit-tag">Unit 2</span>Asset-Liability Management (ALM)</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Asset-Liability Management (ALM) is how a bank manages the risk that arises from mismatches between what it owns (assets) and what it owes (liabilities). This topic covers ALM's meaning, components, organisational structure, and the process banks follow to manage it.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>4.1 Introduction to ALM</h3>
+<p>Management of assets and liabilities (or "Surplus Liability Management") is essentially a risk management technique designed to earn an adequate return while maintaining a comfortable surplus of assets beyond liabilities. It takes into consideration the interest rates, earning power, and degree of willingness to take on risk, considering all the different ways under which ALM has evolved. In the last decade, Asset-Liability Management (ALM) can be termed as a risk management technique designed to manage the mismatch between assets and liabilities on a bank's balance sheet.</p>
+
+<h3>4.2 Need for Asset-Liability Management</h3>
+<p>ALM is the practice of managing risks that arise due to mismatches between the assets and liabilities of a bank. Banks face several risks from such mismatches:</p>
+<ol>
+<li><strong>Liquidity Risk:</strong> Arising from the difference in the volume of assets and liabilities that need to be paid or received within a given period.</li>
+<li><strong>Interest Rate Risk:</strong> Arising from the mismatch in the interest-rate sensitivity of assets versus liabilities.</li>
+<li><strong>Managing Risk Effectively:</strong> Since banks operate with a mix of assets and liabilities of different maturities, currencies, and interest-rate structures, they need a formal process to manage these mismatches.</li>
+</ol>
+
+<h3>4.3 Components of ALM</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">4.3.1 Bank Assets</h4>
+<p>Retail Personal Loans, Retail Credit-Card Receivables, Retail Mortgages, and other retail/wholesale advances form the asset side of a bank's ALM.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">4.3.2 Bank Liabilities</h4>
+<p>Deposits from commercial customers, deposits from retail customers (checking/savings), bonds issued by the bank, and other borrowed funds form the liability side.</p>
+
+<h3>4.4 ALM Organisation</h3>
+<p>The Board has overall responsibility for management of risks and is expected to decide the risk management policy and set limits for liquidity, interest-rate, foreign exchange, and equity price risks.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">4.4.1 Composition of ALCO (Asset-Liability Committee)</h4>
+<p>ALCO is a decision-making unit responsible for balance sheet planning from a risk-return perspective, including strategic management of interest-rate and liquidity risks. Each bank should decide on the role of its ALCO, its responsibility, as well as the decisions to be taken by it. The business and risk management strategy of the bank should ensure that the operations remain within the Board's/ALCO's risk tolerance limits.</p>
+<p>Typically, the organisational structure includes the Head of Banking, Head of Corporate Banking, Head of Treasury, Head of Credit, Head of Operations, and a Chief Financial Officer, all responsible for ALM.</p>
+
+<h3>4.5 Procedure of Asset-Liability Management</h3>
+<p>Step 1: <strong>Preparing Internal Control Questionnaire</strong> &mdash; the board of directors and management should be consistent in their duties and responsibilities.</p>
+<p>Step 2: <strong>Determine the efficiency of Asset-Liability Management</strong> &mdash; assess whether a mechanism to co-ordinate asset and liability decisions exists.</p>
+<p>Step 3: <strong>Review the bank's future development and expansion plans</strong> &mdash; with a focus on the bank's budget projections for funding needs.</p>
+<p>Step 4: <strong>Assess the bank's ability to react to changes</strong> &mdash; whether internal management reports on liquidity and interest-rate exposure are reviewed regularly.</p>
+<p>Step 5: <strong>Reviewing the bank's plan of liquidity management</strong> &mdash; assessing sensitivity to interest rate risk and the adequacy of the bank's liquidity funding needs, in terms of its projected funding needs.</p>
+<p>Step 6: <strong>Preparing an annual audit report</strong> that should include a review of the board and management's liquidity management policies.</p>
+
+<h3>4.6 Emerging Issues of ALM in India</h3>
+<ul>
+<li>With the onset of liberalisation, Indian banks are now more exposed to global competition, which makes ALM systems inadequate and inefficient to manage the increased complexity.</li>
+<li>Net Interest Income (NII) and Net Interest Margin (NIM), within a given level of risk tolerance, are being sought by banks to remain competitive.</li>
+<li>There is a growing need for interest-rate risk management systems that can be aligned with regulatory (RBI) guidelines while also focusing on the bank's own strategic goals.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Asset-Liability Management (ALM)</dt><dd>A risk-management technique designed to manage mismatches between a bank's assets and liabilities, earning adequate returns while maintaining a comfortable liquidity surplus.</dd><dt>ALCO (Asset-Liability Committee)</dt><dd>The decision-making unit responsible for balance sheet planning from a risk-return perspective, managing interest-rate and liquidity risk.</dd><dt>Net Interest Margin (NIM)</dt><dd>The difference between interest income generated and interest paid out, relative to interest-earning assets.</dd><dt>Liquidity Risk (in ALM context)</dt><dd>The risk arising from a mismatch in the volume/timing of assets and liabilities due for payment or receipt.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>ALM = risk-management technique to manage asset-liability mismatches, balancing return against liquidity/interest-rate risk.</li><li>Key risks addressed by ALM: Liquidity Risk and Interest Rate Risk from asset-liability mismatches.</li><li>ALM Components: Bank Assets (loans, credit-card receivables, mortgages) vs Bank Liabilities (deposits, bonds issued, borrowings).</li><li>ALCO is the decision-making body for ALM; Board sets overall risk policy and limits.</li><li>ALM procedure: prepare internal control questionnaire &rarr; assess ALM efficiency &rarr; review expansion plans &rarr; assess responsiveness to change &rarr; review liquidity plan &rarr; prepare annual audit report.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What is Asset-Liability Management? Why is it needed?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">ALM is a risk-management technique that manages mismatches between a bank's assets and liabilities, to earn adequate returns while maintaining sufficient liquidity. It is needed because banks face Liquidity Risk and Interest Rate Risk whenever the maturity, currency, or rate-sensitivity of their assets doesn't match their liabilities.</div></details></li><li>Explain the role and composition of ALCO.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">ALCO (Asset-Liability Committee) is the decision-making unit responsible for balance sheet planning from a risk-return perspective, managing interest-rate and liquidity risk strategically. It typically includes the Heads of Banking, Corporate Banking, Treasury, Credit, Operations, and the CFO, operating within risk limits set by the Board.</div></details></li><li>Describe the procedure followed in Asset-Liability Management.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Preparing an internal control questionnaire, determining the efficiency of existing ALM co-ordination, reviewing the bank's expansion plans, assessing the bank's ability to react to change, reviewing the liquidity management plan, and preparing an annual audit report.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Managing Bank Funds/Products &amp; Risk Management") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic3-investment-management.html">&larr; Investment Management</a><a href="topic5-financial-distress.html">Financial Distress &amp; Prediction Models &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

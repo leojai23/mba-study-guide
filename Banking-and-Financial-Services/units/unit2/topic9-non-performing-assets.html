@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Non-Performing Assets (NPAs) | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Managing Bank Funds/Products &amp; Risk Management</h3>
+        <ol>
+          <li><a href="topic1-capital-adequacy-and-deposits.html">1. Capital Adequacy &amp; Deposits</a></li><li><a href="topic2-loan-management.html">2. Loan Management</a></li><li><a href="topic3-investment-management.html">3. Investment Management</a></li><li><a href="topic4-asset-liability-management.html">4. Asset-Liability Management (ALM)</a></li><li><a href="topic5-financial-distress.html">5. Financial Distress &amp; Prediction Models</a></li><li><a href="topic6-risk-management-interest-rate-risk.html">6. Risk Management &amp; Interest Rate Risk</a></li><li><a href="topic7-forex-and-credit-risk.html">7. Forex Risk &amp; Credit Risk</a></li><li><a href="topic8-market-operational-solvency-risk.html">8. Market, Operational &amp; Solvency Risk</a></li><li><a class="active" href="topic9-non-performing-assets.html">9. Non-Performing Assets (NPAs)</a></li><li><a href="topic10-mergers-and-acquisitions.html">10. Mergers &amp; Acquisitions of Banks</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 9</div>
+    <h1><span class="unit-tag">Unit 2</span>Non-Performing Assets (NPAs)</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>NPAs are one of the most closely watched indicators of a bank's health. This topic covers how loan assets are classified, how provisioning and NPA ratios are calculated, what causes NPAs to rise, and the methods banks use to recover them.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>9.1 Concept of NPA</h3>
+<p>The Securitisation and Reconstruction of Financial Assets and Enforcement of Security Interest Act, 2002 (SARFAESI) defines a Non-Performing Asset (NPA) as "an asset or account of a borrower, which has been classified by a bank or financial institution as sub-standard, doubtful, or loss asset". This happens once a loan account has remained overdue for 90 days from the due date.</p>
+
+<h3>9.2 Categories of NPA Assets</h3>
+<table class="compare">
+<tr><th>Category</th><th>Meaning</th></tr>
+<tr><td><strong>Standard Assets</strong></td><td>Loans/advances that do not carry more than the normal risk; not classified as an NPA. Provisioning: 0.4% (Direct Advances to Agriculture &amp; SME) or 0.25%-1% depending on sector.</td></tr>
+<tr><td><strong>Sub-Standard Assets</strong></td><td>An asset that has remained an NPA for a period less than or equal to 12 months. Collateral value is insufficient to fully cover the outstanding amount if it becomes NPA.</td></tr>
+<tr><td><strong>Doubtful Assets</strong></td><td>An asset that has remained in the sub-standard category for more than 12 months. Full recovery of the loan is highly questionable.</td></tr>
+<tr><td><strong>Loss Assets</strong></td><td>An asset identified as a loss by the bank, auditors, or RBI inspection, but not yet written off wholly. Considered uncollectible with negligible realisable value.</td></tr>
+</table>
+
+<h3>9.3 Provisioning Norms</h3>
+<p>Banks must maintain provisions for loan losses depending on the asset category, as recommended by the RBI:</p>
+<table class="compare">
+<tr><th>Asset Category</th><th>Minimum Provisioning</th></tr>
+<tr><td>Standard Assets</td><td>0.25% &ndash; 1% (varies by sector; 0.40% for direct advances to Agriculture and SME sectors)</td></tr>
+<tr><td>Sub-Standard Assets</td><td>15% of the outstanding amount for secured advances; 25% for the unsecured exposure portion</td></tr>
+<tr><td>Doubtful Assets</td><td>Ranges from 25%-100% depending on how long the asset has been doubtful and whether it is secured/unsecured (higher provisioning for older or unsecured doubtful assets)</td></tr>
+<tr><td>Loss Assets</td><td>100% of the outstanding amount</td></tr>
+</table>
+
+<h3>9.4 Calculation of NPAs</h3>
+<p><strong>Gross NPA:</strong> The sum of all loan assets that have been classified as NPA as per RBI guidelines, without deducting any provisions made. Gross NPA reflects the quality of a bank's loans.</p>
+<p style="text-align:center;font-weight:600;color:var(--accent-dark)">Gross NPA Ratio = Gross NPAs &divide; Total Advances &times; 100</p>
+<p><strong>Net NPA:</strong> Gross NPA minus the provisions held for that account (interest in suspense account, part payment received and kept in suspense, and DICGC/ECGC claims received and held).</p>
+<p style="text-align:center;font-weight:600;color:var(--accent-dark)">Net NPA Ratio = (Gross NPAs &minus; Provisions) &divide; (Total Advances &minus; Provisions) &times; 100</p>
+<p>The difference between Gross and Net NPA is the amount of provisions held in respect of NPA accounts. Net NPA reflects the actual burden the bank carries after providing for expected losses.</p>
+
+<h3>9.5 Causes of Rise in NPAs</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">9.5.1 Internal Causes</h4>
+<ol>
+<li><strong>Defective Lending Process:</strong> Every bank has its own lending policy based on three cardinal principles: Principle of Safety, Principle of Liquidity, and Principle of Profitability, and any negligence in following these results in NPAs.</li>
+<li><strong>Inappropriate Technology:</strong> Banks not constantly updating technology for real-time credit monitoring and management.</li>
+<li><strong>Managerial Deficiencies:</strong> The banker should always ensure before granting credit that the borrower is technically feasible, financially viable, and economically viable.</li>
+<li><strong>Absence of Regular Industrial Visits:</strong> Lack of periodic visits to assess how the loan is being used.</li>
+<li><strong>Poor Credit Appraisal System:</strong> Deficiencies in the appraisal of proposals before sanctioning credit facilities.</li>
+</ol>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">9.5.2 External Causes</h4>
+<ol>
+<li><strong>Industrial Sickness:</strong> Genuine problems faced by industries, e.g. shortage of raw materials, power, and infrastructure.</li>
+<li><strong>Change in Government Policies:</strong> Sudden policy changes can significantly affect industries and their ability to repay loans.</li>
+<li><strong>Natural Calamities:</strong> Droughts, floods, cyclones, etc., are a significant cause of rising NPAs in agriculture-linked lending.</li>
+<li><strong>Wilful Defaults:</strong> Borrowers who have the capacity to repay but wilfully avoid repaying the loan.</li>
+<li><strong>Lack of Demand:</strong> A slowdown in demand can leave businesses unable to service debt from expected revenue.</li>
+</ol>
+
+<h3>9.6 Methods of Recovery of NPAs</h3>
+<table class="compare">
+<tr><th>Method</th><th>Description</th></tr>
+<tr><td><strong>Securitisation (SARFAESI Act)</strong></td><td>Banks can transfer NPAs to Asset Reconstruction Companies (ARCs) or Securitisation Companies (SCs) via issue of security receipts, or recover dues by seizing/selling secured assets without court intervention.</td></tr>
+<tr><td><strong>Compromise/One Time Settlement (OTS)</strong></td><td>A negotiated settlement where the borrower pays a lump sum less than the full outstanding amount, resolving the account and avoiding lengthy litigation.</td></tr>
+<tr><td><strong>Debt Recovery Tribunals (DRTs)</strong></td><td>Established under the Debt Recovery Tribunal Act to facilitate speedy recovery of loans, with dedicated tribunals hearing bank recovery suits.</td></tr>
+<tr><td><strong>Lok Adalat</strong></td><td>A legal platform to facilitate the speedy settlement of small loan disputes (typically up to &#8377;20 lakh) between banks and defaulters, outside regular courts.</td></tr>
+<tr><td><strong>Recovery Camps</strong></td><td>Camps set up by banks in branches/villages to encourage settlement with defaulters through direct engagement.</td></tr>
+<tr><td><strong>Suit Filing</strong></td><td>Filing a civil suit in court to recover the outstanding dues when other methods fail.</td></tr>
+<tr><td><strong>Technical Write-Off</strong></td><td>Writing off a fully-provided NPA from the bank's books for accounting purposes, though recovery efforts against the borrower continue.</td></tr>
+</table>
+<p><strong>Remedial Strategies:</strong> Asset Reconstruction (transferring or selling stressed assets), Recovery through Credit Guarantee Schemes/Debt Recovery Tribunals, and Compromise Proposals (negotiated reduced settlement).</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Non-Performing Asset (NPA)</dt><dd>A loan asset classified as sub-standard, doubtful, or loss (per SARFAESI), typically once overdue for 90 days.</dd><dt>Gross NPA</dt><dd>The total of all loan assets classified as NPA, before deducting provisions.</dd><dt>Net NPA</dt><dd>Gross NPA minus provisions held against those accounts, reflecting the bank's actual residual exposure.</dd><dt>SARFAESI Act, 2002</dt><dd>Allows banks to recover NPAs by seizing/selling secured assets without court intervention, and enables Asset Reconstruction Companies.</dd><dt>One Time Settlement (OTS)</dt><dd>A negotiated lump-sum settlement between a bank and a defaulting borrower for less than the full outstanding amount.</dd><dt>Debt Recovery Tribunal (DRT)</dt><dd>A specialised tribunal for the speedy recovery of bank loan dues.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>NPA categories: Standard &rarr; Sub-Standard (&le;12 months NPA) &rarr; Doubtful (&gt;12 months) &rarr; Loss (identified uncollectible).</li><li>Provisioning: Standard 0.25-1%, Sub-Standard 15% (secured)/25% (unsecured), Doubtful 25-100%, Loss 100%.</li><li>Gross NPA Ratio = Gross NPAs/Total Advances x 100; Net NPA Ratio = (Gross NPA - Provisions)/(Total Advances - Provisions) x 100.</li><li>Internal causes of NPAs: defective lending, outdated technology, managerial deficiencies, no industrial visits, poor credit appraisal.</li><li>External causes: industrial sickness, government policy changes, natural calamities, wilful default, demand slowdown.</li><li>Recovery methods: SARFAESI/Securitisation, One Time Settlement, DRTs, Lok Adalat, Recovery Camps, Suit Filing, Technical Write-Off.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Explain the categories of NPA assets with their provisioning requirements.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Standard Assets (normal risk, 0.25-1% provisioning), Sub-Standard Assets (NPA up to 12 months, 15% secured/25% unsecured provisioning), Doubtful Assets (NPA over 12 months, 25-100% provisioning), and Loss Assets (identified as uncollectible, 100% provisioning).</div></details></li><li>Distinguish between Gross NPA and Net NPA.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Gross NPA is the total of all loan assets classified as NPA without deducting provisions, reflecting overall loan quality. Net NPA is Gross NPA minus provisions held, reflecting the bank's actual residual exposure after accounting for expected losses.</div></details></li><li>Discuss the internal and external causes of rising NPAs.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Internal causes include defective lending processes, outdated technology, managerial deficiencies in assessing borrowers, absence of regular industrial visits, and poor credit appraisal systems. External causes include industrial sickness, changes in government policy, natural calamities, wilful default, and demand slowdowns.</div></details></li><li>Explain the various methods available to banks for recovery of NPAs.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Securitisation under the SARFAESI Act, Compromise/One Time Settlement, Debt Recovery Tribunals, Lok Adalat for small disputes, Recovery Camps, filing civil suits, and Technical Write-Off of fully-provided accounts.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Managing Bank Funds/Products &amp; Risk Management") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic8-market-operational-solvency-risk.html">&larr; Market, Operational &amp; Solvency Risk</a><a href="topic10-mergers-and-acquisitions.html">Mergers &amp; Acquisitions of Banks &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

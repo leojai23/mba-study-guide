@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Financial Distress &amp; Prediction Models | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Managing Bank Funds/Products &amp; Risk Management</h3>
+        <ol>
+          <li><a href="topic1-capital-adequacy-and-deposits.html">1. Capital Adequacy &amp; Deposits</a></li><li><a href="topic2-loan-management.html">2. Loan Management</a></li><li><a href="topic3-investment-management.html">3. Investment Management</a></li><li><a href="topic4-asset-liability-management.html">4. Asset-Liability Management (ALM)</a></li><li><a class="active" href="topic5-financial-distress.html">5. Financial Distress &amp; Prediction Models</a></li><li><a href="topic6-risk-management-interest-rate-risk.html">6. Risk Management &amp; Interest Rate Risk</a></li><li><a href="topic7-forex-and-credit-risk.html">7. Forex Risk &amp; Credit Risk</a></li><li><a href="topic8-market-operational-solvency-risk.html">8. Market, Operational &amp; Solvency Risk</a></li><li><a href="topic9-non-performing-assets.html">9. Non-Performing Assets (NPAs)</a></li><li><a href="topic10-mergers-and-acquisitions.html">10. Mergers &amp; Acquisitions of Banks</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 5</div>
+    <h1><span class="unit-tag">Unit 2</span>Financial Distress &amp; Prediction Models</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>When a bank's financial condition deteriorates, early warning matters. This topic covers what financial distress is, statistical models used to predict it, and the strategies used to rehabilitate a distressed institution.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>5.1 Concept of Financial Distress</h3>
+<p>The term "financial distress" refers to a situation where a bank fails to honour, or has difficulty honouring, its financial obligations to its creditors, due to a decline in earnings and/or asset values. As an increasing proportion of investments is considered risky or "toxic" assets, financial distress results in a situation of facing bankruptcy.</p>
+
+<h3>5.2 Causes of Financial Distress in Banks</h3>
+<ul>
+<li><strong>High amounts of debt</strong> relative to the bank's asset base and equity.</li>
+<li><strong>Fixed/high operating costs</strong> that don't fall even when revenue does.</li>
+<li><strong>An asset-liability mismatch</strong> &mdash; illiquid assets funded by short-term liabilities.</li>
+<li><strong>Poor management decisions</strong> regarding risk-taking, lending quality, and investments.</li>
+<li><strong>Economic downturns</strong> that increase defaults across the loan portfolio.</li>
+</ul>
+<p>Some indicators of the likelihood of financial distress in banks: high debt, low or declining revenue, poor cash flow, rising NPAs, and declining credit ratings.</p>
+
+<h3>5.3 Prediction Models of Financial Distress</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">5.3.1 Z-Score Model</h4>
+<p>The Z-score model, introduced by <strong>Edward Altman</strong>, is a clear, well-tested model for predicting financial distress that shows a firm's financial health using distinct accounting and market-value ratios, combined into a single score. A low Z-score value indicates a firm is at risk of bankruptcy; a high value indicates financial health.</p>
+<p><strong>Agrawal and Taffler</strong> studied Z-score model performance over 25 years and found it retains a fairly consistent ability to give clear, early prediction of a company's distress, agreeing that the accounting-ratio-based Z-score model is superior to certain alternative approaches, though other approaches also add value.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">5.3.2 Hazard Model</h4>
+<p>The Hazard model, developed by researchers including <strong>Shumway</strong>, treats bankruptcy prediction as a hazard/survival-analysis problem &mdash; combining both accounting and market-based variables over the life of the firm, rather than a single cut-off point in time (as the Z-score does). <strong>Chava and Jarrow</strong> further developed hazard models, adding industry effects, and found that a firm's data over multiple years, not just a single snapshot, improves prediction accuracy.</p>
+
+<h3>5.4 Methods/Strategies for Rehabilitation of Financial Distress</h3>
+<table class="compare">
+<tr><th>Strategy</th><th>Approach</th></tr>
+<tr><td><strong>Turnaround Strategies</strong></td><td>Restructuring (Operations, Asset, Financial): cutting costs, improving working capital management, and re-focusing the business to return the distressed firm to profitability.</td></tr>
+<tr><td><strong>Private Workout</strong></td><td>A voluntary agreement between the distressed firm/venture and its creditors to restructure the existing terms of debt (interest, maturity, principal), without going to court.</td></tr>
+<tr><td><strong>Financial Restructuring</strong></td><td>Changing the composition of the venture's existing debt claims against the firm, or reorganising the contractual terms of existing debt.</td></tr>
+<tr><td><strong>File for Legal Bankruptcy (Liquidation)</strong></td><td>If a private/voluntary resolution is not feasible, a bankruptcy court determines that the firm must be liquidated. A liquidation proceeds via a public auction or private sale, and the proceeds are distributed to creditors per the priority of their claims.</td></tr>
+<tr><td><strong>Reorganisation (Legal Bankruptcy):</strong></td><td>Instead of liquidation, the bankruptcy court may approve a reorganisation plan that restructures the firm's debt/equity claims while it continues to operate.</td></tr>
+</table>
+
+<h3>5.5 Signals to Borrowers &amp; Rehabilitation Process</h3>
+<p>Signals of sickness that lenders/bankers watch for include: frequent requests for extension of repayment schedules, decreasing amount of business handled, and irregular servicing of interest and principal.</p>
+<p>The rehabilitation process typically proceeds through stages: (1) the borrower is issued a confirmation of sickness in an industrial unit, (2) the bank/DRS conducts a viability study, (3) formulation of a detailed rehabilitation package/Draft Rehabilitation Scheme (DRS), (4) approval of the DRS by the appropriate authority and lenders, and (5) implementation with continued monitoring until compliance and viability are restored.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Financial Distress</dt><dd>A situation where a firm/bank fails to honour, or struggles to honour, its financial obligations due to declining earnings/asset values.</dd><dt>Z-Score Model</dt><dd>Edward Altman's model predicting bankruptcy risk using a weighted combination of financial ratios into a single score.</dd><dt>Hazard Model</dt><dd>A bankruptcy-prediction model (Shumway et al.) using survival analysis over a firm's life, combining accounting and market variables.</dd><dt>Private Workout</dt><dd>A voluntary, out-of-court agreement between a distressed firm and its creditors to restructure debt terms.</dd><dt>Turnaround Strategy</dt><dd>A restructuring approach (operational, asset, or financial) aimed at returning a distressed firm to profitability.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Financial distress = difficulty honouring financial obligations due to declining earnings/asset values.</li><li>Prediction models: Z-Score (Altman, ratio-based single score) vs Hazard Model (Shumway, survival-analysis over time using accounting + market variables).</li><li>Rehabilitation strategies: Turnaround (restructuring), Private Workout (voluntary out-of-court), Financial Restructuring, or Legal Bankruptcy (Liquidation or Reorganisation).</li><li>Warning signals: repeated repayment extension requests, declining business volume, irregular interest/principal servicing.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Explain the Z-Score model of predicting financial distress.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Developed by Edward Altman, the Z-score model combines several accounting and market-value financial ratios into a single score to predict bankruptcy risk &mdash; a low score signals distress, a high score signals financial health. Studies by Agrawal and Taffler found it retains reasonably consistent predictive power over decades.</div></details></li><li>Distinguish between the Z-Score model and the Hazard model.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The Z-score model gives a single-point prediction based on a weighted combination of ratios at one point in time. The Hazard model (Shumway) treats bankruptcy as a survival/hazard problem, using both accounting and market-based variables tracked over the firm's life, generally improving prediction accuracy over a single-period Z-score.</div></details></li><li>What strategies can a financially distressed bank/firm adopt?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Turnaround strategies (operational/asset/financial restructuring), a Private Workout (voluntary out-of-court debt restructuring with creditors), Financial Restructuring of existing debt claims, or filing for Legal Bankruptcy, which can result in either Liquidation or a court-approved Reorganisation.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Managing Bank Funds/Products &amp; Risk Management") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic4-asset-liability-management.html">&larr; Asset-Liability Management (ALM)</a><a href="topic6-risk-management-interest-rate-risk.html">Risk Management &amp; Interest Rate Risk &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

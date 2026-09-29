@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loan Management | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Managing Bank Funds/Products &amp; Risk Management</h3>
+        <ol>
+          <li><a href="topic1-capital-adequacy-and-deposits.html">1. Capital Adequacy &amp; Deposits</a></li><li><a class="active" href="topic2-loan-management.html">2. Loan Management</a></li><li><a href="topic3-investment-management.html">3. Investment Management</a></li><li><a href="topic4-asset-liability-management.html">4. Asset-Liability Management (ALM)</a></li><li><a href="topic5-financial-distress.html">5. Financial Distress &amp; Prediction Models</a></li><li><a href="topic6-risk-management-interest-rate-risk.html">6. Risk Management &amp; Interest Rate Risk</a></li><li><a href="topic7-forex-and-credit-risk.html">7. Forex Risk &amp; Credit Risk</a></li><li><a href="topic8-market-operational-solvency-risk.html">8. Market, Operational &amp; Solvency Risk</a></li><li><a href="topic9-non-performing-assets.html">9. Non-Performing Assets (NPAs)</a></li><li><a href="topic10-mergers-and-acquisitions.html">10. Mergers &amp; Acquisitions of Banks</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 2</div>
+    <h1><span class="unit-tag">Unit 2</span>Loan Management</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Loans are a bank's primary income-generating asset. This topic covers how banks classify loans, structure their lending policy, price loans, and manage lending through changing conditions like the COVID-19 pandemic.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>2.1 Introduction to Loan Management</h3>
+<p>A loan is an amount of money, property, or other tangible goods given by a lender to a borrower in exchange for future repayment of the loan value, along with interest or finance charges. A loan may be provided for a specific one-time amount, or as an open-ended line of credit up to a set maximum ("open-ended loan", e.g. a credit card).</p>
+
+<h3>2.2 Types of Loans and their Features</h3>
+<table class="compare">
+<tr><th>Type</th><th>Description</th></tr>
+<tr><td><strong>Secured Loan</strong></td><td>Backed by collateral (property, car, or asset pledged); the asset can be seized if the loan is defaulted upon; typically lower interest rates due to lower risk for the lender.</td></tr>
+<tr><td><strong>Unsecured Loan</strong></td><td>Not backed by any collateral (e.g. personal loans, credit card debt); the lender charges a higher interest rate to compensate for the higher risk of default.</td></tr>
+</table>
+<p>Other classifications include: Demand Loans (repayable on demand), Term Loans (fixed repayment schedule).</p>
+
+<h3>2.3 Major Components of a Loan Policy Document</h3>
+<ol>
+<li><strong>Establish a Lending Authority:</strong> It should clearly define who is authorised to make lending decisions and to what limit.</li>
+<li><strong>Statement of Lending Policy:</strong> The bank's policy on the types of loans and the overall portfolio of the bank's lending should be clearly defined.</li>
+<li><strong>Establish Lines of Responsibility:</strong> It should clearly define the responsibilities for reviewing, evaluating, and making decisions on loan applications.</li>
+<li><strong>Required Documentation:</strong> All documents required for every loan application must be clearly specified.</li>
+<li><strong>Lines of Authority and Amount:</strong> Lines of authority for approving loans and amounts should be well defined.</li>
+<li><strong>Guidelines for Establishing Interest Rates and Fees:</strong> Policies and procedures for establishing credit fees, interest rates, etc. must be established.</li>
+</ol>
+
+<h3>2.4 Types of Lending</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">2.4.1 Fund-Based Lending</h4>
+<p>This is the traditional and most popular form of bank lending, which involves an outflow of funds from the bank to the borrower.</p>
+<ul>
+<li><strong>Cash Credit:</strong> A running account facility with a sanctioned limit against which the borrower draws funds as needed, interest charged only on the amount drawn.</li>
+<li><strong>Overdraft:</strong> Withdrawal beyond the credit balance in a current account, up to an agreed limit.</li>
+<li><strong>Bills Purchase and Discounted:</strong> The bank purchases/discounts a bill of exchange, crediting the holder with the discounted value before maturity.</li>
+<li><strong>Term Loans:</strong> Loans with a fixed repayment period for financing capital assets or working capital, secured or unsecured.</li>
+</ul>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">2.4.2 Non-Fund Based Lending</h4>
+<p>The bank does not actually lend out its own funds, but makes a commitment on behalf of the customer, which remains contingent unless invoked.</p>
+<ul>
+<li><strong>Letter of Credit:</strong> An instrument issued by a bank guaranteeing payment to a seller on a buyer's behalf, up to a stated amount, provided conditions are met; commonly used in international trade.</li>
+<li><strong>Bank Guarantee:</strong> A guarantee issued by a bank on behalf of a customer promising to cover a loss if the customer fails to fulfil a contractual obligation.</li>
+<li><strong>Project Finance:</strong> Financing of long-term projects (e.g. highways, infrastructure) based on the projected cash flows of the project, often through a Special Purpose Vehicle (SPV).</li>
+<li><strong>Asset-Based Lending:</strong> Loans secured against a company's assets (inventory, accounts receivable, equipment, or property).</li>
+</ul>
+
+<h3>2.5 Loan Management in Indian Banks &mdash; Pre and Post COVID-19</h3>
+<p>Before COVID-19, borrowing patterns had already started shifting towards digital and app-based borrowing, rather than the traditional medical/education/home-related purposes. During the pandemic, moratoriums and relaxations provided by the government and RBI provided some breather, though non-performing assets driven by the pandemic rose sharply as borrowers struggled to repay.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Issues and Trends in Loan Management</h4>
+<ul>
+<li><strong>Machine Learning &amp; Digital Underwriting:</strong> Banks are increasingly using Machine Learning and digital credit-assessment models (Customer KYC, video KYC) leveraging Aadhaar-enabled and other digital data to make faster lending decisions.</li>
+<li><strong>Government Schemes:</strong> Schemes like the RBI's push towards a 59-minute loan approval process for MSMEs improve turnaround time for credit.</li>
+<li><strong>Small Ticket, Digital-First Loans:</strong> A shift toward small-ticket, digital-first, need-based borrowing (for medical, essential, or education needs) rather than large indulgence-based personal loans.</li>
+<li><strong>Rise of Bad Loans (NPAs):</strong> Banks and their lending systems will continue to see increased risk of NPAs unless underwriting practices are improved to accurately assess a borrower's credit quality and repayment capacity.</li>
+</ul>
+
+<h3>2.6 Pricing of Loans</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">2.6.1 Fixed and Floating Rate Loans</h4>
+<p>Fixed Rate Loans carry an interest rate fixed for the entire term. Floating Rate Loans have an interest rate that varies with the market (e.g. linked to the bank's benchmark rate), which became popular post-COVID-19 as it is easier for banks to price risk into these rates and keep pace with market and economic changes.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">2.6.2 Loan Pricing Methods</h4>
+<table class="compare">
+<tr><th>Method</th><th>Approach</th></tr>
+<tr><td><strong>Cost-Plus Loan Pricing</strong></td><td>Loan Rate = Cost of Funds + Operating Costs + Risk Premium + Profit Margin.</td></tr>
+<tr><td><strong>Cost-Benefit Approach</strong></td><td>Marginal Cost Pricing: New Interest Rate = Marginal Cost of Funds &times; % of Loan Funded by Borrowed Funds, plus other components.</td></tr>
+<tr><td><strong>Historical Average Cost Approach</strong></td><td>Prices a loan based on the bank's historical average cost of funds, rather than the current marginal cost.</td></tr>
+<tr><td><strong>Customer Profitability Analysis (CPA)</strong></td><td>Looks at all revenue and costs from a particular customer relationship (across all products/services) rather than just a single loan, to determine the overall rate.</td></tr>
+<tr><td><strong>Risk-Based Pricing</strong></td><td>Under this scheme, a bank charges a higher (or lower) interest rate based on a borrower's credit risk profile &mdash; riskier borrowers pay more.</td></tr>
+</table>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Secured Loan</dt><dd>A loan backed by collateral, which the lender may seize if the borrower defaults.</dd><dt>Unsecured Loan</dt><dd>A loan not backed by collateral, carrying a higher interest rate to compensate the lender's higher risk.</dd><dt>Fund-Based Lending</dt><dd>Lending that involves an actual outflow of bank funds, e.g. cash credit, overdraft, term loans.</dd><dt>Non-Fund Based Lending</dt><dd>Lending where the bank makes a contingent commitment (e.g. Letter of Credit, Bank Guarantee) without an immediate outflow of funds.</dd><dt>Risk-Based Pricing</dt><dd>Charging loan interest rates according to a borrower's credit risk profile &mdash; riskier borrowers pay higher rates.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Secured Loans (collateral-backed, lower rate) vs Unsecured Loans (no collateral, higher rate).</li><li>Fund-Based Lending (Cash Credit, Overdraft, Bills Purchase/Discount, Term Loans) vs Non-Fund Based Lending (Letter of Credit, Bank Guarantee, Project Finance, Asset-Based Lending).</li><li>Loan policy document components: lending authority, policy statement, lines of responsibility, documentation, approval limits, interest/fee guidelines.</li><li>Loan pricing methods: Cost-Plus, Cost-Benefit/Marginal Cost, Historical Average Cost, Customer Profitability Analysis, Risk-Based Pricing.</li><li>Post-COVID trend: shift to digital-first, small-ticket, need-based lending using ML-based underwriting and faster KYC.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Distinguish between fund-based and non-fund based lending.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Fund-based lending involves an actual outflow of bank funds to the borrower (Cash Credit, Overdraft, Bills Discounting, Term Loans). Non-fund based lending involves the bank making a contingent commitment on the customer's behalf without an immediate outflow of funds (Letter of Credit, Bank Guarantee), which only becomes a fund outflow if invoked.</div></details></li><li>What are the major components of a bank's loan policy document?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Establishing a lending authority, a statement of lending policy, lines of responsibility for loan decisions, required documentation, lines of authority and approval limits, and guidelines for establishing interest rates and fees.</div></details></li><li>Explain the different methods of loan pricing.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Cost-Plus Pricing (cost of funds + operating costs + risk premium + margin), Cost-Benefit/Marginal Cost Pricing, Historical Average Cost Approach, Customer Profitability Analysis (based on the whole customer relationship), and Risk-Based Pricing (rate varies with the borrower's credit risk).</div></details></li><li>Discuss the recent trends and issues in loan management in Indian banks.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A shift toward digital-first, small-ticket, need-based lending; increased use of Machine Learning and digital KYC for faster underwriting; government schemes like the 59-minute MSME loan approval process; and a continuing risk of rising NPAs unless underwriting quality improves.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Managing Bank Funds/Products &amp; Risk Management") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic1-capital-adequacy-and-deposits.html">&larr; Capital Adequacy &amp; Deposits</a><a href="topic3-investment-management.html">Investment Management &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>
