@@ -3,8 +3,17 @@ import os
 
 ROOT = r"G:\Leo-Workspace\MBA-Study-Guide\Strategic-Management\units"
 
-CSS = """
-:root{--accent:#0f6e6e;--accent-dark:#0a4f4f;--accent-light:#e4f4f2;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d9e6e4;--card-shadow:0 1px 3px rgba(15,110,110,.12);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+def make_css(accent="#0f6e6e", accent_dark="#0a4f4f", accent_light="#e4f4f2",
+             border="#d9e6e4", shadow="rgba(15,110,110,.12)"):
+    return (CSS_TEMPLATE
+            .replace("__ACCENT_DARK__", accent_dark)
+            .replace("__ACCENT_LIGHT__", accent_light)
+            .replace("__ACCENT__", accent)
+            .replace("__BORDER__", border)
+            .replace("__SHADOW__", shadow))
+
+CSS_TEMPLATE = """
+:root{--accent:__ACCENT__;--accent-dark:__ACCENT_DARK__;--accent-light:__ACCENT_LIGHT__;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:__BORDER__;--card-shadow:0 1px 3px __SHADOW__;--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
 *{box-sizing:border-box}html,body{margin:0;padding:0}
 body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
 a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
@@ -51,15 +60,19 @@ table.compare th{background:var(--accent-light);color:var(--accent-dark)}
 SM_BOOK = "Book: <em>Strategic Management</em> (BA4301, Anna University MBA Sem III) &mdash; Dr. G. Pandi Selvi &amp; Dr. M. Hemalatha, Thakur Publication"
 SM_BOOK_PLAIN = "Strategic Management (BA4301), Dr. G. Pandi Selvi &amp; Dr. M. Hemalatha, Thakur Publication"
 
+SM_THEME = dict(accent="#0f6e6e", accent_dark="#0a4f4f", accent_light="#e4f4f2",
+                border="#d9e6e4", shadow="rgba(15,110,110,.12)")
+
 class UnitBuilder:
     def __init__(self, unit_num, unit_title, topics, subject="Strategic Management",
-                 subject_root=None, book_html=SM_BOOK, book_plain=SM_BOOK_PLAIN):
+                 subject_root=None, book_html=SM_BOOK, book_plain=SM_BOOK_PLAIN, theme=None):
         self.unit_num = unit_num
         self.unit_title = unit_title
         self.topics = topics  # list of (fname, title)
         self.subject = subject
         self.book_html = book_html
         self.book_plain = book_plain
+        self.css = make_css(**(theme or SM_THEME))
         root = subject_root or ROOT
         self.base = os.path.join(root, f"unit{unit_num}")
 
@@ -95,7 +108,7 @@ class UnitBuilder:
 <meta charset="UTF-8">
 <title>{title} | MBA Study Guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>{CSS}</style>
+<style>{self.css}</style>
 </head>
 <body>
 <div class="layout">
@@ -151,7 +164,7 @@ class UnitBuilder:
 <meta charset="UTF-8">
 <title>Unit {self.unit_num}: {self.unit_title} | MBA Study Guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>{CSS}</style>
+<style>{self.css}</style>
 </head>
 <body>
 <div class="layout">

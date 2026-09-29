@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CAMELS Rating System | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#1e3a5f;--accent-dark:#15293f;--accent-light:#e8eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d6dfe8;--card-shadow:0 1px 3px rgba(30,58,95,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Banking and Financial Services</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 1 &middot; Introduction to Indian Banking System and Performance Evaluation</h3>
+        <ol>
+          <li><a href="topic1-overview-of-indian-banking.html">1. Overview of Indian Banking System</a></li><li><a href="topic2-functions-of-commercial-banks.html">2. Functions of Commercial Banks</a></li><li><a href="topic3-cooperative-banks-payment-systems.html">3. Co-operative Banks, NABARD &amp; Payment Systems</a></li><li><a href="topic4-rbi-and-key-regulations.html">4. RBI &amp; Key Banking Regulations</a></li><li><a href="topic5-financial-statements-of-banks.html">5. Overview of Financial Statements of Banks</a></li><li><a class="active" href="topic6-camels-rating-system.html">6. CAMELS Rating System</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Banking and Financial Services</a> &rsaquo; <a href="index.html">Unit 1</a> &rsaquo; Topic 6</div>
+    <h1><span class="unit-tag">Unit 1</span>CAMELS Rating System</h1>
+    <p class="subtitle">Book: <em>Banking and Financial Services</em> (BA4003, Anna University MBA Sem III) &mdash; Thakur Publication</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>CAMELS is the international rating framework used by regulators to assess the overall soundness of a bank across six dimensions. This closing topic covers each component and the key ratios used to measure it.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>6.1 Introduction to CAMELS</h3>
+<p>In order to strengthen the banking sector and make it sound and efficient, and to link it to the real economic reforms introduced in 1991, a natural framework of such policy, investment, and growth has undergone phase-of-restructuring reforms &mdash; the banking sector has been introduced with the CAMELS framework. This framework is applied in India as it is also referred to as "Capital adequacy, Asset quality, Management, Earnings, Liquidity, and Sensitivity to market risk" (CAMELS).</p>
+
+<h3>6.2 CAMELS Rating System</h3>
+<p>CAMELS is a rating system used by supervisory authorities to rate banks based on six factors, represented by the acronym. Each component is rated on a scale of 1 to 5, and a composite rating is then assigned:</p>
+<table class="compare">
+<tr><th>Rating</th><th>Range</th><th>Interpretation</th></tr>
+<tr><td>1</td><td>1.0 &ndash; 1.4</td><td>Strong &mdash; sound in almost all aspects.</td></tr>
+<tr><td>2</td><td>1.5 &ndash; 2.4</td><td>Satisfactory &mdash; fundamentally sound with modest weaknesses.</td></tr>
+<tr><td>3</td><td>2.5 &ndash; 3.4</td><td>Fair &mdash; combination of weaknesses if not addressed could worsen.</td></tr>
+<tr><td>4</td><td>3.5 &ndash; 4.4</td><td>Marginal &mdash; immoderate to severe weaknesses, unsatisfactory practices.</td></tr>
+<tr><td>5</td><td>4.5 &ndash; 5.0</td><td>Unsatisfactory &mdash; critically deficient performance, high near-term failure probability.</td></tr>
+</table>
+<p>On the other hand, the extreme degree of financial concern requires ratings of 3, 4, or 5 to require a moderate to intense degree of supervisory concern. The interpretation of the composite rating of a financial institution can be summarised as under, so the lower the rating, the lower the degree of supervisory concern, and vice versa.</p>
+
+<h3>6.3 Components of CAMELS</h3>
+<ol>
+<li><strong>Capital Adequacy (C):</strong> The letter "C" in CAMELS stands for "Capital Adequacy". This examiner measures the capital adequacy of a bank with respect to: the volume of risky assets, the growth experience, plans and prospects of the bank, and the volume of marginal and inferior quality of assets.</li>
+<li><strong>Asset Quality (A):</strong> The letter "A" stands for "Asset Quality". This component evaluates the quality of a bank's assets, examining factors like: the level and severity of classified assets, the level and composition of Non-Performing Loans (NPL) as a percentage of total loans, the adequacy of provisions, and the ability of management to administer and collect problem loans.</li>
+<li><strong>Management (M):</strong> "M" stands for "Management Capability". This component evaluates the management's ability to identify, measure, and control risks in a safe and sound manner. Factors examined include: technical competence, leadership and administrative ability, compliance with banking regulations and internal controls, adequacy of policies and plans made by the board, and succession planning.</li>
+<li><strong>Earnings (E):</strong> The letter "E" stands for "Earnings". This component evaluates a bank's earnings, including growth, stability, composition of net income, and how earnings compare with peers, since earnings represent the first line of defence against risk exposure.</li>
+<li><strong>Liquidity (L):</strong> The letter "L" stands for "Liquidity". This component evaluates the adequacy of a bank's liquidity sources compared to its needs, and the availability of assets readily convertible to cash without undue loss.</li>
+<li><strong>Sensitivity to Market Risk (S):</strong> The letter "S" stands for "Sensitivity". This component evaluates the degree to which changes in interest rates, exchange rates, commodity prices, or equity prices can adversely affect a bank's earnings and capital.</li>
+</ol>
+
+<h3>6.4 Key Ratios Involved in CAMELS Rating</h3>
+<table class="compare">
+<tr><th>Component</th><th>Key Ratios</th></tr>
+<tr><td>Capital Adequacy</td><td>Capital Adequacy Ratio (CAR) &mdash; capital as a percentage of risk-weighted assets, as per RBI/Basel norms.</td></tr>
+<tr><td>Asset Quality</td><td>Gross NPA to Total Advances; Net NPA to Net Advances; percentage change in NPAs year-on-year.</td></tr>
+<tr><td>Management</td><td>Total Advances to Total Deposits; Business (Deposits + Advances) per Employee; Profit per Employee.</td></tr>
+<tr><td>Earnings</td><td>Operating Profit to Average Working Funds; Net Profit to Average Assets (Return on Assets, ROA); Interest Income to Total Income; Spread Ratio (Interest Earned &minus; Interest Expended) / Working Funds.</td></tr>
+<tr><td>Liquidity</td><td>Liquid Assets to Total Assets; Liquid Assets to Demand Deposits (LADD); Liquid Assets to Total Deposits (LATD); Approved Securities to Total Assets; Government Securities to Total Assets.</td></tr>
+<tr><td>Sensitivity to Market Risk</td><td>Ratios examining exposure to interest rate risk, foreign exchange risk, and derivatives (swaps, options) held by the bank.</td></tr>
+</table>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>CAMELS</dt><dd>A six-component bank rating framework: Capital Adequacy, Asset Quality, Management, Earnings, Liquidity, and Sensitivity to market risk.</dd><dt>Capital Adequacy Ratio (CAR)</dt><dd>The ratio of a bank's capital to its risk-weighted assets, as prescribed by RBI/Basel norms.</dd><dt>Return on Assets (ROA)</dt><dd>Net profit as a percentage of average total assets, a key Earnings-component ratio in CAMELS.</dd><dt>Sensitivity to Market Risk</dt><dd>The 'S' in CAMELS &mdash; how much changes in interest rates, exchange rates, or asset prices can affect a bank's earnings and capital.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>CAMELS = Capital Adequacy, Asset Quality, Management, Earnings, Liquidity, Sensitivity to Market Risk &mdash; each rated 1 (strong) to 5 (unsatisfactory).</li><li>Composite rating interpretation: 1 = Strong, 2 = Satisfactory, 3 = Fair, 4 = Marginal, 5 = Unsatisfactory (higher number = more supervisory concern).</li><li>Key ratios: CAR (Capital Adequacy), Gross/Net NPA ratios (Asset Quality), Business/Profit per Employee (Management), ROA/Spread Ratio (Earnings), LADD/LATD (Liquidity).</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What does the acronym CAMELS stand for? Explain briefly.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Capital Adequacy, Asset Quality, Management, Earnings, Liquidity, and Sensitivity to market risk &mdash; six components used by regulators to rate a bank's overall soundness, each scored 1 (strong) to 5 (unsatisfactory).</div></details></li><li>Explain the components of CAMEL's model used to analyse bank performance.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Capital Adequacy assesses capital relative to risky assets; Asset Quality assesses NPL levels and provisioning adequacy; Management assesses leadership, compliance, and planning ability; Earnings assesses profitability and its stability; Liquidity assesses the bank's ability to meet its obligations; Sensitivity to Market Risk assesses exposure to interest rate, forex, and price movements.</div></details></li><li>State the key ratios used in CAMELS rating for Asset Quality and Earnings.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Asset Quality: Gross NPA to Total Advances, Net NPA to Net Advances. Earnings: Return on Assets (Net Profit to Average Assets), Operating Profit to Average Working Funds, and the Spread Ratio.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 1 ("Introduction to Indian Banking System and Performance Evaluation") of the course textbook &mdash; Banking and Financial Services (BA4003), Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic5-financial-statements-of-banks.html">&larr; Overview of Financial Statements of Banks</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>
