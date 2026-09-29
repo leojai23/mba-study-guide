@@ -48,12 +48,20 @@ table.compare th{background:var(--accent-light);color:var(--accent-dark)}
 @media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
 """
 
+SM_BOOK = "Book: <em>Strategic Management</em> (BA4301, Anna University MBA Sem III) &mdash; Dr. G. Pandi Selvi &amp; Dr. M. Hemalatha, Thakur Publication"
+SM_BOOK_PLAIN = "Strategic Management (BA4301), Dr. G. Pandi Selvi &amp; Dr. M. Hemalatha, Thakur Publication"
+
 class UnitBuilder:
-    def __init__(self, unit_num, unit_title, topics):
+    def __init__(self, unit_num, unit_title, topics, subject="Strategic Management",
+                 subject_root=None, book_html=SM_BOOK, book_plain=SM_BOOK_PLAIN):
         self.unit_num = unit_num
         self.unit_title = unit_title
         self.topics = topics  # list of (fname, title)
-        self.base = os.path.join(ROOT, f"unit{unit_num}")
+        self.subject = subject
+        self.book_html = book_html
+        self.book_plain = book_plain
+        root = subject_root or ROOT
+        self.base = os.path.join(root, f"unit{unit_num}")
 
     def sidebar(self, active_file):
         items = []
@@ -62,7 +70,7 @@ class UnitBuilder:
             items.append(f'<li><a{cls} href="{fname}">{i}. {title}</a></li>')
         return f"""
         <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
-        <h3>Strategic Management</h3>
+        <h3>{self.subject}</h3>
         <ul><li><a href="../../index.html">Course Home</a></li></ul>
         <h3>Unit {self.unit_num} &middot; {self.unit_title}</h3>
         <ol>
@@ -93,9 +101,9 @@ class UnitBuilder:
 <div class="layout">
   <nav class="sidebar">{self.sidebar(active_file)}</nav>
   <main class="content">
-    <div class="breadcrumb"><a href="../../index.html">Strategic Management</a> &rsaquo; <a href="index.html">Unit {self.unit_num}</a> &rsaquo; Topic {idx}</div>
+    <div class="breadcrumb"><a href="../../index.html">{self.subject}</a> &rsaquo; <a href="index.html">Unit {self.unit_num}</a> &rsaquo; Topic {idx}</div>
     <h1><span class="unit-tag">Unit {self.unit_num}</span>{title}</h1>
-    <p class="subtitle">Book: <em>Strategic Management</em> (BA4301, Anna University MBA Sem III) &mdash; Dr. G. Pandi Selvi &amp; Dr. M. Hemalatha, Thakur Publication</p>
+    <p class="subtitle">{self.book_html}</p>
     {extra_note}
     <h2>1. Overview</h2>
     <div class="card"><p>{overview}</p></div>
@@ -112,7 +120,7 @@ class UnitBuilder:
     <h2>5. Practice Questions</h2>
     <ol class="q-list">{q_html}</ol>
 
-    <p class="callout source">Grounded in Unit {self.unit_num} ("{self.unit_title}") of the course textbook &mdash; Strategic Management (BA4301), Dr. G. Pandi Selvi &amp; Dr. M. Hemalatha, Thakur Publication.</p>
+    <p class="callout source">Grounded in Unit {self.unit_num} ("{self.unit_title}") of the course textbook &mdash; {self.book_plain}.</p>
 
     {nav}
   </main>
@@ -149,13 +157,13 @@ class UnitBuilder:
 <div class="layout">
   <nav class="sidebar">
     <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
-    <h3>Strategic Management</h3>
+    <h3>{self.subject}</h3>
     <ul><li><a href="../../index.html">Course Home</a></li></ul>
     <h3>Unit {self.unit_num} &middot; {self.unit_title}</h3>
     <ol>{items}</ol>
   </nav>
   <main class="content">
-    <div class="breadcrumb"><a href="../../index.html">Strategic Management</a> &rsaquo; Unit {self.unit_num}</div>
+    <div class="breadcrumb"><a href="../../index.html">{self.subject}</a> &rsaquo; Unit {self.unit_num}</div>
     <h1><span class="unit-tag">Unit {self.unit_num}</span>{self.unit_title}</h1>
     <p class="subtitle">{subtitle}</p>
     <div class="topic-grid">{cards}</div>

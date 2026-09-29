@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+# WARNING (2026-09-29): topic1 and topic2's live HTML have hand-edited fixes
+# (Nature of Business Environment 10-pt list, Techniques of Environmental
+# Analysis, Dominant Economic Features, expanded Five Forces) that are NOT
+# reflected in this script's data below. DO NOT re-run this script for
+# topic1/topic2 without first updating their overview/notes/terms variables
+# to match the current HTML, or it will silently overwrite those fixes.
 import common
 
 TOPICS = [
