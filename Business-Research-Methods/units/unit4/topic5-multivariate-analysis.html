@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multivariate Analysis | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#7a1f3d;--accent-dark:#4d1326;--accent-light:#faebf0;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#f0d7df;--card-shadow:0 1px 3px rgba(122,31,61,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Business Research Methods</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 4 &middot; Data Preparation and Analysis</h3>
+        <ol>
+          <li><a href="topic1-data-preparation-and-processing.html">1. Data Preparation and Processing</a></li><li><a href="topic2-data-analysis-meaning-and-types.html">2. Data Analysis: Meaning and Types</a></li><li><a href="topic3-bivariate-analysis-correlation-and-regression.html">3. Bi-variate Analysis: Correlation and Regression</a></li><li><a href="topic4-analysis-of-variance-anova.html">4. Analysis of Variance (ANOVA)</a></li><li><a class="active" href="topic5-multivariate-analysis.html">5. Multivariate Analysis</a></li><li><a href="topic6-hypothesis-testing.html">6. Hypothesis Testing</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Business Research Methods</a> &rsaquo; <a href="index.html">Unit 4</a> &rsaquo; Topic 5</div>
+    <h1><span class="unit-tag">Unit 4</span>Multivariate Analysis</h1>
+    <p class="subtitle">Book: <em>Business Research Methods</em> (BA4205, Anna University MBA Sem II, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>When a research problem involves many variables at once, multivariate techniques are needed. This topic surveys the major multivariate methods used in business research and what each is designed to achieve.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>5.1 Introduction to Multivariate Analysis</h3>
+<p>Multivariate analysis refers to statistical techniques that analyse relationships among three or more variables simultaneously, used when a business problem is too complex to be understood through univariate or bivariate methods alone.</p>
+
+<h3>5.2 Multivariate Statistical Techniques: Overview</h3>
+<table class="compare">
+<tr><th>Technique</th><th>Objective</th></tr>
+<tr><td><strong>Multiple Regression and Correlation</strong></td><td>Predicts a single dependent variable from two or more independent variables; multiple correlation measures the overall strength of that combined relationship.</td></tr>
+<tr><td><strong>Discriminant Analysis</strong></td><td>Classifies observations into two or more pre-defined categories based on a set of predictor variables.</td></tr>
+<tr><td><strong>Factor Analysis</strong></td><td>Reduces a large number of correlated variables into a smaller number of underlying "factors".</td></tr>
+<tr><td><strong>Cluster Analysis</strong></td><td>Groups observations into clusters so that items within a cluster are similar and items in different clusters are dissimilar.</td></tr>
+<tr><td><strong>Multi-Dimensional Scaling (MDS)</strong></td><td>Represents the perceived similarity or dissimilarity among objects visually in a low-dimensional space (a "perceptual map").</td></tr>
+<tr><td><strong>Conjoint Analysis</strong></td><td>Determines the relative importance consumers place on different attributes of a product or service.</td></tr>
+</table>
+
+<h3>5.3 Multiple Regression and Correlation</h3>
+<p>Multiple regression extends simple regression to two or more independent variables: <strong>Y = a + b&#8321;X&#8321; + b&#8322;X&#8322; + ... + b&#8344;X&#8344;</strong>. Multiple correlation (R) measures how well the full set of independent variables together predicts the dependent variable.</p>
+
+<h3>5.4 Discriminant Analysis</h3>
+<p><strong>Objectives:</strong> to identify which predictor variables best distinguish between groups, and to classify new observations into the correct group.<br>
+<strong>Steps:</strong> define the groups, select predictor variables, estimate the discriminant function, and validate its classification accuracy.<br>
+<strong>Applications:</strong> classifying customers as likely to churn or not, or classifying loan applicants as high or low credit risk.</p>
+
+<h3>5.5 Factor Analysis</h3>
+<p><strong>Objectives:</strong> to simplify a large set of correlated variables (e.g. many survey items) into a smaller number of meaningful underlying dimensions.<br>
+<strong>Steps:</strong> compute the correlation matrix, extract factors, rotate factors for interpretability, and name/interpret the resulting factors.<br>
+<strong>Applications:</strong> identifying the underlying dimensions of customer satisfaction from a long list of survey questions.</p>
+
+<h3>5.6 Cluster Analysis</h3>
+<p><strong>Objectives:</strong> to segment a set of observations into naturally occurring, homogeneous groups.<br>
+<strong>Steps:</strong> choose a similarity/distance measure, select a clustering method, decide the number of clusters, and profile each cluster.<br>
+<strong>Applications:</strong> market segmentation based on customer behaviour or demographics.</p>
+
+<h3>5.7 Multi-Dimensional Scaling (MDS)</h3>
+<p><strong>Objectives:</strong> to visually map how objects (e.g. competing brands) are perceived relative to one another.<br>
+<strong>Procedure:</strong> collect similarity/preference data, apply the MDS algorithm to position objects in a low-dimensional space, and interpret the resulting map.<br>
+<strong>Applications:</strong> competitive brand-positioning maps.</p>
+
+<h3>5.8 Conjoint Analysis</h3>
+<p><strong>Objectives:</strong> to measure how much each attribute of a product (e.g. price, brand, features) contributes to overall consumer preference.<br>
+<strong>Procedure:</strong> select attributes to be tested, present respondents with combinations of attributes to rank or rate, and estimate each attribute's relative importance ("utility").<br>
+<strong>Applications:</strong> new-product design and pricing decisions.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Multivariate Analysis</dt><dd>Statistical techniques that analyse relationships among three or more variables simultaneously.</dd><dt>Multiple Regression</dt><dd>Regression analysis that predicts a dependent variable from two or more independent variables.</dd><dt>Discriminant Analysis</dt><dd>A technique that classifies observations into pre-defined categories based on predictor variables.</dd><dt>Factor Analysis</dt><dd>A technique that reduces a large number of correlated variables into a smaller number of underlying factors.</dd><dt>Cluster Analysis</dt><dd>A technique that groups observations into clusters of similar items.</dd><dt>Conjoint Analysis</dt><dd>A technique that measures the relative importance consumers place on different product attributes.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Multivariate techniques: multiple regression, discriminant analysis, factor analysis, cluster analysis, MDS, conjoint analysis.</li><li>Multiple regression: Y = a + b1X1 + b2X2 + ... + bnXn; multiple correlation R = overall predictive strength.</li><li>Discriminant analysis = classifies observations into pre-defined groups.</li><li>Factor analysis = reduces many variables into fewer underlying factors.</li><li>Cluster analysis = groups observations into similar segments (no pre-defined groups).</li><li>Conjoint analysis = measures relative importance of product attributes to preference.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What is multivariate analysis and when is it used?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Multivariate analysis refers to statistical techniques that analyse relationships among three or more variables simultaneously. It is used when a business problem is too complex to be understood through examining one variable (univariate) or two variables (bivariate) at a time.</div></details></li><li>Differentiate between factor analysis and cluster analysis.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Factor analysis reduces a large number of correlated variables into a smaller number of underlying factors, simplifying the variable set itself. Cluster analysis instead groups observations (such as customers) into homogeneous segments based on similarity across variables, without reducing the variables themselves.</div></details></li><li>Explain discriminant analysis with its objectives and an application.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Discriminant analysis identifies which predictor variables best distinguish between pre-defined groups and classifies new observations into the correct group. A common application is classifying loan applicants as high or low credit risk based on variables such as income, credit history and debt level.</div></details></li><li>What is conjoint analysis used for in business research?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Conjoint analysis measures how much each attribute of a product or service, such as price, brand and features, contributes to overall consumer preference, by having respondents evaluate combinations of attributes. It is commonly applied in new-product design and pricing decisions.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 4 ("Data Preparation and Analysis") of the course textbook &mdash; Business Research Methods (BA4205), Dr. T. Vetrivel &amp; Dr. P. Priyadarsini, Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic4-analysis-of-variance-anova.html">&larr; Analysis of Variance (ANOVA)</a><a href="topic6-hypothesis-testing.html">Hypothesis Testing &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

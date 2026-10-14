@@ -9,6 +9,7 @@ SUBJECT_LABELS = {
     "Banking-and-Financial-Services": "Banking and Financial Services",
     "Management-Concepts-and-Organisational-Behavior": "Management Concepts and Organisational Behaviour",
     "Statistics-for-Management": "Statistics for Management",
+    "Business-Research-Methods": "Business Research Methods",
 }
 
 def extract_title(html):

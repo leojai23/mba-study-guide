@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data Analysis: Meaning and Types | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#7a1f3d;--accent-dark:#4d1326;--accent-light:#faebf0;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#f0d7df;--card-shadow:0 1px 3px rgba(122,31,61,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Business Research Methods</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 4 &middot; Data Preparation and Analysis</h3>
+        <ol>
+          <li><a href="topic1-data-preparation-and-processing.html">1. Data Preparation and Processing</a></li><li><a class="active" href="topic2-data-analysis-meaning-and-types.html">2. Data Analysis: Meaning and Types</a></li><li><a href="topic3-bivariate-analysis-correlation-and-regression.html">3. Bi-variate Analysis: Correlation and Regression</a></li><li><a href="topic4-analysis-of-variance-anova.html">4. Analysis of Variance (ANOVA)</a></li><li><a href="topic5-multivariate-analysis.html">5. Multivariate Analysis</a></li><li><a href="topic6-hypothesis-testing.html">6. Hypothesis Testing</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Business Research Methods</a> &rsaquo; <a href="index.html">Unit 4</a> &rsaquo; Topic 2</div>
+    <h1><span class="unit-tag">Unit 4</span>Data Analysis: Meaning and Types</h1>
+    <p class="subtitle">Book: <em>Business Research Methods</em> (BA4205, Anna University MBA Sem II, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>With clean, tabulated data in hand, the researcher moves to analysis. This topic surveys what data analysis involves, its objectives, its two broad types, and the role of statistical software in carrying it out.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>2.1 Introduction to Data Analysis</h3>
+<p>Data analysis is the process of inspecting, cleaning, transforming and modelling data to extract useful information, draw conclusions, and support decision-making regarding the research objectives.</p>
+
+<h3>2.2 Objectives of Data Analysis</h3>
+<ul>
+<li>To summarise and describe the collected data meaningfully.</li>
+<li>To identify patterns, relationships or differences among variables.</li>
+<li>To test the hypotheses formulated at the start of the study.</li>
+<li>To provide a sound basis for conclusions and managerial recommendations.</li>
+</ul>
+
+<h3>2.3 Types of Data Analysis</h3>
+<table class="compare">
+<tr><th>Type</th><th>Description</th></tr>
+<tr><td><strong>Qualitative Analysis</strong></td><td>Interprets non-numerical data (text, images, observations) to identify themes and patterns.</td></tr>
+<tr><td><strong>Quantitative Analysis</strong></td><td>Applies statistical and mathematical techniques to numerical data.</td></tr>
+<tr><td><strong>Univariate Analysis</strong></td><td>Examines one variable at a time (e.g. mean, frequency distribution).</td></tr>
+<tr><td><strong>Bivariate Analysis</strong></td><td>Examines the relationship between two variables (e.g. correlation, cross-tabulation).</td></tr>
+<tr><td><strong>Multivariate Analysis</strong></td><td>Examines relationships among three or more variables simultaneously.</td></tr>
+</table>
+
+<h3>2.4 Phases of Data Analysis</h3>
+<ol>
+<li>Organising and cleaning the prepared data.</li>
+<li>Choosing the appropriate statistical technique based on the data type and research objective.</li>
+<li>Running the analysis, often using statistical software.</li>
+<li>Interpreting the output in the context of the research problem.</li>
+<li>Drawing conclusions and formulating recommendations.</li>
+</ol>
+
+<h3>2.5 Application of Statistical Software</h3>
+<p>Modern business research relies heavily on statistical software to perform the calculations involved in analysis quickly and accurately:</p>
+<table class="compare">
+<tr><th>Software</th><th>Description</th></tr>
+<tr><td><strong>SPSS</strong> (Statistical Package for the Social Sciences)</td><td>Widely used, menu-driven software popular for survey and social-science style business research.</td></tr>
+<tr><td><strong>SAS</strong> (Statistical Analysis System)</td><td>A powerful system used heavily in large-scale corporate and analytics environments.</td></tr>
+<tr><td><strong>STATA</strong></td><td>Popular in economics and econometrics-heavy research, combining a command language with menu-driven options.</td></tr>
+</table>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Data Analysis</dt><dd>The process of inspecting, cleaning, transforming and modelling data to extract useful information and support conclusions.</dd><dt>Univariate Analysis</dt><dd>Analysis that examines a single variable at a time.</dd><dt>Bivariate Analysis</dt><dd>Analysis that examines the relationship between two variables.</dd><dt>Multivariate Analysis</dt><dd>Analysis that examines relationships among three or more variables simultaneously.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Data analysis objectives: summarise data, identify patterns/relationships, test hypotheses, support conclusions.</li><li>Types by data: qualitative (non-numerical) vs quantitative (numerical/statistical).</li><li>Types by variable count: univariate (1) &rarr; bivariate (2) &rarr; multivariate (3+).</li><li>Analysis phases: organise/clean &rarr; choose technique &rarr; run analysis &rarr; interpret &rarr; conclude.</li><li>Common software: SPSS (survey-focused), SAS (large-scale corporate analytics), STATA (econometrics).</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What are the objectives of data analysis?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Data analysis aims to summarise and describe the collected data meaningfully, identify patterns and relationships or differences among variables, test the hypotheses formulated at the outset of the study, and provide a sound basis for conclusions and managerial recommendations.</div></details></li><li>Distinguish between univariate, bivariate and multivariate analysis.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Univariate analysis examines a single variable at a time, such as its mean or frequency distribution. Bivariate analysis examines the relationship between exactly two variables, such as through correlation or cross-tabulation. Multivariate analysis examines the relationships among three or more variables simultaneously, such as through multiple regression or factor analysis.</div></details></li><li>Name and briefly describe three statistical software packages used in business research.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">SPSS (Statistical Package for the Social Sciences) is a widely used, menu-driven package popular for survey-based research. SAS (Statistical Analysis System) is a powerful system used in large-scale corporate and analytics environments. STATA is popular in economics and econometrics-heavy research, combining a command language with menu-driven options.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 4 ("Data Preparation and Analysis") of the course textbook &mdash; Business Research Methods (BA4205), Dr. T. Vetrivel &amp; Dr. P. Priyadarsini, Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic1-data-preparation-and-processing.html">&larr; Data Preparation and Processing</a><a href="topic3-bivariate-analysis-correlation-and-regression.html">Bi-variate Analysis: Correlation and Regression &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

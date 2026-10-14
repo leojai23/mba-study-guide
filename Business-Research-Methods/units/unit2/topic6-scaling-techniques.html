@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scaling Techniques | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#7a1f3d;--accent-dark:#4d1326;--accent-light:#faebf0;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#f0d7df;--card-shadow:0 1px 3px rgba(122,31,61,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Business Research Methods</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Understanding Research Design and Measurement</h3>
+        <ol>
+          <li><a href="topic1-research-design-meaning-and-types.html">1. Research Design: Meaning and Types</a></li><li><a href="topic2-exploratory-and-descriptive-research-design.html">2. Exploratory and Descriptive Research Design</a></li><li><a href="topic3-experimental-causal-research-design.html">3. Experimental (Causal) Research Design</a></li><li><a href="topic4-variables-in-research.html">4. Variables in Research</a></li><li><a href="topic5-measurement-in-research.html">5. Measurement in Research</a></li><li><a class="active" href="topic6-scaling-techniques.html">6. Scaling Techniques</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Business Research Methods</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 6</div>
+    <h1><span class="unit-tag">Unit 2</span>Scaling Techniques</h1>
+    <p class="subtitle">Book: <em>Business Research Methods</em> (BA4205, Anna University MBA Sem II, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Scaling converts qualitative judgements into quantitative data that can be analysed statistically. This topic covers the types of scales and the main scaling techniques used in business research.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>6.1 Introduction to Scaling</h3>
+<p>Scaling is the process of assigning numbers to an object or respondent's attitude, opinion or perception so that it can be compared, ranked or statistically analysed against others.</p>
+
+<h3>6.2 Process of Scale Construction</h3>
+<ol>
+<li>Define the attitude or construct to be scaled.</li>
+<li>Generate a pool of potential items/statements.</li>
+<li>Select the scaling technique to apply.</li>
+<li>Pre-test the scale on a sample.</li>
+<li>Refine and finalise the scale based on pre-test results.</li>
+</ol>
+
+<h3>6.3 Types of Scales (Levels of Measurement)</h3>
+<table class="compare">
+<tr><th>Scale Type</th><th>Description</th></tr>
+<tr><td><strong>Nominal Scale</strong></td><td>Labels/categorises data with no inherent order (e.g. gender, brand names). Only counts/frequencies are meaningful.</td></tr>
+<tr><td><strong>Ordinal Scale</strong></td><td>Ranks data in order, but the gaps between ranks are not necessarily equal (e.g. satisfaction ranked "low/medium/high").</td></tr>
+<tr><td><strong>Interval Scale</strong></td><td>Ranked data with equal intervals between points, but no true/absolute zero (e.g. temperature in &deg;C).</td></tr>
+<tr><td><strong>Ratio Scale</strong></td><td>Interval scale with a true zero point, allowing meaningful ratios (e.g. sales revenue, age, income).</td></tr>
+</table>
+
+<h3>6.4 Scaling Techniques</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Ranking Scales (Comparative)</h4>
+<p>Respondents directly compare items against each other and arrange them in order (e.g. rank 5 brands from most to least preferred).</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Rating Scales (Non-Comparative)</h4>
+<p>Respondents evaluate each item independently against a fixed scale (e.g. a 5-point Likert scale from "strongly disagree" to "strongly agree").</p>
+
+<h3>6.5 Validity and Reliability of the Scaling Instrument</h3>
+<p>As with any measurement tool, a scale must be checked for validity (does it truly capture the intended attitude?) and reliability (does it give consistent results when repeated?) before its results can be trusted.</p>
+
+<h3>6.6 Importance of Scaling</h3>
+<p>Scaling allows subjective concepts such as attitudes, satisfaction and preference to be expressed numerically, enabling statistical comparison, ranking and hypothesis testing that would otherwise be impossible with purely qualitative descriptions.</p>
+
+<h3>6.7 Issues in Designing Attitude Scales</h3>
+<ul>
+<li>Choosing the appropriate number of scale points (too few loses precision; too many can confuse respondents).</li>
+<li>Avoiding leading, ambiguous or double-barrelled statements.</li>
+<li>Deciding whether to include a neutral midpoint.</li>
+<li>Ensuring the scale is balanced, with an equal number of favourable and unfavourable positions.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Nominal Scale</dt><dd>A scale that labels or categorises data with no inherent order.</dd><dt>Ordinal Scale</dt><dd>A scale that ranks data in order without equal gaps between ranks.</dd><dt>Interval Scale</dt><dd>A ranked scale with equal intervals between points but no true zero.</dd><dt>Ratio Scale</dt><dd>An interval scale with a true zero point, allowing meaningful ratios.</dd><dt>Likert Scale</dt><dd>A common rating scale on which respondents indicate their degree of agreement with a statement.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Scale construction: define construct &rarr; generate items &rarr; choose technique &rarr; pre-test &rarr; refine.</li><li>Four levels of measurement: nominal (labels) &lt; ordinal (ranks) &lt; interval (equal gaps, no true zero) &lt; ratio (true zero).</li><li>Ranking scales = comparative (items compared to each other); Rating scales = non-comparative (items rated independently).</li><li>Scale must have validity (measures the right thing) and reliability (consistent results).</li><li>Design issues: number of scale points, avoiding leading/ambiguous items, neutral midpoint, balance.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Explain the four levels of measurement scales with examples.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Nominal scales label data with no order, such as brand names. Ordinal scales rank data without equal gaps, such as low/medium/high satisfaction. Interval scales have equal intervals but no true zero, such as temperature in Celsius. Ratio scales have a true zero and allow meaningful ratios, such as sales revenue or age.</div></details></li><li>Differentiate between ranking and rating scales.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Ranking (comparative) scales require respondents to directly compare items against each other and arrange them in order, such as ranking five brands by preference. Rating (non-comparative) scales ask respondents to evaluate each item independently against a fixed scale, such as a 5-point Likert agreement scale.</div></details></li><li>What issues must be considered when designing an attitude scale?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Key issues include choosing an appropriate number of scale points, avoiding leading, ambiguous or double-barrelled statements, deciding whether to include a neutral midpoint, and ensuring the scale is balanced with an equal number of favourable and unfavourable positions.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Understanding Research Design and Measurement") of the course textbook &mdash; Business Research Methods (BA4205), Dr. T. Vetrivel &amp; Dr. P. Priyadarsini, Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic5-measurement-in-research.html">&larr; Measurement in Research</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>

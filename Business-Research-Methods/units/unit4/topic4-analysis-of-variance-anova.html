@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Analysis of Variance (ANOVA) | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#7a1f3d;--accent-dark:#4d1326;--accent-light:#faebf0;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#f0d7df;--card-shadow:0 1px 3px rgba(122,31,61,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Business Research Methods</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 4 &middot; Data Preparation and Analysis</h3>
+        <ol>
+          <li><a href="topic1-data-preparation-and-processing.html">1. Data Preparation and Processing</a></li><li><a href="topic2-data-analysis-meaning-and-types.html">2. Data Analysis: Meaning and Types</a></li><li><a href="topic3-bivariate-analysis-correlation-and-regression.html">3. Bi-variate Analysis: Correlation and Regression</a></li><li><a class="active" href="topic4-analysis-of-variance-anova.html">4. Analysis of Variance (ANOVA)</a></li><li><a href="topic5-multivariate-analysis.html">5. Multivariate Analysis</a></li><li><a href="topic6-hypothesis-testing.html">6. Hypothesis Testing</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Business Research Methods</a> &rsaquo; <a href="index.html">Unit 4</a> &rsaquo; Topic 4</div>
+    <h1><span class="unit-tag">Unit 4</span>Analysis of Variance (ANOVA)</h1>
+    <p class="subtitle">Book: <em>Business Research Methods</em> (BA4205, Anna University MBA Sem II, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Analysis of Variance (ANOVA) extends hypothesis testing to compare the means of three or more groups simultaneously. This topic covers its assumptions, applications, and the one-way and two-way classifications.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>4.1 Characteristics of Analysis of Variance (ANOVA)</h3>
+<p>ANOVA tests whether the means of three or more groups are statistically different from one another by comparing the variation <em>between</em> group means to the variation <em>within</em> groups, rather than comparing means pair by pair.</p>
+
+<h3>4.2 Assumptions of ANOVA</h3>
+<ul>
+<li>Observations are independent of one another.</li>
+<li>Each group/population is approximately normally distributed.</li>
+<li>The groups have approximately equal variances (homogeneity of variance).</li>
+<li>The dependent variable is measured on an interval or ratio scale.</li>
+</ul>
+
+<h3>4.3 Applications of ANOVA</h3>
+<ul>
+<li>Comparing average sales performance across more than two sales regions.</li>
+<li>Comparing customer satisfaction scores across more than two store formats.</li>
+<li>Comparing the effectiveness of more than two advertising campaigns.</li>
+</ul>
+
+<h3>4.4 ANOVA Techniques</h3>
+<p>ANOVA works by partitioning the total variation in the data into components: variation <em>between</em> groups (explained by the factor being studied) and variation <em>within</em> groups (random/error variation). The ratio of these two forms the <strong>F-statistic</strong>:</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>F = (Variance Between Groups) &divide; (Variance Within Groups)</strong></p>
+<p>A large F-value suggests the group means differ more than would be expected by chance alone.</p>
+
+<h3>4.5 Analysis of Variance for One-Way Classification</h3>
+<p>One-way ANOVA tests the effect of a single factor (e.g. "region") on a dependent variable (e.g. "sales"), comparing means across the factor's different levels/categories.</p>
+
+<h3>4.6 Analysis of Variance for Two-Way Classification</h3>
+<p>Two-way ANOVA tests the effect of two factors simultaneously (e.g. "region" and "season" on sales), and can also test whether the two factors interact &mdash; that is, whether the effect of one factor depends on the level of the other.</p>
+<table class="compare">
+<tr><th>Aspect</th><th>One-Way ANOVA</th><th>Two-Way ANOVA</th></tr>
+<tr><td>Number of factors</td><td>One</td><td>Two</td></tr>
+<tr><td>Can test interaction effects?</td><td>No</td><td>Yes</td></tr>
+<tr><td>Example</td><td>Sales by region</td><td>Sales by region and season</td></tr>
+</table>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Analysis of Variance (ANOVA)</dt><dd>A statistical technique that tests whether the means of three or more groups differ by comparing between-group and within-group variation.</dd><dt>F-Statistic</dt><dd>The ratio of between-group variance to within-group variance used in ANOVA to test for significant differences.</dd><dt>One-Way ANOVA</dt><dd>ANOVA used to test the effect of a single factor on a dependent variable across its different levels.</dd><dt>Two-Way ANOVA</dt><dd>ANOVA used to test the effect of two factors, including any interaction between them, on a dependent variable.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>ANOVA compares means of 3+ groups via between-group vs within-group variance.</li><li>Assumptions: independent observations, normal distribution, equal variances, interval/ratio data.</li><li>F = Variance Between Groups / Variance Within Groups; large F suggests real group differences.</li><li>One-way ANOVA: one factor. Two-way ANOVA: two factors, can test interaction effects.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What is ANOVA and what assumptions underlie it?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Analysis of Variance (ANOVA) tests whether the means of three or more groups differ significantly by comparing the variation between group means to the variation within groups. It assumes the observations are independent, each group is approximately normally distributed, the groups have roughly equal variances, and the dependent variable is measured on an interval or ratio scale.</div></details></li><li>Explain how the F-statistic is used in ANOVA.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The F-statistic is the ratio of the variance between groups to the variance within groups. A large F-value indicates that the differences between group means are larger than would be expected from random variation alone, leading to rejection of the null hypothesis that all group means are equal.</div></details></li><li>Differentiate between one-way and two-way ANOVA.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">One-way ANOVA tests the effect of a single factor on a dependent variable across its different levels, such as sales across regions. Two-way ANOVA tests the effect of two factors simultaneously, such as region and season on sales, and can additionally test whether the two factors interact with each other.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 4 ("Data Preparation and Analysis") of the course textbook &mdash; Business Research Methods (BA4205), Dr. T. Vetrivel &amp; Dr. P. Priyadarsini, Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic3-bivariate-analysis-correlation-and-regression.html">&larr; Bi-variate Analysis: Correlation and Regression</a><a href="topic5-multivariate-analysis.html">Multivariate Analysis &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

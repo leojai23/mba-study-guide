@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sampling and Sampling Techniques | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#7a1f3d;--accent-dark:#4d1326;--accent-light:#faebf0;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#f0d7df;--card-shadow:0 1px 3px rgba(122,31,61,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Business Research Methods</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 3 &middot; Collection of Data</h3>
+        <ol>
+          <li><a href="topic1-data-collection-and-primary-data.html">1. Data Collection and Primary Data</a></li><li><a href="topic2-questionnaire-design.html">2. Questionnaire Design</a></li><li><a href="topic3-observation-and-survey-method.html">3. Observation and Survey Method</a></li><li><a href="topic4-interview-method-and-experiments.html">4. Interview Method and Experiments</a></li><li><a href="topic5-secondary-data.html">5. Secondary Data</a></li><li><a class="active" href="topic6-sampling-and-sampling-techniques.html">6. Sampling and Sampling Techniques</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Business Research Methods</a> &rsaquo; <a href="index.html">Unit 3</a> &rsaquo; Topic 6</div>
+    <h1><span class="unit-tag">Unit 3</span>Sampling and Sampling Techniques</h1>
+    <p class="subtitle">Book: <em>Business Research Methods</em> (BA4205, Anna University MBA Sem II, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Since it is rarely practical to study an entire population, researchers draw a sample. This topic covers the basics of sampling and the probability and non-probability techniques used to select a sample.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>6.1 Sampling: Introduction</h3>
+<p>Sampling is the process of selecting a subset (sample) of individuals or units from a larger population, so that conclusions drawn from the sample can be used to make inferences about the whole population.</p>
+
+<h3>6.2 Basic Concepts in Sampling</h3>
+<ul>
+<li><strong>Population</strong> &mdash; the entire group of individuals or units of interest to the study.</li>
+<li><strong>Sample</strong> &mdash; a subset of the population actually studied.</li>
+<li><strong>Sampling Frame</strong> &mdash; the actual list or source from which the sample is drawn.</li>
+<li><strong>Sampling Unit</strong> &mdash; the individual element selected from the sampling frame.</li>
+<li><strong>Sampling Error</strong> &mdash; the difference between a sample result and the true population value, arising because only a subset was studied.</li>
+</ul>
+
+<h3>6.3 Characteristics of a Good Sample</h3>
+<ul>
+<li>Representative of the population from which it is drawn.</li>
+<li>Adequate in size to produce statistically reliable results.</li>
+<li>Selected using a method that avoids systematic bias.</li>
+<li>Practical and economical to draw and study within the available budget and time.</li>
+</ul>
+
+<h3>6.4 Sample Size and Sampling Plan</h3>
+<p>Sample size depends on the desired level of precision, the population's variability, the confidence level required, and available resources. A sampling plan specifies the target population, the sampling frame, the sampling unit, the sampling technique, and the sample size before data collection begins.</p>
+
+<h3>6.5 Advantages and Disadvantages of Sampling</h3>
+<table class="compare">
+<tr><th>Advantages</th><th>Disadvantages</th></tr>
+<tr><td>Saves time and cost compared to a full census.</td><td>Introduces sampling error since not every unit is studied.</td></tr>
+<tr><td>Makes large-scale studies practically feasible.</td><td>A poorly drawn sample can be unrepresentative and misleading.</td></tr>
+<tr><td>Allows faster data collection and quicker results.</td><td>Requires sound statistical knowledge to design and interpret correctly.</td></tr>
+</table>
+
+<h3>6.6 Sampling Techniques/Methods</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Probability Sampling</h4>
+<p>Every unit in the population has a known, non-zero chance of being selected, allowing formal statistical inference. Common methods include simple random sampling, systematic sampling, stratified sampling, and cluster sampling.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Non-Probability Sampling</h4>
+<p>Units are selected based on researcher judgement or convenience rather than known probabilities. Common methods include convenience sampling, judgement/purposive sampling, quota sampling, and snowball sampling.</p>
+
+<h3>6.7 Probability versus Non-Probability Sampling</h3>
+<table class="compare">
+<tr><th>Aspect</th><th>Probability Sampling</th><th>Non-Probability Sampling</th></tr>
+<tr><td>Selection basis</td><td>Known chance of selection for every unit</td><td>Researcher judgement or convenience</td></tr>
+<tr><td>Generalisability</td><td>Results can be statistically generalised</td><td>Limited generalisability</td></tr>
+<tr><td>Cost and time</td><td>Generally higher</td><td>Generally lower, faster</td></tr>
+<tr><td>Typical use</td><td>Conclusive, large-scale studies</td><td>Exploratory studies, limited resources</td></tr>
+</table>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Sampling</dt><dd>The process of selecting a subset of a population so that conclusions from the subset can be generalised to the whole population.</dd><dt>Sampling Frame</dt><dd>The actual list or source from which a sample is drawn.</dd><dt>Sampling Error</dt><dd>The difference between a sample result and the true population value, arising because only a subset was studied.</dd><dt>Probability Sampling</dt><dd>A sampling approach in which every population unit has a known, non-zero chance of selection.</dd><dt>Non-Probability Sampling</dt><dd>A sampling approach in which units are selected based on judgement or convenience rather than known probabilities.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Key terms: population, sample, sampling frame, sampling unit, sampling error.</li><li>Good sample: representative, adequate size, unbiased selection, practical/economical.</li><li>Sample size depends on: desired precision, population variability, confidence level, resources.</li><li>Sampling advantages: saves time/cost, feasible at scale; disadvantage: introduces sampling error.</li><li>Probability sampling (known selection chance, generalisable) vs non-probability (judgement/convenience, limited generalisability).</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Define sampling and explain the characteristics of a good sample.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Sampling is the process of selecting a subset of a population so that conclusions drawn from the subset can be generalised to the whole population. A good sample is representative of the population, adequate in size for reliable results, selected through a method that avoids systematic bias, and practical and economical to draw within available resources.</div></details></li><li>Distinguish between probability and non-probability sampling.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">In probability sampling, every unit in the population has a known, non-zero chance of being selected, allowing results to be statistically generalised; examples include simple random, systematic, stratified and cluster sampling. In non-probability sampling, units are selected based on researcher judgement or convenience, which is faster and cheaper but limits how far results can be generalised; examples include convenience, judgement, quota and snowball sampling.</div></details></li><li>What factors determine sample size?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Sample size is determined by the desired level of precision in the results, the variability of the population being studied, the confidence level required, and the time and budget available for the study.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 3 ("Collection of Data") of the course textbook &mdash; Business Research Methods (BA4205), Dr. T. Vetrivel &amp; Dr. P. Priyadarsini, Thakur Publication.</p>
+
+    <div class="page-nav"><a href="topic5-secondary-data.html">&larr; Secondary Data</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>
