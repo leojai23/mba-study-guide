@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Organisation Structure, Formal/Informal Design and Control | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#a1591f;--accent-dark:#6b3a14;--accent-light:#f7ebdd;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#e8d7c3;--card-shadow:0 1px 3px rgba(161,89,31,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Management Concepts and Organisational Behaviour</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Planning and Organising</h3>
+        <ol>
+          <li><a href="topic1-planning-meaning-types-process.html">1. Planning: Meaning, Scope, Process and Types</a></li><li><a href="topic2-forecasting.html">2. Forecasting: Meaning, Techniques and Methods</a></li><li><a href="topic3-mbo-policies-strategies.html">3. Management by Objectives, Policies and Strategies</a></li><li><a href="topic4-decision-making.html">4. Decision-Making: Types, Process and Approaches</a></li><li><a href="topic5-organising-delegation-centralisation.html">5. Organising, Delegation and Centralisation/Decentralisation</a></li><li><a class="active" href="topic6-organisation-structure-types-control.html">6. Organisation Structure, Formal/Informal Design and Control</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Management Concepts and Organisational Behaviour</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 6</div>
+    <h1><span class="unit-tag">Unit 2</span>Organisation Structure, Formal/Informal Design and Control</h1>
+    <p class="subtitle">Book: <em>Management Concepts and Organisational Behaviour</em> (BA4102, Anna University MBA Sem I)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This closing topic covers the two broad types of organisation structure &mdash; formal and informal &mdash; the major structural forms an organisation can adopt, and the final function of management, control, which closes the planning-organising-controlling loop.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>6.1 Formal and Informal Organisation</h3>
+<table class="compare">
+<tr><th>Basis</th><th>Formal Organisation</th><th>Informal Organisation</th></tr>
+<tr><td>Origin</td><td>Deliberately designed by management</td><td>Spontaneously formed by employees</td></tr>
+<tr><td>Structure</td><td>Defined hierarchy, official rules</td><td>No official structure; based on personal relationships</td></tr>
+<tr><td>Communication</td><td>Follows official channels</td><td>Follows the "grapevine," faster but less reliable</td></tr>
+<tr><td>Purpose</td><td>Achieving organisational objectives</td><td>Satisfying social, psychological needs of members</td></tr>
+</table>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Advantages and Disadvantages</h4>
+<ul>
+<li><strong>Formal Organisation:</strong> Advantage &mdash; clarity of roles and accountability; Disadvantage &mdash; can be rigid and slow to adapt.</li>
+<li><strong>Informal Organisation:</strong> Advantage &mdash; fast communication and strong social support; Disadvantage &mdash; can spread rumours and resist formal change if its norms conflict with management's goals.</li>
+</ul>
+
+<h3>6.2 Types of Organisation Structure</h3>
+<table class="compare">
+<tr><th>Structure</th><th>Description</th></tr>
+<tr><td><strong>Simple Structure</strong></td><td>Flat structure with one owner-manager making most decisions directly; suits small organisations.</td></tr>
+<tr><td><strong>Functional Structure</strong></td><td>Departments grouped by specialism (production, marketing, finance), each led by a functional expert reporting to a central head.</td></tr>
+<tr><td><strong>Divisional Structure</strong></td><td>Self-contained divisions organised around products, markets or regions, each with its own functions.</td></tr>
+<tr><td><strong>Matrix Structure</strong></td><td>Staff report to both a functional manager and a project/product manager at the same time.</td></tr>
+<tr><td><strong>Team-Based Structure</strong></td><td>Built around cross-functional teams rather than fixed departments.</td></tr>
+<tr><td><strong>Network/Virtual Structure</strong></td><td>A small core organisation outsources most activities to a network of external partners.</td></tr>
+<tr><td><strong>Boundaryless Organisation</strong></td><td>Minimises internal and external structural barriers, relying on technology and flexible teams instead of rigid reporting lines.</td></tr>
+</table>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Mechanistic vs Organic Structures</h4>
+<p><strong>Mechanistic structures</strong> are rigid, highly formalised and centralised, suited to stable environments where efficiency matters most (similar to a Functional structure). <strong>Organic structures</strong> are flexible, loosely defined and decentralised, suited to changing environments where adaptability matters most (similar to Matrix or Network structures).</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Impact of Technology on Organisational Design</h4>
+<p>Modern information technology reduces the need for layers of middle management to pass information up and down the hierarchy, enabling flatter structures, remote and virtual teams, and faster coordination across departments and even across organisations.</p>
+
+<h3>6.3 Control &mdash; Meaning and Function</h3>
+<p>Control is the management function of measuring actual performance against planned performance and taking corrective action to ensure organisational objectives are achieved. It closes the loop with planning: planning sets the standard, and control checks whether that standard is being met.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Process of Control</h4>
+<ol>
+<li><strong>Setting Standards:</strong> Establishing the performance standards derived from the organisation's plans.</li>
+<li><strong>Measuring Actual Performance:</strong> Tracking what is actually being achieved.</li>
+<li><strong>Comparing Performance with Standards:</strong> Identifying any deviation between actual and planned performance.</li>
+<li><strong>Analysing Deviations:</strong> Investigating the causes of significant deviations.</li>
+<li><strong>Taking Corrective Action:</strong> Adjusting operations, or occasionally the plan itself, to bring performance back on track.</li>
+</ol>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Characteristics of a Good Control System</h4>
+<ul>
+<li>Should be simple to understand and economical to operate.</li>
+<li>Should be timely, flagging deviations quickly enough for corrective action to matter.</li>
+<li>Should be flexible enough to adapt to changing plans and circumstances.</li>
+<li>Should point directly to where and why performance is off-track, not just that it is.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Formal Organisation</dt><dd>A deliberately designed structure with an official hierarchy, rules and communication channels, built to achieve organisational objectives.</dd><dt>Informal Organisation</dt><dd>A spontaneously formed network of relationships among employees, based on personal connections rather than official structure.</dd><dt>Mechanistic Structure</dt><dd>A rigid, highly formalised and centralised organisational structure suited to stable environments.</dd><dt>Organic Structure</dt><dd>A flexible, loosely defined and decentralised organisational structure suited to changing environments.</dd><dt>Control</dt><dd>The management function of measuring actual performance against planned performance and taking corrective action.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Formal organisation = deliberately designed, official channels; Informal = spontaneous, grapevine communication, social needs.</li><li>Structure types: Simple, Functional, Divisional, Matrix, Team-Based, Network/Virtual, Boundaryless.</li><li>Mechanistic (rigid, stable environment) vs Organic (flexible, changing environment) structures.</li><li>Control process: Set Standards &rarr; Measure Performance &rarr; Compare with Standards &rarr; Analyse Deviations &rarr; Take Corrective Action.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Differentiate between formal and informal organisation.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Formal organisation is deliberately designed by management with an official hierarchy and communication channels, aimed at achieving organisational objectives. Informal organisation forms spontaneously among employees based on personal relationships, communicates through the grapevine, and mainly serves members' social and psychological needs.</div></details></li><li>Explain the major types of organisation structure.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Simple structure suits small firms with one decision-maker; Functional structure groups departments by specialism; Divisional structure creates self-contained units by product/market/region; Matrix structure has dual reporting to functional and project managers; Team-Based structure organises around cross-functional teams; Network/Virtual structure outsources most activities to partners; and Boundaryless organisations minimise structural barriers using technology.</div></details></li><li>Differentiate between mechanistic and organic organisation structures.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Mechanistic structures are rigid, highly formalised and centralised, suited to stable environments where efficiency matters most. Organic structures are flexible, loosely defined and decentralised, suited to changing environments where adaptability matters most.</div></details></li><li>Explain the process of control in management.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Setting performance standards derived from plans, measuring actual performance, comparing it against the standards to find deviations, analysing the causes of significant deviations, and taking corrective action to bring performance back in line with the plan.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Planning and Organising") of the course textbook &mdash; Management Concepts and Organisational Behaviour (BA4102).</p>
+
+    <div class="page-nav"><a href="topic5-organising-delegation-centralisation.html">&larr; Organising, Delegation and Centralisation/Decentralisation</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>

@@ -7,6 +7,7 @@ os.chdir(os.path.join(os.path.dirname(__file__), ".."))
 SUBJECT_LABELS = {
     "Strategic-Management": "Strategic Management",
     "Banking-and-Financial-Services": "Banking and Financial Services",
+    "Management-Concepts-and-Organisational-Behavior": "Management Concepts and Organisational Behaviour",
 }
 
 def extract_title(html):
