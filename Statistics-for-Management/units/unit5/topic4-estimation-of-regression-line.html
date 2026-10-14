@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Estimation of the Regression Line | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 5 &middot; Correlation and Regression</h3>
+        <ol>
+          <li><a href="topic1-correlation-meaning-types-karl-pearson.html">1. Correlation: Meaning, Types and Karl Pearson's Coefficient</a></li><li><a href="topic2-coefficient-of-determination-rank-correlation.html">2. Coefficient of Determination and Rank Correlation</a></li><li><a href="topic3-regression-lines-least-squares.html">3. Regression: Regression Lines and the Method of Least Squares</a></li><li><a class="active" href="topic4-estimation-of-regression-line.html">4. Estimation of the Regression Line</a></li><li><a href="topic5-standard-error-of-estimate.html">5. Standard Error of Estimate</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 5</a> &rsaquo; Topic 4</div>
+    <h1><span class="unit-tag">Unit 5</span>Estimation of the Regression Line</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This topic focuses on how a fitted regression line is actually used to make predictions, working through the calculation steps and the important distinction between interpolation and extrapolation.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>4.1 From Data to a Fitted Regression Equation</h3>
+<p>Once a and b have been calculated using the Method of Least Squares (covered in the previous topic), the fitted regression equation &#374; = a + bX can be used to <strong>estimate</strong> the value of Y for any given value of X. The "hat" symbol on &#374; indicates this is a predicted (estimated) value, not an observed one.</p>
+
+<h3>4.2 Steps to Estimate the Regression Line</h3>
+<ol>
+<li><strong>Calculate the Means:</strong> Find X&#772; and Y&#772; for the given data.</li>
+<li><strong>Calculate the Slope (b):</strong> Using the least-squares formula from the previous topic.</li>
+<li><strong>Calculate the Intercept (a):</strong> Using a = Y&#772; &minus; bX&#772;.</li>
+<li><strong>Write the Fitted Equation:</strong> &#374; = a + bX.</li>
+<li><strong>Use the Equation for Prediction:</strong> Substitute any specific value of X into the fitted equation to obtain the predicted &#374;.</li>
+</ol>
+
+<h3>4.3 Interpreting the Slope and Intercept</h3>
+<ul>
+<li><strong>Slope (b):</strong> For every one-unit increase in X, Y is predicted to change by b units (increase if b is positive, decrease if b is negative).</li>
+<li><strong>Intercept (a):</strong> The predicted value of Y when X = 0; this is only practically meaningful if X = 0 is a realistic, observed value within the data's range.</li>
+</ul>
+
+<h3>4.4 Interpolation vs Extrapolation</h3>
+<table class="compare">
+<tr><th>Term</th><th>Meaning</th><th>Reliability</th></tr>
+<tr><td><strong>Interpolation</strong></td><td>Predicting Y for an X-value that falls within the range of X-values actually observed in the data.</td><td>Generally reliable, since the fitted relationship is supported by nearby observed data.</td></tr>
+<tr><td><strong>Extrapolation</strong></td><td>Predicting Y for an X-value that falls outside the range of X-values actually observed.</td><td>Riskier, since there is no guarantee the same linear relationship continues to hold beyond the observed range.</td></tr>
+</table>
+<p>As a general rule, extrapolation should be done cautiously, if at all, and any resulting prediction should be clearly flagged as less certain than an interpolated one.</p>
+
+<h3>4.5 Checking the Regression Fit</h3>
+<p>Before relying on a fitted regression line for prediction, it is good practice to check: the correlation coefficient r (and r&sup2;) for the strength of the linear relationship, a scatter plot of the data to visually confirm linearity, and whether any outliers may be unduly influencing the fitted line.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Fitted Regression Equation</dt><dd>The specific regression line, with calculated values of a and b, used to predict the dependent variable from the independent variable.</dd><dt>Interpolation</dt><dd>Predicting a value for an independent-variable value that falls within the range of data actually observed.</dd><dt>Extrapolation</dt><dd>Predicting a value for an independent-variable value that falls outside the range of data actually observed, considered less reliable than interpolation.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Steps: calculate means (Xbar, Ybar) &rarr; calculate slope b &rarr; calculate intercept a = Ybar - b*Xbar &rarr; write Y-hat = a + bX &rarr; substitute X to predict Y-hat.</li><li>Slope b interpretation: Y changes by b units per 1-unit increase in X; Intercept a: predicted Y when X=0 (meaningful only if X=0 is realistic).</li><li>Interpolation (within observed X range) = more reliable; Extrapolation (outside observed X range) = riskier, less reliable.</li><li>Check regression fit via r/r-squared, a scatter plot for linearity, and checking for influential outliers.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Outline the steps used to estimate and apply a regression line.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Calculate the means of X and Y, calculate the slope b using the least-squares formula, calculate the intercept a = Ybar - b x Xbar, write the fitted equation Y-hat = a + bX, and substitute any specific X-value into this equation to obtain the predicted Y-hat.</div></details></li><li>How should the slope and intercept of a regression line be interpreted?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The slope b indicates that for every one-unit increase in X, Y is predicted to change by b units (increasing if b is positive, decreasing if negative). The intercept a is the predicted value of Y when X = 0, which is only practically meaningful if X = 0 falls within a realistic range of the data.</div></details></li><li>Differentiate between interpolation and extrapolation. Why does this distinction matter?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Interpolation predicts Y for an X-value within the range of data actually observed, and is generally reliable. Extrapolation predicts Y for an X-value outside the observed range, and is riskier because there is no guarantee the same linear relationship holds beyond the data actually collected; extrapolated predictions should be treated with more caution.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 5 ("Correlation and Regression") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic3-regression-lines-least-squares.html">&larr; Regression: Regression Lines and the Method of Least Squares</a><a href="topic5-standard-error-of-estimate.html">Standard Error of Estimate &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

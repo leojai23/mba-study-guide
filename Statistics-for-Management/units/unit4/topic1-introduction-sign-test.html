@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Introduction to Non-Parametric Tests and the Sign Test | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 4 &middot; Non-Parametric Tests</h3>
+        <ol>
+          <li><a class="active" href="topic1-introduction-sign-test.html">1. Introduction to Non-Parametric Tests and the Sign Test</a></li><li><a href="topic2-mann-whitney-u-test.html">2. Rank Sum Test: Mann-Whitney U Test</a></li><li><a href="topic3-kruskal-wallis-test.html">3. Kruskal-Wallis Test</a></li><li><a href="topic4-kolmogorov-smirnov-run-test.html">4. Kolmogorov-Smirnov Test and One Sample Run Test</a></li><li><a href="topic5-chi-square-goodness-of-fit-variance.html">5. Chi-Square Test for Goodness of Fit and Single Sample Standard Deviation</a></li><li><a href="topic6-chi-square-independence-of-attributes.html">6. Chi-Square Test for Independence of Attributes</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 4</a> &rsaquo; Topic 1</div>
+    <h1><span class="unit-tag">Unit 4</span>Introduction to Non-Parametric Tests and the Sign Test</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Unit 3's tests all assumed the population data followed a known distribution (usually normal). This unit covers non-parametric tests, which make far fewer assumptions. This opening topic introduces the sign test, one of the simplest non-parametric tests.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>1.1 What Are Non-Parametric Tests?</h3>
+<p>Non-parametric tests are hypothesis tests that do not require the population to follow a specific distribution (such as normal), and often work directly with the ranks or signs of data rather than the raw numerical values themselves.</p>
+
+<h3>1.2 When to Use Non-Parametric Tests</h3>
+<ul>
+<li>When the population distribution is unknown or clearly not normal.</li>
+<li>When the sample size is very small, making it hard to verify normality.</li>
+<li>When the data is ordinal (ranked) rather than truly numerical/interval-scaled.</li>
+<li>When the data contains outliers that would distort a parametric test like the t-test.</li>
+</ul>
+
+<h3>1.3 Non-Parametric vs Parametric Tests</h3>
+<table class="compare">
+<tr><th>Basis</th><th>Parametric Tests</th><th>Non-Parametric Tests</th></tr>
+<tr><td>Distribution Assumption</td><td>Requires a known distribution (usually normal)</td><td>Makes no (or very few) distributional assumptions</td></tr>
+<tr><td>Data Type</td><td>Interval/ratio-scaled numerical data</td><td>Works with ordinal data, ranks, or signs too</td></tr>
+<tr><td>Statistical Power</td><td>Generally more powerful when assumptions hold</td><td>Generally less powerful, but more robust when assumptions fail</td></tr>
+<tr><td>Examples</td><td>Z-test, t-test, F-test, ANOVA</td><td>Sign test, Mann-Whitney U, Kruskal-Wallis, Chi-Square</td></tr>
+</table>
+
+<h3>1.4 The Sign Test &mdash; Single Sample</h3>
+<p>The single-sample sign test checks whether a population median equals a hypothesised value, using only the <strong>sign</strong> (+ or &minus;) of each observation's deviation from that hypothesised median, ignoring the actual magnitude of the deviation.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Procedure</h4>
+<ol>
+<li>State H&#8320;: population median = a specified value.</li>
+<li>For each observation, record a "+" if it is above the hypothesised median, a "&minus;" if below, and discard any observation exactly equal to it.</li>
+<li>Count the number of plus signs and minus signs.</li>
+<li>Under H&#8320;, the number of plus signs follows a Binomial distribution with p = 0.5; this Binomial (or its normal approximation for larger n) is used to test whether the observed split is consistent with chance.</li>
+</ol>
+
+<h3>1.5 The Sign Test &mdash; Paired Data</h3>
+<p>The paired sign test is the non-parametric counterpart to the paired t-test from Unit 3, used to compare two related/matched samples (e.g. "before" and "after" scores) without assuming the differences are normally distributed.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Procedure</h4>
+<ol>
+<li>For each pair, calculate the difference and record only its sign (+ if the second value is greater, &minus; if smaller, discard ties).</li>
+<li>Test whether the resulting mix of plus and minus signs is consistent with there being no systematic difference between the paired conditions (H&#8320;: equal numbers of + and &minus; signs are equally likely, i.e. p = 0.5).</li>
+</ol>
+
+<h3>1.6 Advantages and Limitations of the Sign Test</h3>
+<ul>
+<li><strong>Advantage:</strong> Extremely simple to apply and requires no distributional assumptions.</li>
+<li><strong>Limitation:</strong> Because it discards the magnitude of each difference and uses only its sign, it is less statistically powerful than tests (parametric or non-parametric) that use more information from the data.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Non-Parametric Test</dt><dd>A hypothesis test that does not require the population to follow a specific distribution, often working with ranks or signs rather than raw values.</dd><dt>Sign Test</dt><dd>A non-parametric test that uses only the sign (+ or -) of each observation's deviation from a hypothesised value, ignoring magnitude.</dd><dt>Paired Sign Test</dt><dd>A non-parametric test comparing two related samples using only the sign of the difference within each matched pair.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Non-parametric tests make no/few distributional assumptions; used for unknown/non-normal distributions, ordinal data, small samples, or outlier-prone data.</li><li>Parametric (Z/t/F/ANOVA) vs Non-parametric (Sign, Mann-Whitney, Kruskal-Wallis, Chi-Square): distributional assumptions vs none; generally more power vs more robustness.</li><li>Single-sample sign test: counts +/- signs of deviations from hypothesised median; under H0, number of + signs ~ Binomial(n, 0.5).</li><li>Paired sign test: non-parametric counterpart to paired t-test, uses sign of each pair's difference only.</li><li>Sign test advantage: simple, few assumptions; limitation: ignores magnitude, so less powerful than tests using full data.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>When are non-parametric tests preferred over parametric tests?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Non-parametric tests are preferred when the population distribution is unknown or clearly not normal, when sample sizes are too small to verify normality, when data is ordinal rather than truly numerical, or when outliers would distort a parametric test.</div></details></li><li>Explain the procedure of the single-sample sign test.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">State H0 that the population median equals a specified value; record a plus sign for each observation above that value and a minus sign for each below (discarding ties); count the pluses and minuses; since the number of plus signs follows a Binomial(n, 0.5) distribution under H0, test whether the observed split is consistent with this.</div></details></li><li>What is the paired sign test used for?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">It is the non-parametric counterpart to the paired t-test, used to compare two related/matched samples (such as before-and-after scores) by looking only at the sign of the difference within each pair, without assuming the differences are normally distributed.</div></details></li><li>State an advantage and a limitation of the sign test.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Advantage: it is extremely simple to apply and requires no distributional assumptions. Limitation: because it discards the magnitude of each difference and uses only its sign, it is less statistically powerful than tests that use more information from the data.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 4 ("Non-Parametric Tests") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><span></span><a href="topic2-mann-whitney-u-test.html">Rank Sum Test: Mann-Whitney U Test &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

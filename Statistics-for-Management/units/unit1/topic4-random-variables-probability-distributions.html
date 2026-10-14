@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Random Variables and Probability Distributions | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 1 &middot; Probability and Probability Distributions</h3>
+        <ol>
+          <li><a href="topic1-basic-concepts-of-probability.html">1. Basic Concepts of Probability</a></li><li><a href="topic2-counting-rules-sample-space-events.html">2. Counting Rules, Sample Space and Events</a></li><li><a href="topic3-theorems-conditional-probability-bayes.html">3. Theorems of Probability, Conditional Probability and Bayes' Theorem</a></li><li><a class="active" href="topic4-random-variables-probability-distributions.html">4. Random Variables and Probability Distributions</a></li><li><a href="topic5-binomial-poisson-distributions.html">5. Binomial and Poisson Distributions</a></li><li><a href="topic6-normal-distribution.html">6. Normal Distribution</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 1</a> &rsaquo; Topic 4</div>
+    <h1><span class="unit-tag">Unit 1</span>Random Variables and Probability Distributions</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This topic bridges basic probability and probability distributions by introducing random variables &mdash; the way numerical outcomes are formally assigned to the results of a random experiment.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>4.1 Random Variable &mdash; Concept</h3>
+<p>A random variable is a variable whose value is a numerical outcome of a random experiment. It assigns a real number to every possible outcome in the sample space.</p>
+
+<h3>4.2 Discrete Random Variables</h3>
+<p>A discrete random variable can take only a countable number of distinct values (e.g. the number of defective items in a batch of 10, which can only be 0, 1, 2, &hellip;, 10).</p>
+
+<h3>4.3 Continuous Random Variables</h3>
+<p>A continuous random variable can take any value within a given range (e.g. the exact weight of a product, or the time taken to complete a task), rather than being restricted to specific countable values.</p>
+
+<h3>4.4 Expected Value Concept</h3>
+<p>The expected value of a random variable is its long-run average value across many repetitions, calculated as:</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>E(X) = &Sigma; [x &times; P(x)]</strong></p>
+<p>where the sum runs over every possible value x that the random variable X can take, weighted by its probability P(x). The expected value is also called the <strong>mean of the probability distribution</strong>, often denoted &mu;.</p>
+
+<h3>4.5 Probability Mass Function (PMF)</h3>
+<p>For a discrete random variable, the probability mass function gives the probability that the random variable takes each specific value: <strong>P(X = x)</strong>. Every PMF must satisfy P(x) &ge; 0 for all x, and &Sigma; P(x) = 1 across all possible values.</p>
+
+<h3>4.6 Probability Density Function (PDF)</h3>
+<p>For a continuous random variable, probability is described by a probability density function, where the probability of X falling within a given range is the area under the curve of the function over that range. Since a continuous variable has infinitely many possible values, the probability of it taking any single exact value is zero; only probabilities over an interval are meaningful.</p>
+
+<h3>4.7 Types of Probability Distribution</h3>
+<p>Probability distributions are classified as <strong>discrete</strong> (built from a PMF, e.g. Binomial and Poisson Distributions, covered in the next topic) or <strong>continuous</strong> (built from a PDF, e.g. the Normal Distribution, covered later in this unit).</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Random Variable</dt><dd>A variable whose value is a numerical outcome of a random experiment, assigning a real number to every outcome in the sample space.</dd><dt>Discrete Random Variable</dt><dd>A random variable that can take only a countable number of distinct values.</dd><dt>Continuous Random Variable</dt><dd>A random variable that can take any value within a given range.</dd><dt>Expected Value E(X)</dt><dd>The long-run average value of a random variable, calculated as the sum of each value weighted by its probability.</dd><dt>Probability Mass Function (PMF)</dt><dd>A function giving the probability that a discrete random variable takes each specific value.</dd><dt>Probability Density Function (PDF)</dt><dd>A function describing the relative likelihood of a continuous random variable, where probability over a range equals the area under the curve.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Random variable = numerical outcome of a random experiment; Discrete (countable values) vs Continuous (any value in a range).</li><li>Expected value E(X) = Sum of [x * P(x)] = mean of the probability distribution (mu).</li><li>PMF (discrete): P(X=x), with P(x) &ge; 0 and sum of all P(x) = 1.</li><li>PDF (continuous): probability over a range = area under the curve; probability of an exact single value = 0.</li><li>Discrete distributions: Binomial, Poisson; Continuous distribution: Normal.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Define random variable. Differentiate between discrete and continuous random variables.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A random variable is a variable whose value is a numerical outcome of a random experiment. A discrete random variable takes only a countable number of distinct values (e.g. number of defects), while a continuous random variable can take any value within a range (e.g. weight or time).</div></details></li><li>What is the expected value of a random variable? Give its formula.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The expected value is the long-run average value of a random variable across many repetitions, calculated as E(X) = Sum of [x x P(x)] across all possible values x. It is also called the mean of the probability distribution.</div></details></li><li>Differentiate between a probability mass function and a probability density function.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A probability mass function (PMF) applies to discrete random variables and gives the probability of each specific value, P(X=x). A probability density function (PDF) applies to continuous random variables, where the probability of X falling in a range is the area under the curve over that range, and the probability of any single exact value is zero.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 1 ("Probability and Probability Distributions") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic3-theorems-conditional-probability-bayes.html">&larr; Theorems of Probability, Conditional Probability and Bayes' Theorem</a><a href="topic5-binomial-poisson-distributions.html">Binomial and Poisson Distributions &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

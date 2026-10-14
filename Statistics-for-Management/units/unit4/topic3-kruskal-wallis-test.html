@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kruskal-Wallis Test | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 4 &middot; Non-Parametric Tests</h3>
+        <ol>
+          <li><a href="topic1-introduction-sign-test.html">1. Introduction to Non-Parametric Tests and the Sign Test</a></li><li><a href="topic2-mann-whitney-u-test.html">2. Rank Sum Test: Mann-Whitney U Test</a></li><li><a class="active" href="topic3-kruskal-wallis-test.html">3. Kruskal-Wallis Test</a></li><li><a href="topic4-kolmogorov-smirnov-run-test.html">4. Kolmogorov-Smirnov Test and One Sample Run Test</a></li><li><a href="topic5-chi-square-goodness-of-fit-variance.html">5. Chi-Square Test for Goodness of Fit and Single Sample Standard Deviation</a></li><li><a href="topic6-chi-square-independence-of-attributes.html">6. Chi-Square Test for Independence of Attributes</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 4</a> &rsaquo; Topic 3</div>
+    <h1><span class="unit-tag">Unit 4</span>Kruskal-Wallis Test</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>The Kruskal-Wallis Test extends the logic of the Mann-Whitney U Test from two groups to three or more, serving as the non-parametric counterpart to One-Way ANOVA.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>3.1 Purpose of the Kruskal-Wallis Test</h3>
+<p>The Kruskal-Wallis Test compares three or more independent samples to determine whether they come from populations with the same distribution, without assuming normality. It is the non-parametric equivalent of One-Way ANOVA.</p>
+
+<h3>3.2 Hypotheses</h3>
+<p>H&#8320;: All k populations have identical distributions (no difference among the groups).<br>
+H&#8321;: At least one population differs from the others.</p>
+
+<h3>3.3 Procedure</h3>
+<ol>
+<li><strong>Combine and Rank:</strong> Combine all k samples into one group and rank all observations together from smallest to largest, using average ranks for ties.</li>
+<li><strong>Sum the Ranks per Group:</strong> Calculate the sum of ranks R&#8321;, R&#8322;, &hellip;, R<sub>k</sub> for each of the k groups.</li>
+<li><strong>Calculate the Test Statistic, H:</strong></li>
+</ol>
+<p style="text-align:center;font-size:1.05rem;"><strong>H = [12 &divide; N(N+1)] &times; &Sigma;(R<sub>i</sub>&sup2; &divide; n<sub>i</sub>) &minus; 3(N+1)</strong></p>
+<p>where N is the total number of observations across all groups, n<sub>i</sub> is the sample size of group i, and R<sub>i</sub> is the rank sum of group i.</p>
+
+<h3>3.4 Distribution of the Test Statistic</h3>
+<p>For reasonably sized samples, H approximately follows a <strong>Chi-Square (&chi;&sup2;) distribution</strong> with <strong>df = k &minus; 1</strong> degrees of freedom, where k is the number of groups.</p>
+
+<h3>3.5 Decision Rule</h3>
+<p>The calculated H is compared against the critical &chi;&sup2; value at the chosen significance level with df = k &minus; 1. If H exceeds this critical value, H&#8320; is rejected, concluding that at least one group's distribution differs from the others.</p>
+
+<h3>3.6 Kruskal-Wallis vs One-Way ANOVA</h3>
+<table class="compare">
+<tr><th>Basis</th><th>One-Way ANOVA</th><th>Kruskal-Wallis Test</th></tr>
+<tr><td>Data required</td><td>Interval/ratio, approximately normal within groups</td><td>Ordinal, or numerical without a normality assumption</td></tr>
+<tr><td>Works on</td><td>Actual values (via means)</td><td>Ranks of the combined data</td></tr>
+<tr><td>Test statistic</td><td>F</td><td>H (approximately &chi;&sup2;)</td></tr>
+</table>
+<p>As with ANOVA, a significant Kruskal-Wallis result indicates that at least one group differs, but does not by itself identify which group(s); a follow-up test is needed for that.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Kruskal-Wallis Test</dt><dd>A non-parametric test comparing three or more independent samples using ranks, equivalent to One-Way ANOVA.</dd><dt>H-Statistic</dt><dd>The test statistic of the Kruskal-Wallis Test, which approximately follows a Chi-Square distribution with k-1 degrees of freedom.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Kruskal-Wallis = non-parametric alternative to One-Way ANOVA, for 3+ independent groups; H0: all groups have identical distributions.</li><li>Procedure: combine and rank all observations &rarr; sum ranks per group &rarr; H = [12/N(N+1)] * Sum(Ri^2/ni) - 3(N+1).</li><li>H approximately follows Chi-Square distribution with df = k-1 (k = number of groups).</li><li>Reject H0 if H(calculated) > critical Chi-Square value; doesn't identify which specific group(s) differ.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What is the Kruskal-Wallis Test used for? What test is it the non-parametric equivalent of?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">It is used to compare three or more independent samples to determine whether they come from populations with the same distribution, without assuming normality. It is the non-parametric equivalent of One-Way ANOVA.</div></details></li><li>Write the formula for the Kruskal-Wallis H-statistic and explain its terms.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">H = [12 / N(N+1)] x Sum(Ri^2/ni) - 3(N+1), where N is the total number of observations across all groups, ni is the sample size of group i, and Ri is the sum of ranks for group i.</div></details></li><li>What distribution does the Kruskal-Wallis H-statistic follow, and what is its decision rule?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">H approximately follows a Chi-Square distribution with df = k-1 degrees of freedom, where k is the number of groups. If the calculated H exceeds the critical Chi-Square value at the chosen significance level, H0 is rejected, concluding at least one group's distribution differs from the others.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 4 ("Non-Parametric Tests") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic2-mann-whitney-u-test.html">&larr; Rank Sum Test: Mann-Whitney U Test</a><a href="topic4-kolmogorov-smirnov-run-test.html">Kolmogorov-Smirnov Test and One Sample Run Test &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

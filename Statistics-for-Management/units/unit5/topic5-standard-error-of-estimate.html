@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Standard Error of Estimate | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 5 &middot; Correlation and Regression</h3>
+        <ol>
+          <li><a href="topic1-correlation-meaning-types-karl-pearson.html">1. Correlation: Meaning, Types and Karl Pearson's Coefficient</a></li><li><a href="topic2-coefficient-of-determination-rank-correlation.html">2. Coefficient of Determination and Rank Correlation</a></li><li><a href="topic3-regression-lines-least-squares.html">3. Regression: Regression Lines and the Method of Least Squares</a></li><li><a href="topic4-estimation-of-regression-line.html">4. Estimation of the Regression Line</a></li><li><a class="active" href="topic5-standard-error-of-estimate.html">5. Standard Error of Estimate</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 5</a> &rsaquo; Topic 5</div>
+    <h1><span class="unit-tag">Unit 5</span>Standard Error of Estimate</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This closing topic of the course covers the Standard Error of Estimate &mdash; a measure of how accurately a regression line actually predicts the dependent variable, completing the correlation and regression toolkit.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>5.1 Why a Measure of Accuracy Is Needed</h3>
+<p>A fitted regression line gives a single predicted value, &#374;, for each X &mdash; but the actual observed Y-values will not fall exactly on this line (unless the correlation is perfect). The <strong>Standard Error of Estimate</strong> quantifies, on average, how far the actual Y-values tend to deviate from the predicted values on the regression line.</p>
+
+<h3>5.2 Formula for the Standard Error of Estimate</h3>
+<p style="text-align:center;font-size:1.1rem;"><strong>S<sub>Y&middot;X</sub> = &radic;{&Sigma;(Y &minus; &#374;)&sup2; &divide; (n &minus; 2)}</strong></p>
+<p>where Y is each actual observed value, &#374; is the corresponding value predicted by the regression line, and n is the number of paired observations. The denominator uses <strong>n &minus; 2</strong> (rather than n or n&minus;1) because two parameters, a and b, were already estimated from the data to fit the line.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">A Computationally Convenient Alternative Formula</h4>
+<p style="text-align:center;font-size:1.05rem;"><strong>S<sub>Y&middot;X</sub> = &radic;{[&Sigma;Y&sup2; &minus; a&Sigma;Y &minus; b&Sigma;XY] &divide; (n &minus; 2)}</strong></p>
+
+<h3>5.3 Interpreting the Standard Error of Estimate</h3>
+<ul>
+<li>A <strong>smaller</strong> S<sub>Y&middot;X</sub> means the actual data points lie closer to the regression line, indicating a more accurate, more useful predictive model.</li>
+<li>A <strong>larger</strong> S<sub>Y&middot;X</sub> means the actual data points are more scattered around the regression line, indicating less precise predictions.</li>
+<li>S<sub>Y&middot;X</sub> is measured in the same units as the dependent variable Y, making it directly interpretable (e.g. "predictions are typically off by about &#8377;500" if Y is measured in rupees).</li>
+</ul>
+
+<h3>5.4 Relationship Between Standard Error of Estimate and Correlation</h3>
+<p>The Standard Error of Estimate and the correlation coefficient r are closely related: as |r| approaches 1 (a stronger linear relationship), S<sub>Y&middot;X</sub> approaches 0 (more accurate predictions), since the data points lie closer to a well-fitted line. When r = 0 (no linear relationship), S<sub>Y&middot;X</sub> is at its largest, roughly equal to the standard deviation of Y itself, since the regression line provides no real predictive advantage over simply using Y&#772; as the prediction for every case.</p>
+
+<h3>5.5 Using the Standard Error of Estimate to Build Prediction Intervals</h3>
+<p>Similar to the confidence intervals covered in Unit 2, S<sub>Y&middot;X</sub> can be used to construct a <strong>prediction interval</strong> around a specific predicted &#374; value, giving a plausible range (rather than a single point) for where an actual Y-value is likely to fall for a given X, at a chosen confidence level.</p>
+
+<h3>5.6 Bringing the Unit Together</h3>
+<p>Correlation (Topics 1&ndash;2) measures whether and how strongly two variables are related; Regression (Topics 3&ndash;4) builds a predictive equation from that relationship; and the Standard Error of Estimate (this topic) measures how trustworthy that equation's predictions actually are &mdash; together, these form a complete toolkit for using one variable to understand and predict another.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Standard Error of Estimate (S(Y.X))</dt><dd>A measure of how far actual observed values of Y tend to deviate from the values predicted by a regression line.</dd><dt>Prediction Interval</dt><dd>A range of values, built using the Standard Error of Estimate, within which an actual Y-value is likely to fall for a given X at a chosen confidence level.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Standard Error of Estimate: S(Y.X) = sqrt{Sum(Y - Yhat)^2 / (n-2)}; uses n-2 df since a and b are both estimated from the data.</li><li>Smaller S(Y.X) = more accurate predictions (points closer to the line); larger S(Y.X) = less accurate predictions.</li><li>As |r| -> 1, S(Y.X) -> 0 (better fit); as r -> 0, S(Y.X) approaches the standard deviation of Y (regression adds no predictive value).</li><li>S(Y.X) used to build prediction intervals around a specific Y-hat value.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Define the Standard Error of Estimate. Write its formula.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The Standard Error of Estimate measures how far actual observed Y-values tend to deviate from the values predicted by the regression line. S(Y.X) = sqrt{Sum(Y - Yhat)^2 / (n-2)}, where Y is the observed value, Yhat is the predicted value, and n is the number of paired observations.</div></details></li><li>Why is (n-2) used in the denominator of the Standard Error of Estimate formula rather than n or (n-1)?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Because two parameters, the intercept a and the slope b, were already estimated from the sample data to fit the regression line, two degrees of freedom are used up, leaving n-2 degrees of freedom for estimating the error.</div></details></li><li>How is the Standard Error of Estimate related to the correlation coefficient r?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">As the magnitude of r approaches 1 (a stronger linear relationship), the Standard Error of Estimate approaches 0, since the data points lie closer to a well-fitted line. When r = 0, the Standard Error of Estimate is at its largest, roughly equal to the standard deviation of Y, since the regression line adds no real predictive advantage.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 5 ("Correlation and Regression") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic4-estimation-of-regression-line.html">&larr; Estimation of the Regression Line</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>

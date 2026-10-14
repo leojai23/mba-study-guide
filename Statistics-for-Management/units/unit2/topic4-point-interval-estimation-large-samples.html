@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Point and Interval Estimation for Large Samples | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Sampling Distribution and Estimation</h3>
+        <ol>
+          <li><a href="topic1-sampling-distributions-introduction.html">1. Introduction to Sampling Distributions</a></li><li><a href="topic2-sampling-distribution-mean-proportion-clt.html">2. Sampling Distribution of Mean and Proportion, and the Central Limit Theorem</a></li><li><a href="topic3-sampling-techniques.html">3. Sampling Techniques</a></li><li><a class="active" href="topic4-point-interval-estimation-large-samples.html">4. Point and Interval Estimation for Large Samples</a></li><li><a href="topic5-interval-estimation-small-samples-sample-size.html">5. Interval Estimation for Small Samples and Determining Sample Size</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 4</div>
+    <h1><span class="unit-tag">Unit 2</span>Point and Interval Estimation for Large Samples</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Estimation uses sample data to infer the value of an unknown population parameter. This topic covers point estimation, and interval estimation for large samples using the normal distribution.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>4.1 Point Estimation</h3>
+<p>A point estimate is a single value, calculated from sample data, used as the best guess for an unknown population parameter. For example, the sample mean x&#772; is the point estimate of the population mean &mu;, and the sample proportion p&#773; is the point estimate of the population proportion p.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Properties of a Good Estimator</h4>
+<ul>
+<li><strong>Unbiasedness:</strong> The expected value of the estimator equals the true population parameter.</li>
+<li><strong>Efficiency:</strong> Among unbiased estimators, the one with the smallest variance is preferred.</li>
+<li><strong>Consistency:</strong> As sample size increases, the estimator converges toward the true population value.</li>
+</ul>
+
+<h3>4.2 Interval Estimation (Confidence Intervals)</h3>
+<p>Because a point estimate alone gives no sense of its likely accuracy, an <strong>interval estimate</strong> (confidence interval) provides a range of values, together with a confidence level, within which the true population parameter is expected to lie.</p>
+
+<h3>4.3 Confidence Interval for the Population Mean (Large Sample, n &ge; 30)</h3>
+<p style="text-align:center;font-size:1.1rem;"><strong>x&#772; &plusmn; Z<sub>&alpha;/2</sub> &times; (&sigma; &divide; &radic;n)</strong></p>
+<p>where x&#772; is the sample mean, Z<sub>&alpha;/2</sub> is the Z-value corresponding to the desired confidence level (1.96 for 95% confidence, 2.58 for 99% confidence), &sigma; is the population standard deviation (or the sample standard deviation s, if &sigma; is unknown and n is large), and n is the sample size.</p>
+
+<h3>4.4 Confidence Interval for the Population Proportion (Large Sample)</h3>
+<p style="text-align:center;font-size:1.1rem;"><strong>p&#773; &plusmn; Z<sub>&alpha;/2</sub> &times; &radic;[p&#773;(1&minus;p&#773;) &divide; n]</strong></p>
+<p>where p&#773; is the sample proportion.</p>
+
+<h3>4.5 Interpreting a Confidence Interval</h3>
+<p>A 95% confidence interval does <em>not</em> mean there is a 95% probability the true parameter lies in this specific interval. It means that if the same sampling procedure were repeated many times, approximately 95% of the resulting intervals would contain the true population parameter.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Factors Affecting Confidence Interval Width</h4>
+<ul>
+<li>A higher confidence level (e.g. 99% vs 95%) produces a <strong>wider</strong> interval.</li>
+<li>A larger sample size produces a <strong>narrower</strong> interval, since the standard error decreases.</li>
+<li>Greater variability in the data (larger &sigma;) produces a <strong>wider</strong> interval.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Point Estimate</dt><dd>A single value calculated from sample data, used as the best guess for an unknown population parameter.</dd><dt>Interval Estimate (Confidence Interval)</dt><dd>A range of values, with an associated confidence level, within which a population parameter is expected to lie.</dd><dt>Confidence Level</dt><dd>The long-run proportion of repeated confidence intervals that would be expected to contain the true population parameter.</dd><dt>Unbiased Estimator</dt><dd>An estimator whose expected value equals the true population parameter being estimated.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Point estimate = single best-guess value (e.g. x-bar estimates mu); properties of a good estimator: unbiasedness, efficiency, consistency.</li><li>CI for mean (large sample): x-bar +/- Z(alpha/2) x (sigma / sqrt(n)); common Z-values: 1.96 (95%), 2.58 (99%).</li><li>CI for proportion (large sample): p-hat +/- Z(alpha/2) x sqrt[p-hat(1-p-hat)/n].</li><li>Higher confidence level = wider interval; larger sample size = narrower interval; more variability = wider interval.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What is a point estimate? State the properties of a good estimator.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A point estimate is a single value from sample data used as the best guess for a population parameter, such as the sample mean estimating the population mean. A good estimator should be unbiased (expected value equals the true parameter), efficient (smallest variance among unbiased estimators), and consistent (converges to the true value as sample size grows).</div></details></li><li>Write the formula for the confidence interval of the population mean for a large sample.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">x-bar +/- Z(alpha/2) x (sigma / sqrt(n)), where x-bar is the sample mean, Z(alpha/2) is the Z-value for the desired confidence level, sigma is the population (or large-sample estimate of the) standard deviation, and n is the sample size.</div></details></li><li>How does sample size and confidence level affect the width of a confidence interval?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A larger sample size narrows the confidence interval because the standard error decreases, giving a more precise estimate. A higher confidence level (e.g. 99% instead of 95%) widens the interval, since a wider range is needed to be more confident of capturing the true parameter.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Sampling Distribution and Estimation") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic3-sampling-techniques.html">&larr; Sampling Techniques</a><a href="topic5-interval-estimation-small-samples-sample-size.html">Interval Estimation for Small Samples and Determining Sample Size &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

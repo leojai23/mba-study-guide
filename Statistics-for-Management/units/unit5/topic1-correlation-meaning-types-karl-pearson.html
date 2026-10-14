@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Correlation: Meaning, Types and Karl Pearson's Coefficient | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 5 &middot; Correlation and Regression</h3>
+        <ol>
+          <li><a class="active" href="topic1-correlation-meaning-types-karl-pearson.html">1. Correlation: Meaning, Types and Karl Pearson's Coefficient</a></li><li><a href="topic2-coefficient-of-determination-rank-correlation.html">2. Coefficient of Determination and Rank Correlation</a></li><li><a href="topic3-regression-lines-least-squares.html">3. Regression: Regression Lines and the Method of Least Squares</a></li><li><a href="topic4-estimation-of-regression-line.html">4. Estimation of the Regression Line</a></li><li><a href="topic5-standard-error-of-estimate.html">5. Standard Error of Estimate</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 5</a> &rsaquo; Topic 1</div>
+    <h1><span class="unit-tag">Unit 5</span>Correlation: Meaning, Types and Karl Pearson's Coefficient</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This closing unit moves from testing hypotheses about single variables to studying the relationship between two variables. This opening topic covers what correlation means, its types, and the most widely used measure of it: Karl Pearson's correlation coefficient.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>1.1 Meaning of Correlation</h3>
+<p>Correlation measures the strength and direction of the linear relationship between two numerical variables &mdash; whether, and how closely, they tend to move together.</p>
+
+<h3>1.2 Types of Correlation</h3>
+<table class="compare">
+<tr><th>Basis</th><th>Types</th></tr>
+<tr><td>Direction</td><td><strong>Positive Correlation</strong> (both variables increase or decrease together) vs <strong>Negative Correlation</strong> (one increases as the other decreases).</td></tr>
+<tr><td>Number of Variables</td><td><strong>Simple Correlation</strong> (between two variables) vs <strong>Multiple Correlation</strong> (one variable and two or more others considered jointly).</td></tr>
+<tr><td>Nature of Relationship</td><td><strong>Linear Correlation</strong> (the relationship approximates a straight line) vs <strong>Non-Linear (Curvilinear) Correlation</strong> (the relationship follows a curve).</td></tr>
+</table>
+
+<h3>1.3 Karl Pearson's Coefficient of Correlation</h3>
+<p>Karl Pearson's coefficient, <strong>r</strong>, is the most widely used measure of linear correlation between two variables X and Y:</p>
+<p style="text-align:center;font-size:1.05rem;"><strong>r = &Sigma;(X&minus;X&#772;)(Y&minus;Y&#772;) &divide; &radic;[&Sigma;(X&minus;X&#772;)&sup2; &times; &Sigma;(Y&minus;Y&#772;)&sup2;]</strong></p>
+<p>An equivalent, computationally convenient form using raw sums is:</p>
+<p style="text-align:center;font-size:1.05rem;"><strong>r = [n&Sigma;XY &minus; (&Sigma;X)(&Sigma;Y)] &divide; &radic;{[n&Sigma;X&sup2; &minus; (&Sigma;X)&sup2;][n&Sigma;Y&sup2; &minus; (&Sigma;Y)&sup2;]}</strong></p>
+
+<h3>1.4 Properties of r</h3>
+<ul>
+<li><strong>r</strong> always lies between &minus;1 and +1 (inclusive): <strong>&minus;1 &le; r &le; +1</strong>.</li>
+<li><strong>r = +1</strong> indicates perfect positive linear correlation.</li>
+<li><strong>r = &minus;1</strong> indicates perfect negative linear correlation.</li>
+<li><strong>r = 0</strong> indicates no linear correlation (the variables may still be related non-linearly).</li>
+<li>r is independent of the units of measurement of X and Y.</li>
+</ul>
+
+<h3>1.5 Interpreting the Strength of r</h3>
+<table class="compare">
+<tr><th>Value of |r|</th><th>Strength</th></tr>
+<tr><td>0.00 &ndash; 0.19</td><td>Very weak</td></tr>
+<tr><td>0.20 &ndash; 0.39</td><td>Weak</td></tr>
+<tr><td>0.40 &ndash; 0.69</td><td>Moderate</td></tr>
+<tr><td>0.70 &ndash; 0.89</td><td>Strong</td></tr>
+<tr><td>0.90 &ndash; 1.00</td><td>Very strong</td></tr>
+</table>
+
+<h3>1.6 Important Caveat: Correlation Is Not Causation</h3>
+<p>A high correlation between two variables does not prove that one causes the other &mdash; the relationship could be coincidental, or both variables could be driven by a third, unmeasured factor. Correlation should always be interpreted carefully, and ideally alongside domain knowledge about the variables in question.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Correlation</dt><dd>A measure of the strength and direction of the linear relationship between two numerical variables.</dd><dt>Karl Pearson's Coefficient of Correlation (r)</dt><dd>The most widely used measure of linear correlation, ranging from -1 to +1.</dd><dt>Positive Correlation</dt><dd>A relationship in which both variables tend to increase or decrease together.</dd><dt>Negative Correlation</dt><dd>A relationship in which one variable tends to increase as the other decreases.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Correlation = strength and direction of linear relationship between two variables.</li><li>Types: Positive/Negative (direction); Simple/Multiple (number of variables); Linear/Non-Linear (nature of relationship).</li><li>Karl Pearson's r = Sum[(X-Xbar)(Y-Ybar)] / sqrt{Sum(X-Xbar)^2 * Sum(Y-Ybar)^2}; range: -1 <= r <= +1.</li><li>r = +1 perfect positive; r = -1 perfect negative; r = 0 no linear correlation.</li><li>Correlation does not imply causation.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Define correlation. Explain its types based on direction.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Correlation measures the strength and direction of the linear relationship between two numerical variables. Based on direction, it is Positive (both variables increase or decrease together) or Negative (one increases as the other decreases).</div></details></li><li>State Karl Pearson's coefficient of correlation formula and its properties.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">r = Sum[(X-Xbar)(Y-Ybar)] / sqrt{Sum(X-Xbar)^2 x Sum(Y-Ybar)^2}. Its properties: r always lies between -1 and +1; r = +1 is perfect positive correlation, r = -1 is perfect negative correlation, r = 0 indicates no linear correlation; and r is independent of the units of measurement.</div></details></li><li>Why is it said that 'correlation does not imply causation'?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A high correlation between two variables shows they tend to move together, but does not prove one causes the other &mdash; the relationship could be coincidental, or both variables could be driven by a third, unmeasured factor, so correlation must be interpreted carefully alongside domain knowledge.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 5 ("Correlation and Regression") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><span></span><a href="topic2-coefficient-of-determination-rank-correlation.html">Coefficient of Determination and Rank Correlation &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

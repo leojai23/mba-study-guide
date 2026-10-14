@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Introduction to Sampling Distributions | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Sampling Distribution and Estimation</h3>
+        <ol>
+          <li><a class="active" href="topic1-sampling-distributions-introduction.html">1. Introduction to Sampling Distributions</a></li><li><a href="topic2-sampling-distribution-mean-proportion-clt.html">2. Sampling Distribution of Mean and Proportion, and the Central Limit Theorem</a></li><li><a href="topic3-sampling-techniques.html">3. Sampling Techniques</a></li><li><a href="topic4-point-interval-estimation-large-samples.html">4. Point and Interval Estimation for Large Samples</a></li><li><a href="topic5-interval-estimation-small-samples-sample-size.html">5. Interval Estimation for Small Samples and Determining Sample Size</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 1</div>
+    <h1><span class="unit-tag">Unit 2</span>Introduction to Sampling Distributions</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This unit moves from probability theory to statistical inference &mdash; using a sample to draw conclusions about a population. This opening topic introduces the key idea that makes this possible: the sampling distribution.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>1.1 Population and Sample</h3>
+<p>A <strong>population</strong> is the complete set of all items or individuals of interest in a study. A <strong>sample</strong> is a subset of the population actually observed and measured. Since studying an entire population is often impractical, statistics uses samples to estimate population characteristics.</p>
+
+<h3>1.2 Parameter and Statistic</h3>
+<table class="compare">
+<tr><th>Term</th><th>Meaning</th><th>Example Symbol</th></tr>
+<tr><td><strong>Parameter</strong></td><td>A numerical characteristic of a population (usually unknown).</td><td>Population mean &mu;, population standard deviation &sigma;</td></tr>
+<tr><td><strong>Statistic</strong></td><td>A numerical characteristic calculated from a sample, used to estimate the corresponding parameter.</td><td>Sample mean x&#772;, sample standard deviation s</td></tr>
+</table>
+
+<h3>1.3 Introduction to Sampling Distributions</h3>
+<p>If repeated samples of the same size are drawn from a population, the value of a statistic (such as the sample mean) will differ from sample to sample. The <strong>sampling distribution</strong> of a statistic is the probability distribution of that statistic across all possible samples of a given size drawn from the population.</p>
+<p>Sampling distributions are the theoretical bridge that lets us use a single sample's statistic to make a probability-based inference about the unknown population parameter &mdash; the entire logic of hypothesis testing and interval estimation in the next units rests on this idea.</p>
+
+<h3>1.4 Sampling Error</h3>
+<p>Sampling error is the difference between a sample statistic and the true population parameter, arising purely because a sample (rather than the whole population) was observed. Sampling error decreases, on average, as sample size increases.</p>
+
+<h3>1.5 Standard Error</h3>
+<p>The standard error of a statistic is the standard deviation of its sampling distribution &mdash; it measures how much the statistic is expected to vary from sample to sample. A smaller standard error means the sample statistic is likely to be closer to the true population parameter.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Population</dt><dd>The complete set of all items or individuals of interest in a study.</dd><dt>Sample</dt><dd>A subset of the population that is actually observed and measured.</dd><dt>Parameter</dt><dd>A numerical characteristic of a population, usually unknown, such as the population mean mu.</dd><dt>Statistic</dt><dd>A numerical characteristic calculated from a sample, used to estimate a population parameter.</dd><dt>Sampling Distribution</dt><dd>The probability distribution of a statistic across all possible samples of a given size drawn from a population.</dd><dt>Standard Error</dt><dd>The standard deviation of the sampling distribution of a statistic, measuring how much it varies from sample to sample.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Population = entire group of interest; Sample = subset actually observed.</li><li>Parameter (population, e.g. mu) vs Statistic (sample, e.g. x-bar, used to estimate the parameter).</li><li>Sampling distribution = probability distribution of a statistic across all possible samples of a given size.</li><li>Sampling error = difference between sample statistic and true population parameter; decreases as sample size increases.</li><li>Standard error = standard deviation of the sampling distribution; smaller standard error = more precise estimate.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Differentiate between a parameter and a statistic.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A parameter is a numerical characteristic of a population, usually unknown, such as the population mean (mu). A statistic is a numerical characteristic calculated from a sample, such as the sample mean (x-bar), used to estimate the corresponding population parameter.</div></details></li><li>What is a sampling distribution? Why is it important?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A sampling distribution is the probability distribution of a statistic (such as the sample mean) across all possible samples of a given size drawn from a population. It is important because it provides the theoretical basis for using a single sample's statistic to make probability-based inferences about an unknown population parameter.</div></details></li><li>Define sampling error and standard error.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Sampling error is the difference between a sample statistic and the true population parameter, arising because a sample rather than the whole population was observed; it decreases as sample size increases. Standard error is the standard deviation of the sampling distribution of a statistic, measuring how much the statistic is expected to vary from sample to sample.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Sampling Distribution and Estimation") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><span></span><a href="topic2-sampling-distribution-mean-proportion-clt.html">Sampling Distribution of Mean and Proportion, and the Central Limit Theorem &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

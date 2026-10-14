@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rank Sum Test: Mann-Whitney U Test | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 4 &middot; Non-Parametric Tests</h3>
+        <ol>
+          <li><a href="topic1-introduction-sign-test.html">1. Introduction to Non-Parametric Tests and the Sign Test</a></li><li><a class="active" href="topic2-mann-whitney-u-test.html">2. Rank Sum Test: Mann-Whitney U Test</a></li><li><a href="topic3-kruskal-wallis-test.html">3. Kruskal-Wallis Test</a></li><li><a href="topic4-kolmogorov-smirnov-run-test.html">4. Kolmogorov-Smirnov Test and One Sample Run Test</a></li><li><a href="topic5-chi-square-goodness-of-fit-variance.html">5. Chi-Square Test for Goodness of Fit and Single Sample Standard Deviation</a></li><li><a href="topic6-chi-square-independence-of-attributes.html">6. Chi-Square Test for Independence of Attributes</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 4</a> &rsaquo; Topic 2</div>
+    <h1><span class="unit-tag">Unit 4</span>Rank Sum Test: Mann-Whitney U Test</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>The Mann-Whitney U Test is the non-parametric counterpart to the independent two-sample t-test, used to compare two independent groups when the data is ranked rather than normally distributed.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>2.1 Purpose of the Mann-Whitney U Test</h3>
+<p>The Mann-Whitney U Test (also called the Rank Sum Test or Wilcoxon-Mann-Whitney Test) compares two independent samples to determine whether they come from populations with the same distribution, without assuming normality. It is the non-parametric equivalent of the independent two-sample t-test.</p>
+
+<h3>2.2 Hypotheses</h3>
+<p>H&#8320;: The two populations have identical distributions (no difference between the groups).<br>
+H&#8321;: The two populations differ (one tends to produce larger values than the other).</p>
+
+<h3>2.3 Procedure</h3>
+<ol>
+<li><strong>Combine and Rank:</strong> Combine both samples into a single group and rank all observations together from smallest (rank 1) to largest, regardless of which sample each value came from.</li>
+<li><strong>Sum the Ranks:</strong> Sum the ranks separately for each original sample, giving R&#8321; and R&#8322;.</li>
+<li><strong>Calculate the U-Statistics:</strong></li>
+</ol>
+<p style="text-align:center;font-size:1.05rem;"><strong>U&#8321; = n&#8321;n&#8322; + [n&#8321;(n&#8321;+1) &divide; 2] &minus; R&#8321;</strong></p>
+<p style="text-align:center;font-size:1.05rem;"><strong>U&#8322; = n&#8321;n&#8322; &minus; U&#8321;</strong></p>
+<p>where n&#8321;, n&#8322; are the two sample sizes. The smaller of U&#8321; and U&#8322; is used as the test statistic, U.</p>
+<ol start="4">
+<li><strong>Compare and Decide:</strong> For small samples, U is compared against critical values from Mann-Whitney U tables. For larger samples, U can be converted to an approximately normal Z-statistic and compared against standard normal critical values.</li>
+</ol>
+
+<h3>2.4 Handling Tied Ranks</h3>
+<p>When two or more observations have the same value, each is assigned the <strong>average</strong> of the ranks they would have occupied (e.g. if two values tie for ranks 3 and 4, both receive rank 3.5).</p>
+
+<h3>2.5 When to Use the Mann-Whitney U Test</h3>
+<ul>
+<li>Comparing two independent groups when the data is ordinal, or numerical but not normally distributed.</li>
+<li>Comparing two independent groups when sample sizes are too small to assess normality reliably.</li>
+<li>As a more robust alternative to the two-sample t-test when outliers are present.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Mann-Whitney U Test</dt><dd>A non-parametric test comparing two independent samples by ranking all observations together, used as an alternative to the independent two-sample t-test.</dd><dt>U-Statistic</dt><dd>The test statistic in the Mann-Whitney U Test, based on the sum of ranks for each sample; the smaller of U1 and U2 is used.</dd><dt>Tied Ranks</dt><dd>Ranks assigned when two or more observations have equal values, calculated as the average of the ranks the tied values would otherwise occupy.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Mann-Whitney U = non-parametric alternative to independent two-sample t-test; H0: identical distributions; H1: distributions differ.</li><li>Procedure: combine and rank all observations together &rarr; sum ranks per sample (R1, R2) &rarr; calculate U1 = n1n2 + n1(n1+1)/2 - R1, U2 = n1n2 - U1 &rarr; use smaller U.</li><li>Tied values: assign the average of the ranks they would occupy.</li><li>Used for ordinal data, non-normal data, small samples, or when outliers would distort a t-test.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What is the Mann-Whitney U Test used for?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">It is used to compare two independent samples to determine whether they come from populations with the same distribution, without assuming normality; it is the non-parametric equivalent of the independent two-sample t-test.</div></details></li><li>Explain the procedure for conducting the Mann-Whitney U Test.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Combine both samples and rank all observations together from smallest to largest; sum the ranks separately for each sample (R1 and R2); calculate U1 = n1n2 + n1(n1+1)/2 - R1 and U2 = n1n2 - U1; use the smaller of U1 and U2 as the test statistic and compare it against critical values (or a normal approximation for larger samples).</div></details></li><li>How are tied ranks handled in the Mann-Whitney U Test?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">When two or more observations have the same value, each is assigned the average of the ranks they would have occupied had they not been tied.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 4 ("Non-Parametric Tests") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic1-introduction-sign-test.html">&larr; Introduction to Non-Parametric Tests and the Sign Test</a><a href="topic3-kruskal-wallis-test.html">Kruskal-Wallis Test &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Normal Distribution | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 1 &middot; Probability and Probability Distributions</h3>
+        <ol>
+          <li><a href="topic1-basic-concepts-of-probability.html">1. Basic Concepts of Probability</a></li><li><a href="topic2-counting-rules-sample-space-events.html">2. Counting Rules, Sample Space and Events</a></li><li><a href="topic3-theorems-conditional-probability-bayes.html">3. Theorems of Probability, Conditional Probability and Bayes' Theorem</a></li><li><a href="topic4-random-variables-probability-distributions.html">4. Random Variables and Probability Distributions</a></li><li><a href="topic5-binomial-poisson-distributions.html">5. Binomial and Poisson Distributions</a></li><li><a class="active" href="topic6-normal-distribution.html">6. Normal Distribution</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 1</a> &rsaquo; Topic 6</div>
+    <h1><span class="unit-tag">Unit 1</span>Normal Distribution</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>The Normal Distribution is the most important continuous probability distribution in statistics, underlying much of sampling theory and hypothesis testing covered in later units. This topic covers its definition, properties, and the Standard Normal Distribution.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>6.1 Definition and Probability Function</h3>
+<p>The Normal Distribution is a continuous probability distribution that is symmetric and bell-shaped, fully described by its mean (&mu;) and standard deviation (&sigma;). Its probability density function is:</p>
+<p style="text-align:center;font-size:1.05rem;"><strong>f(x) = [1 &divide; (&sigma;&radic;(2&pi;))] &times; e<sup>&minus;(x&minus;&mu;)&sup2;/(2&sigma;&sup2;)</sup></strong></p>
+
+<h3>6.2 Assumptions of the Normal Distribution</h3>
+<ul>
+<li>The underlying variable is continuous.</li>
+<li>The distribution is symmetric about the mean.</li>
+<li>The mean, median and mode of the distribution all coincide at the centre.</li>
+</ul>
+
+<h3>6.3 Characteristics of the Normal Distribution</h3>
+<ul>
+<li><strong>Bell-Shaped and Symmetric:</strong> The curve is a symmetric bell shape centred at the mean.</li>
+<li><strong>Mean = Median = Mode:</strong> All three measures of central tendency are equal and located at the centre of the curve.</li>
+<li><strong>Asymptotic Tails:</strong> The curve approaches, but never quite touches, the horizontal axis as it extends in either direction.</li>
+<li><strong>Total Area = 1:</strong> The total area under the curve equals 1, representing all possible outcomes.</li>
+<li><strong>Empirical Rule:</strong> Approximately 68% of values lie within &plusmn;1&sigma; of the mean, 95% within &plusmn;2&sigma;, and 99.7% within &plusmn;3&sigma;.</li>
+</ul>
+
+<h3>6.4 Standard Normal Distribution</h3>
+<p>The Standard Normal Distribution is a special case of the Normal Distribution with mean &mu; = 0 and standard deviation &sigma; = 1. Any normal random variable X can be converted into the standard normal variable Z using the <strong>Z-score formula</strong>:</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>Z = (X &minus; &mu;) &divide; &sigma;</strong></p>
+<p>This conversion lets any normal distribution problem be solved using a single standard normal probability table, regardless of the original mean and standard deviation.</p>
+
+<h3>6.5 Characteristics of the Standard Normal Curve</h3>
+<ul>
+<li>Centred at Z = 0, with a standard deviation of 1.</li>
+<li>Symmetric about Z = 0, so P(Z &lt; 0) = P(Z &gt; 0) = 0.5.</li>
+<li>The area under the entire curve equals 1, and probabilities for any range of Z can be read directly from standard normal tables.</li>
+</ul>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Why the Normal Distribution Matters</h4>
+<p>The Normal Distribution underlies the Central Limit Theorem, sampling distributions, confidence intervals, and most parametric hypothesis tests covered in the following units &mdash; making it the foundation on which the rest of inferential statistics in this course is built.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Normal Distribution</dt><dd>A continuous, symmetric, bell-shaped probability distribution fully described by its mean and standard deviation.</dd><dt>Standard Normal Distribution</dt><dd>A special case of the Normal Distribution with mean 0 and standard deviation 1.</dd><dt>Z-Score</dt><dd>The number of standard deviations a value lies from the mean, calculated as Z = (X - mu) / sigma.</dd><dt>Empirical Rule</dt><dd>The rule that approximately 68%, 95% and 99.7% of normally distributed values lie within 1, 2 and 3 standard deviations of the mean respectively.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Normal distribution: continuous, symmetric, bell-shaped; Mean = Median = Mode; total area under curve = 1.</li><li>Empirical rule: ~68% within +/-1 sigma, ~95% within +/-2 sigma, ~99.7% within +/-3 sigma.</li><li>Standard Normal Distribution: mean = 0, standard deviation = 1; Z = (X - mu) / sigma converts any normal variable to standard normal.</li><li>Normal distribution underlies sampling theory, confidence intervals, and parametric hypothesis tests in later units.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>State the characteristics of the Normal Distribution.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">It is bell-shaped and symmetric about the mean; mean, median and mode coincide; its tails are asymptotic to the horizontal axis; the total area under the curve is 1; and the Empirical Rule states about 68%, 95% and 99.7% of values fall within 1, 2 and 3 standard deviations of the mean respectively.</div></details></li><li>What is the Standard Normal Distribution? How is a normal variable converted to it?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The Standard Normal Distribution is a Normal Distribution with mean 0 and standard deviation 1. Any normal variable X is converted to the standard normal variable Z using the Z-score formula: Z = (X - mu) / sigma.</div></details></li><li>Why is the Normal Distribution important in statistics?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">It underlies the Central Limit Theorem, sampling distributions, confidence interval estimation, and most parametric hypothesis tests, making it the foundation for the inferential statistics topics covered in later units of this course.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 1 ("Probability and Probability Distributions") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic5-binomial-poisson-distributions.html">&larr; Binomial and Poisson Distributions</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>

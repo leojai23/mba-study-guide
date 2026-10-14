@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Counting Rules, Sample Space and Events | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 1 &middot; Probability and Probability Distributions</h3>
+        <ol>
+          <li><a href="topic1-basic-concepts-of-probability.html">1. Basic Concepts of Probability</a></li><li><a class="active" href="topic2-counting-rules-sample-space-events.html">2. Counting Rules, Sample Space and Events</a></li><li><a href="topic3-theorems-conditional-probability-bayes.html">3. Theorems of Probability, Conditional Probability and Bayes' Theorem</a></li><li><a href="topic4-random-variables-probability-distributions.html">4. Random Variables and Probability Distributions</a></li><li><a href="topic5-binomial-poisson-distributions.html">5. Binomial and Poisson Distributions</a></li><li><a href="topic6-normal-distribution.html">6. Normal Distribution</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 1</a> &rsaquo; Topic 2</div>
+    <h1><span class="unit-tag">Unit 1</span>Counting Rules, Sample Space and Events</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Before probability can be calculated for complex situations, a few basic building blocks are needed: the language of experiments, sample spaces and events, and the counting rules used to work out how many outcomes are possible in the first place.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>2.1 Basic Concepts</h3>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Experiment</h4>
+<p>A random experiment is any process that produces one of several possible outcomes, where the specific outcome cannot be predicted with certainty in advance (e.g. tossing a coin, rolling a die).</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Sample Space</h4>
+<p>The sample space, denoted S, is the set of all possible outcomes of an experiment. For a single coin toss, S = {Head, Tail}.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Events</h4>
+<p>An event is any subset of the sample space &mdash; a collection of one or more outcomes that are of interest. A <strong>simple event</strong> consists of exactly one outcome; a <strong>compound event</strong> consists of two or more outcomes.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Union and Intersection of Two or More Events</h4>
+<ul>
+<li><strong>Union (A &cup; B):</strong> The event that A occurs, or B occurs, or both occur.</li>
+<li><strong>Intersection (A &cap; B):</strong> The event that both A and B occur together.</li>
+<li><strong>Mutually Exclusive Events:</strong> Events that cannot occur at the same time, so A &cap; B = &empty; (the empty set).</li>
+</ul>
+
+<h3>2.2 Fundamental Rules of Counting</h3>
+<p>Counting rules determine how many total outcomes exist in situations too complex to list out by hand, which is essential for calculating classical probability.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">The Multiplication Rule</h4>
+<p>If one task can be done in <em>m</em> ways and a second, independent task can be done in <em>n</em> ways, the two tasks together can be done in <strong>m &times; n</strong> ways.</p>
+
+<h3>2.3 Counting Rules for Permutations</h3>
+<p>A <strong>permutation</strong> is an arrangement of objects in a specific order, where order matters.</p>
+<p>The number of permutations of <em>n</em> distinct objects taken <em>r</em> at a time is:</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>nPr = n! &divide; (n &minus; r)!</strong></p>
+<p>where <em>n!</em> ("n factorial") = n &times; (n&minus;1) &times; (n&minus;2) &times; ... &times; 1.</p>
+
+<h3>2.4 Counting Rules for Combinations</h3>
+<p>A <strong>combination</strong> is a selection of objects where order does not matter.</p>
+<p>The number of combinations of <em>n</em> distinct objects taken <em>r</em> at a time is:</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>nCr = n! &divide; [r! (n &minus; r)!]</strong></p>
+<p>Combinations are always smaller than or equal to permutations for the same n and r, since combinations do not count different orderings of the same selection separately.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Random Experiment</dt><dd>A process that produces one of several possible outcomes, where the specific outcome cannot be predicted with certainty.</dd><dt>Sample Space (S)</dt><dd>The set of all possible outcomes of an experiment.</dd><dt>Event</dt><dd>Any subset of the sample space, representing one or more outcomes of interest.</dd><dt>Permutation (nPr)</dt><dd>An arrangement of n objects taken r at a time where order matters, calculated as n! / (n-r)!.</dd><dt>Combination (nCr)</dt><dd>A selection of n objects taken r at a time where order does not matter, calculated as n! / [r!(n-r)!].</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Sample space S = set of all possible outcomes; Event = subset of S (simple = 1 outcome, compound = 2+ outcomes).</li><li>Mutually exclusive events: A &cap; B = &empty; (cannot occur together).</li><li>Multiplication rule: m ways x n ways = m x n total ways.</li><li>Permutation (order matters): nPr = n! / (n-r)!</li><li>Combination (order doesn't matter): nCr = n! / [r!(n-r)!]</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Define sample space and event, with an example.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The sample space is the set of all possible outcomes of an experiment (e.g. S = {Head, Tail} for a coin toss). An event is any subset of the sample space of interest, such as 'getting a Head', which here is a simple event since it contains one outcome.</div></details></li><li>Differentiate between permutation and combination.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A permutation is an arrangement of objects where order matters, calculated as nPr = n!/(n-r)!. A combination is a selection of objects where order does not matter, calculated as nCr = n!/[r!(n-r)!]. For the same n and r, the number of combinations is always smaller than or equal to the number of permutations.</div></details></li><li>Explain the multiplication rule of counting with an example.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">If one task can be completed in m ways and a second independent task in n ways, the two tasks together can be completed in m x n ways. For example, if a restaurant offers 4 starters and 3 main courses, a diner can choose a starter-and-main combination in 4 x 3 = 12 ways.</div></details></li><li>Calculate 5P2 and 5C2. Explain the difference in the results.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">5P2 = 5!/(5-2)! = 5!/3! = 5 x 4 = 20. 5C2 = 5!/[2!(5-2)!] = (5 x 4)/(2 x 1) = 10. The permutation count is higher because it counts each pair of chosen items in both possible orders, while the combination count treats each pair as a single selection regardless of order.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 1 ("Probability and Probability Distributions") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic1-basic-concepts-of-probability.html">&larr; Basic Concepts of Probability</a><a href="topic3-theorems-conditional-probability-bayes.html">Theorems of Probability, Conditional Probability and Bayes' Theorem &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

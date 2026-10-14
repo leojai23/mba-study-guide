@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Regression: Regression Lines and the Method of Least Squares | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 5 &middot; Correlation and Regression</h3>
+        <ol>
+          <li><a href="topic1-correlation-meaning-types-karl-pearson.html">1. Correlation: Meaning, Types and Karl Pearson's Coefficient</a></li><li><a href="topic2-coefficient-of-determination-rank-correlation.html">2. Coefficient of Determination and Rank Correlation</a></li><li><a class="active" href="topic3-regression-lines-least-squares.html">3. Regression: Regression Lines and the Method of Least Squares</a></li><li><a href="topic4-estimation-of-regression-line.html">4. Estimation of the Regression Line</a></li><li><a href="topic5-standard-error-of-estimate.html">5. Standard Error of Estimate</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 5</a> &rsaquo; Topic 3</div>
+    <h1><span class="unit-tag">Unit 5</span>Regression: Regression Lines and the Method of Least Squares</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>While correlation measures how strongly two variables are related, regression goes further, providing an equation that can be used to predict one variable from the other. This topic introduces regression lines and the method used to fit them: Least Squares.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>3.1 Meaning of Regression</h3>
+<p>Regression analysis is a statistical technique for modelling the relationship between a <strong>dependent variable</strong> (Y, the variable being predicted) and one or more <strong>independent variables</strong> (X, the variable(s) used to make the prediction), expressed as a mathematical equation.</p>
+
+<h3>3.2 Correlation vs Regression</h3>
+<table class="compare">
+<tr><th>Basis</th><th>Correlation</th><th>Regression</th></tr>
+<tr><td>Purpose</td><td>Measures the strength and direction of association</td><td>Models the relationship to allow prediction</td></tr>
+<tr><td>Variables</td><td>Symmetric &mdash; no distinction between X and Y</td><td>Asymmetric &mdash; a clear dependent (Y) and independent (X) variable</td></tr>
+<tr><td>Output</td><td>A single coefficient (r)</td><td>An equation (regression line)</td></tr>
+</table>
+
+<h3>3.3 The Simple Linear Regression Line</h3>
+<p>The regression of Y on X is expressed as a straight-line equation:</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>Y = a + bX</strong></p>
+<p>where <strong>a</strong> is the Y-intercept (the predicted value of Y when X = 0), and <strong>b</strong> is the slope (the regression coefficient, representing the average change in Y for a one-unit increase in X).</p>
+
+<h3>3.4 The Method of Least Squares</h3>
+<p>The Method of Least Squares is used to find the specific values of a and b that make the regression line the "best fit" to the data &mdash; specifically, the line that <strong>minimises the sum of squared vertical distances</strong> between each actual observed Y-value and the Y-value predicted by the line.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Formulas for a and b</h4>
+<p style="text-align:center;font-size:1.05rem;"><strong>b = [n&Sigma;XY &minus; (&Sigma;X)(&Sigma;Y)] &divide; [n&Sigma;X&sup2; &minus; (&Sigma;X)&sup2;]</strong></p>
+<p style="text-align:center;font-size:1.1rem;"><strong>a = Y&#772; &minus; bX&#772;</strong></p>
+<p>where X&#772; and Y&#772; are the means of X and Y respectively.</p>
+
+<h3>3.5 Two Regression Lines</h3>
+<p>In general, there are <strong>two different regression lines</strong> for a given pair of variables: the regression of Y on X (used to predict Y from X, as above) and the regression of X on Y (used to predict X from Y). These two lines are generally different from each other, and only coincide exactly when r = &plusmn;1 (perfect correlation).</p>
+
+<h3>3.6 Relationship Between r, and the Two Regression Coefficients</h3>
+<p>If b<sub>YX</sub> is the slope of Y on X, and b<sub>XY</sub> is the slope of X on Y, then:</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>r&sup2; = b<sub>YX</sub> &times; b<sub>XY</sub></strong></p>
+<p>This relationship is a useful check: since r&sup2; must lie between 0 and 1, the product of the two regression coefficients must also lie between 0 and 1.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Regression Analysis</dt><dd>A statistical technique modelling the relationship between a dependent variable and one or more independent variables as an equation.</dd><dt>Dependent Variable (Y)</dt><dd>The variable being predicted or explained in a regression model.</dd><dt>Independent Variable (X)</dt><dd>The variable used to predict or explain the dependent variable in a regression model.</dd><dt>Method of Least Squares</dt><dd>A method for fitting a regression line by minimising the sum of squared vertical distances between observed and predicted Y-values.</dd><dt>Regression Coefficient (b)</dt><dd>The slope of a regression line, representing the average change in the dependent variable for a one-unit increase in the independent variable.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Regression: dependent variable (Y, predicted) vs independent variable (X, predictor); models relationship as an equation, unlike correlation's single coefficient.</li><li>Simple linear regression: Y = a + bX (a = intercept, b = slope).</li><li>Least Squares: b = [nSumXY - (SumX)(SumY)] / [nSumX^2 - (SumX)^2]; a = Ybar - b*Xbar.</li><li>Two regression lines exist (Y on X, X on Y); they coincide only when r = +/-1.</li><li>r^2 = bYX * bXY (product of the two regression slopes equals r-squared).</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Differentiate between correlation and regression.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Correlation measures the strength and direction of association between two variables symmetrically, producing a single coefficient. Regression models the relationship as an equation with a clear dependent (Y) and independent (X) variable, allowing prediction of Y from X.</div></details></li><li>Explain the method of least squares.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The method of least squares finds the regression line values of a (intercept) and b (slope) that minimise the sum of squared vertical distances between each actual observed Y-value and the Y-value predicted by the line, giving the 'best fit' straight line to the data.</div></details></li><li>Why are there two regression lines for a pair of variables? When do they coincide?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">There is a regression of Y on X (predicting Y from X) and a regression of X on Y (predicting X from Y), which are generally different lines. They coincide exactly only when the correlation coefficient r = +1 or r = -1, i.e. when there is perfect correlation.</div></details></li><li>State the relationship between r-squared and the two regression coefficients.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">r-squared equals the product of the two regression coefficients: r^2 = bYX x bXY, where bYX is the slope of Y on X and bXY is the slope of X on Y.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 5 ("Correlation and Regression") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic2-coefficient-of-determination-rank-correlation.html">&larr; Coefficient of Determination and Rank Correlation</a><a href="topic4-estimation-of-regression-line.html">Estimation of the Regression Line &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

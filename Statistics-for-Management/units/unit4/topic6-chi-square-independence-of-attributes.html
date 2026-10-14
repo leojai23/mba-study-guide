@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chi-Square Test for Independence of Attributes | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 4 &middot; Non-Parametric Tests</h3>
+        <ol>
+          <li><a href="topic1-introduction-sign-test.html">1. Introduction to Non-Parametric Tests and the Sign Test</a></li><li><a href="topic2-mann-whitney-u-test.html">2. Rank Sum Test: Mann-Whitney U Test</a></li><li><a href="topic3-kruskal-wallis-test.html">3. Kruskal-Wallis Test</a></li><li><a href="topic4-kolmogorov-smirnov-run-test.html">4. Kolmogorov-Smirnov Test and One Sample Run Test</a></li><li><a href="topic5-chi-square-goodness-of-fit-variance.html">5. Chi-Square Test for Goodness of Fit and Single Sample Standard Deviation</a></li><li><a class="active" href="topic6-chi-square-independence-of-attributes.html">6. Chi-Square Test for Independence of Attributes</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 4</a> &rsaquo; Topic 6</div>
+    <h1><span class="unit-tag">Unit 4</span>Chi-Square Test for Independence of Attributes</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This closing topic of Unit 4 covers the Chi-Square Test for Independence, used to determine whether two categorical attributes (e.g. gender and product preference) are statistically related or independent of each other.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>6.1 Purpose of the Test</h3>
+<p>The Chi-Square Test for Independence determines whether two categorical variables (attributes) are statistically independent of each other, or whether there is a significant association between them, based on data in a <strong>contingency table</strong> (also called a cross-tabulation).</p>
+
+<h3>6.2 Hypotheses</h3>
+<p>H&#8320;: The two attributes are independent (no association between them).<br>
+H&#8321;: The two attributes are not independent (there is an association between them).</p>
+
+<h3>6.3 Contingency Table</h3>
+<p>Data is arranged in a table with the categories of one attribute as rows and the categories of the other as columns, with each cell showing the observed frequency (count) of items falling into that combination of categories.</p>
+
+<h3>6.4 Calculating Expected Frequencies</h3>
+<p>Under the assumption of independence (H&#8320;), the expected frequency for each cell is:</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>E = (Row Total &times; Column Total) &divide; Grand Total</strong></p>
+
+<h3>6.5 The Chi-Square Statistic</h3>
+<p style="text-align:center;font-size:1.1rem;"><strong>&chi;&sup2; = &Sigma; [(O &minus; E)&sup2; &divide; E]</strong></p>
+<p>summed across every cell in the contingency table, where O is the observed frequency and E is the expected frequency (calculated as above) for that cell.</p>
+
+<h3>6.6 Degrees of Freedom</h3>
+<p style="text-align:center;font-size:1.1rem;"><strong>df = (r &minus; 1) &times; (c &minus; 1)</strong></p>
+<p>where r is the number of rows (categories of the first attribute) and c is the number of columns (categories of the second attribute) in the contingency table.</p>
+
+<h3>6.7 Decision Rule</h3>
+<p>The calculated &chi;&sup2; is compared against the critical &chi;&sup2; value for the chosen significance level and df = (r&minus;1)(c&minus;1). If calculated &chi;&sup2; exceeds the critical value, H&#8320; is rejected, concluding there is a statistically significant association between the two attributes.</p>
+
+<h3>6.8 Applications in Management</h3>
+<ul>
+<li>Testing whether customer satisfaction level is associated with the store branch visited.</li>
+<li>Testing whether employee department is associated with preferred training format.</li>
+<li>Testing whether product defect type is associated with the production shift during which the item was made.</li>
+<li>Market research &mdash; testing whether brand preference is associated with demographic categories such as age group or region.</li>
+</ul>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Important Caveat</h4>
+<p>A statistically significant Chi-Square result shows an association exists, but it does not by itself indicate the <strong>strength</strong> or the <strong>direction</strong> of that association &mdash; further measures (such as Cramer's V) or examination of the contingency table itself are needed for that.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Chi-Square Test for Independence</dt><dd>A test determining whether two categorical attributes are statistically independent, based on data in a contingency table.</dd><dt>Contingency Table</dt><dd>A table cross-tabulating the observed frequencies of two categorical attributes, with one attribute's categories as rows and the other's as columns.</dd><dt>Expected Frequency (Independence Test)</dt><dd>The frequency expected in a contingency table cell under the assumption of independence, calculated as (Row Total x Column Total) / Grand Total.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Chi-Square Test for Independence: H0 = two attributes are independent; uses a contingency table (rows x columns).</li><li>Expected frequency per cell: E = (Row Total x Column Total) / Grand Total.</li><li>chi^2 = Sum[(O-E)^2/E] across all cells; df = (r-1)(c-1).</li><li>Significant result = association exists, but doesn't show strength/direction by itself.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What does the Chi-Square Test for Independence check for?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">It checks whether two categorical attributes (such as gender and product preference) are statistically independent of each other, or whether there is a significant association between them, using data arranged in a contingency table.</div></details></li><li>How is the expected frequency calculated for a cell in a contingency table?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">E = (Row Total x Column Total) / Grand Total, calculated under the assumption that the two attributes are independent.</div></details></li><li>State the formula for degrees of freedom in the Chi-Square Test for Independence.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">df = (r - 1) x (c - 1), where r is the number of rows (categories of the first attribute) and c is the number of columns (categories of the second attribute) in the contingency table.</div></details></li><li>Give two management applications of the Chi-Square Test for Independence.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Testing whether customer satisfaction level is associated with the store branch visited, and testing whether brand preference is associated with a demographic category such as age group, in market research.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 4 ("Non-Parametric Tests") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic5-chi-square-goodness-of-fit-variance.html">&larr; Chi-Square Test for Goodness of Fit and Single Sample Standard Deviation</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>

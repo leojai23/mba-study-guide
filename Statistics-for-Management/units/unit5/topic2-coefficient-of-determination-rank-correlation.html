@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Coefficient of Determination and Rank Correlation | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 5 &middot; Correlation and Regression</h3>
+        <ol>
+          <li><a href="topic1-correlation-meaning-types-karl-pearson.html">1. Correlation: Meaning, Types and Karl Pearson's Coefficient</a></li><li><a class="active" href="topic2-coefficient-of-determination-rank-correlation.html">2. Coefficient of Determination and Rank Correlation</a></li><li><a href="topic3-regression-lines-least-squares.html">3. Regression: Regression Lines and the Method of Least Squares</a></li><li><a href="topic4-estimation-of-regression-line.html">4. Estimation of the Regression Line</a></li><li><a href="topic5-standard-error-of-estimate.html">5. Standard Error of Estimate</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 5</a> &rsaquo; Topic 2</div>
+    <h1><span class="unit-tag">Unit 5</span>Coefficient of Determination and Rank Correlation</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This topic covers two further correlation concepts: the coefficient of determination, which gives correlation a direct, intuitive interpretation, and rank correlation, used when data is ordinal rather than precisely numerical.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>2.1 Coefficient of Determination</h3>
+<p>The coefficient of determination, <strong>r&sup2;</strong>, is simply the square of Karl Pearson's correlation coefficient. It gives a directly meaningful interpretation: the proportion of the total variation in one variable that is "explained by," or associated with, its linear relationship with the other variable.</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>r&sup2; = (Karl Pearson's r)&sup2;</strong></p>
+<p>For example, if r = 0.8, then r&sup2; = 0.64, meaning 64% of the variation in one variable is associated with its linear relationship to the other variable (and the remaining 36% is associated with other factors).</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Why r&sup2; Is Useful</h4>
+<p>Because r&sup2; is always between 0 and 1 regardless of the sign of r, it gives a simpler, more intuitive sense of the strength of a relationship than r itself, and is the measure most commonly reported alongside, or instead of, regression results in the next topics.</p>
+
+<h3>2.2 Rank Correlation (Spearman's Coefficient)</h3>
+<p>Spearman's Rank Correlation Coefficient measures the strength and direction of association between two variables when the data is <strong>ranked</strong> (ordinal) rather than measured on a precise numerical scale, or when the relationship is monotonic but not necessarily linear.</p>
+<p style="text-align:center;font-size:1.1rem;"><strong>&rho; = 1 &minus; [6&Sigma;d&sup2; &divide; n(n&sup2;&minus;1)]</strong></p>
+<p>where d is the difference between the ranks assigned to each pair of observations (d = Rank of X &minus; Rank of Y), and n is the number of paired observations.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Procedure</h4>
+<ol>
+<li>Rank the X values from 1 to n (and separately, rank the Y values from 1 to n).</li>
+<li>Calculate d for each pair, and then d&sup2;.</li>
+<li>Sum d&sup2; across all pairs and substitute into the formula above.</li>
+</ol>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Handling Tied Ranks</h4>
+<p>When two or more values are tied, each is given the <strong>average</strong> of the ranks they would otherwise occupy, consistent with the tie-handling rule used in the Mann-Whitney and Kruskal-Wallis tests in Unit 4.</p>
+
+<h3>2.3 Properties of Spearman's &rho;</h3>
+<ul>
+<li>&rho; also ranges from &minus;1 to +1, with the same interpretation of direction and strength as Karl Pearson's r.</li>
+<li>It requires no assumption about the underlying distribution of the data, making it a non-parametric measure of association.</li>
+<li>It is especially appropriate when data is already in ranked form (e.g. rankings by two different judges).</li>
+</ul>
+
+<h3>2.4 Karl Pearson's r vs Spearman's &rho;</h3>
+<table class="compare">
+<tr><th>Basis</th><th>Karl Pearson's r</th><th>Spearman's &rho;</th></tr>
+<tr><td>Data required</td><td>Interval/ratio numerical data</td><td>Ordinal (ranked) data, or numerical data converted to ranks</td></tr>
+<tr><td>Relationship detected</td><td>Linear relationships only</td><td>Any monotonic relationship (linear or not)</td></tr>
+<tr><td>Sensitivity to outliers</td><td>More sensitive</td><td>Less sensitive, since it uses ranks rather than raw values</td></tr>
+</table>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Coefficient of Determination (r-squared)</dt><dd>The square of Karl Pearson's correlation coefficient, giving the proportion of variation in one variable associated with its linear relationship to another.</dd><dt>Spearman's Rank Correlation Coefficient (rho)</dt><dd>A non-parametric measure of association between two variables based on the ranks of the data rather than their raw values.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>r-squared (coefficient of determination) = (Karl Pearson's r)^2; proportion of variation in one variable associated with the other; always between 0 and 1.</li><li>Spearman's rho = 1 - [6*Sum(d^2) / n(n^2-1)], where d = difference between paired ranks.</li><li>Tied ranks: use average of the ranks they'd occupy.</li><li>Pearson's r: linear relationships, numerical data, sensitive to outliers; Spearman's rho: any monotonic relationship, ranked data, non-parametric, less sensitive to outliers.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>What is the coefficient of determination? How is it calculated and interpreted?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The coefficient of determination, r-squared, is the square of Karl Pearson's correlation coefficient. It represents the proportion of the total variation in one variable that is associated with its linear relationship to the other variable; for example, r-squared = 0.64 means 64% of the variation is explained by the relationship.</div></details></li><li>State the formula for Spearman's Rank Correlation Coefficient and explain its terms.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">rho = 1 - [6 x Sum(d^2) / n(n^2-1)], where d is the difference between the ranks assigned to X and Y for each pair of observations, and n is the number of paired observations.</div></details></li><li>Differentiate between Karl Pearson's correlation coefficient and Spearman's rank correlation coefficient.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Karl Pearson's r requires interval/ratio numerical data and detects only linear relationships, and is more sensitive to outliers. Spearman's rho works with ordinal/ranked data (or numerical data converted to ranks), detects any monotonic relationship, is non-parametric, and is less sensitive to outliers since it uses ranks rather than raw values.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 5 ("Correlation and Regression") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic1-correlation-meaning-types-karl-pearson.html">&larr; Correlation: Meaning, Types and Karl Pearson's Coefficient</a><a href="topic3-regression-lines-least-squares.html">Regression: Regression Lines and the Method of Least Squares &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

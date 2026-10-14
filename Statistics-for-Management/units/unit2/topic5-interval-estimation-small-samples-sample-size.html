@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interval Estimation for Small Samples and Determining Sample Size | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 2 &middot; Sampling Distribution and Estimation</h3>
+        <ol>
+          <li><a href="topic1-sampling-distributions-introduction.html">1. Introduction to Sampling Distributions</a></li><li><a href="topic2-sampling-distribution-mean-proportion-clt.html">2. Sampling Distribution of Mean and Proportion, and the Central Limit Theorem</a></li><li><a href="topic3-sampling-techniques.html">3. Sampling Techniques</a></li><li><a href="topic4-point-interval-estimation-large-samples.html">4. Point and Interval Estimation for Large Samples</a></li><li><a class="active" href="topic5-interval-estimation-small-samples-sample-size.html">5. Interval Estimation for Small Samples and Determining Sample Size</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 2</a> &rsaquo; Topic 5</div>
+    <h1><span class="unit-tag">Unit 2</span>Interval Estimation for Small Samples and Determining Sample Size</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This closing topic of Unit 2 covers interval estimation when the sample size is small, which requires the t-distribution rather than the normal distribution, and how to determine the sample size needed before data collection even begins.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>5.1 Why Small Samples Need a Different Approach</h3>
+<p>When the sample size is small (commonly, n &lt; 30) and the population standard deviation &sigma; is unknown, the sample standard deviation s is a less reliable estimate of &sigma;. Using the normal Z-distribution in this situation understates the true uncertainty, so the <strong>t-distribution</strong> is used instead.</p>
+
+<h3>5.2 The t-Distribution</h3>
+<p>The t-distribution is similar in shape to the normal distribution &mdash; symmetric and bell-shaped &mdash; but with heavier tails, reflecting the extra uncertainty from estimating &sigma; with a small sample. Its exact shape depends on the <strong>degrees of freedom (df)</strong>, df = n &minus; 1 for a single sample. As the sample size increases, the t-distribution approaches the normal distribution.</p>
+
+<h3>5.3 Confidence Interval for the Mean (Small Sample)</h3>
+<p style="text-align:center;font-size:1.1rem;"><strong>x&#772; &plusmn; t<sub>&alpha;/2, df</sub> &times; (s &divide; &radic;n)</strong></p>
+<p>where t<sub>&alpha;/2, df</sub> is the critical t-value for the desired confidence level with df = n &minus; 1 degrees of freedom, taken from t-distribution tables, and s is the sample standard deviation.</p>
+
+<h3>5.4 Determining the Sample Size</h3>
+<p>Before collecting data, researchers often need to determine the minimum sample size required to estimate a parameter within a desired margin of error, E, at a given confidence level.</p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Sample Size for Estimating a Mean</h4>
+<p style="text-align:center;font-size:1.1rem;"><strong>n = (Z<sub>&alpha;/2</sub> &times; &sigma; &divide; E)&sup2;</strong></p>
+<h4 style="margin:14px 0 6px;color:var(--accent-dark);font-size:0.98rem;">Sample Size for Estimating a Proportion</h4>
+<p style="text-align:center;font-size:1.1rem;"><strong>n = [Z<sub>&alpha;/2</sub>&sup2; &times; p(1&minus;p)] &divide; E&sup2;</strong></p>
+<p>where E is the desired margin of error. If no prior estimate of p is available, <strong>p = 0.5</strong> is used, since this produces the most conservative (largest) required sample size.</p>
+
+<h3>5.5 Factors Affecting Required Sample Size</h3>
+<ul>
+<li>A smaller desired margin of error E requires a <strong>larger</strong> sample size.</li>
+<li>A higher confidence level requires a <strong>larger</strong> sample size (larger Z<sub>&alpha;/2</sub>).</li>
+<li>Greater population variability (larger &sigma;, or p closer to 0.5) requires a <strong>larger</strong> sample size.</li>
+</ul>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>t-Distribution</dt><dd>A probability distribution similar to the normal distribution but with heavier tails, used for small-sample inference when the population standard deviation is unknown.</dd><dt>Degrees of Freedom (df)</dt><dd>A parameter of the t-distribution, equal to n - 1 for a single-sample confidence interval, that determines its exact shape.</dd><dt>Margin of Error (E)</dt><dd>The maximum expected difference between a point estimate and the true population parameter, used when determining required sample size.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Small sample (n < 30), sigma unknown: use t-distribution instead of Z; df = n - 1; t-distribution has heavier tails than normal, approaches normal as n grows.</li><li>CI for mean (small sample): x-bar +/- t(alpha/2, df) x (s / sqrt(n)).</li><li>Sample size for mean: n = (Z(alpha/2) x sigma / E)^2.</li><li>Sample size for proportion: n = [Z(alpha/2)^2 x p(1-p)] / E^2; use p = 0.5 if no prior estimate (most conservative, largest n).</li><li>Smaller margin of error, higher confidence level, or greater variability all increase the required sample size.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Why is the t-distribution used instead of the normal distribution for small samples?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">When the sample size is small (commonly n < 30) and the population standard deviation is unknown, the sample standard deviation is a less reliable estimate, so using the normal distribution would understate the true uncertainty. The t-distribution, with its heavier tails that reflect this extra uncertainty, is used instead, with the exact shape depending on the degrees of freedom (df = n - 1).</div></details></li><li>Write the formula for the confidence interval of the mean for a small sample.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">x-bar +/- t(alpha/2, df) x (s / sqrt(n)), where t(alpha/2, df) is the critical t-value for the desired confidence level with df = n - 1 degrees of freedom, and s is the sample standard deviation.</div></details></li><li>How is the required sample size determined for estimating a population mean?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Using n = (Z(alpha/2) x sigma / E)^2, where E is the desired margin of error, sigma is the population standard deviation (or an estimate), and Z(alpha/2) is the Z-value for the desired confidence level.</div></details></li><li>What value of p is used when determining sample size for a proportion if no prior estimate exists? Why?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">p = 0.5 is used, because p(1-p) is maximised at p = 0.5, which produces the largest (most conservative) required sample size, ensuring the sample is large enough regardless of the true proportion.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 2 ("Sampling Distribution and Estimation") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic4-point-interval-estimation-large-samples.html">&larr; Point and Interval Estimation for Large Samples</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>

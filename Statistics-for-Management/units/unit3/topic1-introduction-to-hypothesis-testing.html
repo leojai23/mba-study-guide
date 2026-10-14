@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Introduction to Hypothesis Testing | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 3 &middot; Testing of Hypothesis - Parametric Tests</h3>
+        <ol>
+          <li><a class="active" href="topic1-introduction-to-hypothesis-testing.html">1. Introduction to Hypothesis Testing</a></li><li><a href="topic2-z-tests-means-proportions-large-samples.html">2. Z-Tests for Means and Proportions (Large Samples)</a></li><li><a href="topic3-t-tests-means-small-samples.html">3. T-Tests for Means (Small Samples)</a></li><li><a href="topic4-f-test-two-sample-standard-deviations.html">4. F-Test for Two Sample Standard Deviations</a></li><li><a href="topic5-anova-one-way.html">5. ANOVA &mdash; One Way</a></li><li><a href="topic6-anova-two-way.html">6. ANOVA &mdash; Two Way</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 3</a> &rsaquo; Topic 1</div>
+    <h1><span class="unit-tag">Unit 3</span>Introduction to Hypothesis Testing</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Hypothesis testing is the formal statistical procedure for deciding whether sample evidence is strong enough to challenge an existing claim about a population. This topic covers its vocabulary, logic, and the general step-by-step procedure used throughout this unit.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>1.1 Meaning of Hypothesis Testing</h3>
+<p>Hypothesis testing is a statistical procedure that uses sample data to evaluate whether there is enough evidence to reject a stated claim (hypothesis) about a population parameter.</p>
+
+<h3>1.2 Null and Alternative Hypothesis</h3>
+<table class="compare">
+<tr><th>Hypothesis</th><th>Meaning</th></tr>
+<tr><td><strong>Null Hypothesis (H&#8320;)</strong></td><td>The default claim of "no difference" or "no effect," assumed true unless the sample data provides strong evidence against it.</td></tr>
+<tr><td><strong>Alternative Hypothesis (H&#8321;)</strong></td><td>The claim that contradicts the null hypothesis &mdash; what the test is trying to find evidence for.</td></tr>
+</table>
+<p>A test is <strong>two-tailed</strong> when H&#8321; states the parameter is simply "not equal to" a value, and <strong>one-tailed</strong> when H&#8321; specifies a direction ("greater than" or "less than").</p>
+
+<h3>1.3 Type I and Type II Errors</h3>
+<table class="compare">
+<tr><th></th><th>H&#8320; is actually True</th><th>H&#8320; is actually False</th></tr>
+<tr><td><strong>Reject H&#8320;</strong></td><td>Type I Error (probability = &alpha;)</td><td>Correct Decision</td></tr>
+<tr><td><strong>Fail to Reject H&#8320;</strong></td><td>Correct Decision</td><td>Type II Error (probability = &beta;)</td></tr>
+</table>
+<ul>
+<li><strong>Type I Error:</strong> Rejecting a true null hypothesis (a "false positive"). Its probability is the <strong>significance level, &alpha;</strong>, commonly set at 0.05 or 0.01.</li>
+<li><strong>Type II Error:</strong> Failing to reject a false null hypothesis (a "false negative"). Its probability is denoted &beta;.</li>
+</ul>
+
+<h3>1.4 Level of Significance and Critical Region</h3>
+<p>The <strong>level of significance (&alpha;)</strong> is the probability of making a Type I error that the researcher is willing to accept, typically chosen before the test is conducted. The <strong>critical region</strong> (or rejection region) is the range of test-statistic values for which H&#8320; is rejected; the <strong>critical value</strong> is the boundary of this region.</p>
+
+<h3>1.5 General Steps in Hypothesis Testing</h3>
+<ol>
+<li><strong>State the Null and Alternative Hypotheses</strong> (H&#8320; and H&#8321;).</li>
+<li><strong>Choose the Level of Significance</strong> (&alpha;), typically 0.05 or 0.01.</li>
+<li><strong>Select the Appropriate Test Statistic</strong> (Z, t, F, or &chi;&sup2;, depending on the situation).</li>
+<li><strong>Determine the Critical Value(s)</strong> from the relevant statistical table.</li>
+<li><strong>Calculate the Test Statistic</strong> from the sample data.</li>
+<li><strong>Compare and Decide:</strong> If the calculated test statistic falls in the critical region (or if the p-value is less than &alpha;), reject H&#8320;; otherwise, fail to reject H&#8320;.</li>
+<li><strong>State the Conclusion</strong> in the context of the original business or research question.</li>
+</ol>
+
+<h3>1.6 The p-Value Approach</h3>
+<p>The <strong>p-value</strong> is the probability of obtaining a test statistic at least as extreme as the one calculated, assuming H&#8320; is true. If the p-value is less than &alpha;, H&#8320; is rejected; this approach is equivalent to the critical-value approach but is more commonly reported by statistical software.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Null Hypothesis (H0)</dt><dd>The default claim of no difference or no effect, assumed true unless sample evidence strongly contradicts it.</dd><dt>Alternative Hypothesis (H1)</dt><dd>The claim that contradicts the null hypothesis, which the test seeks evidence for.</dd><dt>Type I Error</dt><dd>Rejecting a true null hypothesis; its probability is the significance level, alpha.</dd><dt>Type II Error</dt><dd>Failing to reject a false null hypothesis; its probability is denoted beta.</dd><dt>Level of Significance (alpha)</dt><dd>The probability of a Type I error that a researcher is willing to accept, commonly 0.05 or 0.01.</dd><dt>p-Value</dt><dd>The probability of obtaining a test statistic at least as extreme as the one observed, assuming the null hypothesis is true.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>H0 = default/no-difference claim; H1 = contradicting claim being tested for.</li><li>Type I error = reject true H0 (probability alpha); Type II error = fail to reject false H0 (probability beta).</li><li>7 steps: State H0/H1 &rarr; Choose alpha &rarr; Select test statistic &rarr; Find critical value &rarr; Calculate test statistic &rarr; Compare &amp; decide &rarr; Conclude.</li><li>p-value < alpha &rArr; reject H0 (p-value approach, equivalent to critical-value approach).</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Define null and alternative hypothesis with an example.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The null hypothesis (H0) is the default claim of no difference, e.g. 'the mean delivery time is 30 minutes.' The alternative hypothesis (H1) is the contradicting claim being tested for, e.g. 'the mean delivery time is not 30 minutes.'</div></details></li><li>Differentiate between Type I and Type II errors.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">A Type I error is rejecting a true null hypothesis (a false positive), with probability alpha (the significance level). A Type II error is failing to reject a false null hypothesis (a false negative), with probability beta.</div></details></li><li>Explain the general steps involved in hypothesis testing.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">State H0 and H1, choose the significance level alpha, select the appropriate test statistic, determine the critical value from statistical tables, calculate the test statistic from sample data, compare the calculated value to the critical value (or the p-value to alpha) to decide whether to reject H0, and state the conclusion in context.</div></details></li><li>What is a p-value? How is it used to make a decision?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The p-value is the probability of obtaining a test statistic at least as extreme as the one calculated, assuming the null hypothesis is true. If the p-value is less than the chosen significance level alpha, the null hypothesis is rejected; otherwise, it is not rejected.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 3 ("Testing of Hypothesis - Parametric Tests") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><span></span><a href="topic2-z-tests-means-proportions-large-samples.html">Z-Tests for Means and Proportions (Large Samples) &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>

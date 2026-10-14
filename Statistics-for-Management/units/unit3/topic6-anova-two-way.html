@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ANOVA &mdash; Two Way | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 3 &middot; Testing of Hypothesis - Parametric Tests</h3>
+        <ol>
+          <li><a href="topic1-introduction-to-hypothesis-testing.html">1. Introduction to Hypothesis Testing</a></li><li><a href="topic2-z-tests-means-proportions-large-samples.html">2. Z-Tests for Means and Proportions (Large Samples)</a></li><li><a href="topic3-t-tests-means-small-samples.html">3. T-Tests for Means (Small Samples)</a></li><li><a href="topic4-f-test-two-sample-standard-deviations.html">4. F-Test for Two Sample Standard Deviations</a></li><li><a href="topic5-anova-one-way.html">5. ANOVA &mdash; One Way</a></li><li><a class="active" href="topic6-anova-two-way.html">6. ANOVA &mdash; Two Way</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 3</a> &rsaquo; Topic 6</div>
+    <h1><span class="unit-tag">Unit 3</span>ANOVA &mdash; Two Way</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>Two-Way ANOVA extends One-Way ANOVA to examine the effect of two different factors simultaneously, and whether they interact with each other in their effect on the outcome.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>6.1 When Two-Way ANOVA Is Used</h3>
+<p>Two-Way ANOVA is used when data is classified by <strong>two independent factors</strong> at once (e.g. testing both the effect of three different training methods <em>and</em> three different regions on sales performance), rather than just one factor as in One-Way ANOVA.</p>
+
+<h3>6.2 Hypotheses for Two-Way ANOVA</h3>
+<p>Two-Way ANOVA tests three separate hypotheses at once:</p>
+<ol>
+<li><strong>Main Effect of Factor A:</strong> H&#8320;: all levels of Factor A have equal means.</li>
+<li><strong>Main Effect of Factor B:</strong> H&#8320;: all levels of Factor B have equal means.</li>
+<li><strong>Interaction Effect (A &times; B):</strong> H&#8320;: there is no interaction between Factor A and Factor B (the effect of one factor does not depend on the level of the other).</li>
+</ol>
+
+<h3>6.3 Partitioning Total Variation</h3>
+<p>Two-Way ANOVA splits the total variation (SST) into four components:</p>
+<ul>
+<li><strong>SSA:</strong> Variation due to Factor A.</li>
+<li><strong>SSB:</strong> Variation due to Factor B.</li>
+<li><strong>SSAB:</strong> Variation due to the interaction between Factor A and Factor B.</li>
+<li><strong>SSE:</strong> Residual/error (within-cell) variation, not explained by either factor or their interaction.</li>
+</ul>
+<p>SST = SSA + SSB + SSAB + SSE</p>
+
+<h3>6.4 The Two-Way ANOVA Table</h3>
+<table class="compare">
+<tr><th>Source</th><th>df</th><th>Mean Square</th><th>F</th></tr>
+<tr><td>Factor A</td><td>a &minus; 1</td><td>MSA = SSA/(a&minus;1)</td><td>MSA/MSE</td></tr>
+<tr><td>Factor B</td><td>b &minus; 1</td><td>MSB = SSB/(b&minus;1)</td><td>MSB/MSE</td></tr>
+<tr><td>Interaction (A&times;B)</td><td>(a&minus;1)(b&minus;1)</td><td>MSAB = SSAB/[(a&minus;1)(b&minus;1)]</td><td>MSAB/MSE</td></tr>
+<tr><td>Error</td><td>N &minus; ab</td><td>MSE = SSE/(N&minus;ab)</td><td>&mdash;</td></tr>
+</table>
+<p>where a = number of levels of Factor A, b = number of levels of Factor B, and N = total number of observations.</p>
+
+<h3>6.5 Interpreting the Results</h3>
+<p>Each F-ratio is compared against its own critical F-value (using the relevant degrees of freedom). An important practical point: if the <strong>interaction effect</strong> is found to be statistically significant, the two main effects should be interpreted cautiously, since the effect of one factor genuinely depends on the level of the other &mdash; the interaction should usually be examined and discussed first.</p>
+
+<h3>6.6 Why Two-Way ANOVA Matters for Management</h3>
+<p>Two-Way ANOVA lets managers test two business variables and their interaction in one study rather than two separate ones &mdash; for example, simultaneously assessing the effect of advertising medium and target age group on campaign response, including whether certain media work better for certain age groups specifically.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Two-Way ANOVA</dt><dd>An ANOVA test examining the effect of two independent factors, and their interaction, on an outcome.</dd><dt>Main Effect</dt><dd>The effect of a single factor on the outcome, averaged across the levels of the other factor, in Two-Way ANOVA.</dd><dt>Interaction Effect</dt><dd>The extent to which the effect of one factor on the outcome depends on the level of the other factor.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Two-Way ANOVA tests two factors (A, B) plus their interaction (A x B) at once; 3 sets of hypotheses: Factor A main effect, Factor B main effect, A x B interaction.</li><li>Total variation SST = SSA + SSB + SSAB + SSE.</li><li>Each effect's F = its Mean Square / MSE (Mean Square Error); compared to its own critical F value.</li><li>If interaction is significant, interpret main effects cautiously &mdash; examine the interaction first.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>When is Two-Way ANOVA used instead of One-Way ANOVA?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Two-Way ANOVA is used when data is classified by two independent factors simultaneously, allowing the researcher to test the main effect of each factor as well as whether the two factors interact in their effect on the outcome, rather than examining just one factor at a time.</div></details></li><li>State the three hypotheses tested in Two-Way ANOVA.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">The main effect of Factor A (H0: all levels of Factor A have equal means), the main effect of Factor B (H0: all levels of Factor B have equal means), and the interaction effect (H0: there is no interaction between Factor A and Factor B).</div></details></li><li>How is total variation partitioned in Two-Way ANOVA?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Total variation (SST) is partitioned into SSA (due to Factor A), SSB (due to Factor B), SSAB (due to the interaction between A and B), and SSE (residual error variation), such that SST = SSA + SSB + SSAB + SSE.</div></details></li><li>Why should a significant interaction effect be interpreted before the main effects?<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">If the interaction effect is statistically significant, it means the effect of one factor genuinely depends on the level of the other factor, so interpreting either main effect alone (as if it applied uniformly) could be misleading; the interaction should be examined first to understand the fuller picture.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 3 ("Testing of Hypothesis - Parametric Tests") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><a href="topic5-anova-one-way.html">&larr; ANOVA &mdash; One Way</a><span></span></div>
+  </main>
+</div>
+</body>
+</html>

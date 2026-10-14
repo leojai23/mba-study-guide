@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Basic Concepts of Probability | MBA Study Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--accent:#2f5f8f;--accent-dark:#1d3c57;--accent-light:#e7eef5;--ink:#1f2937;--ink-soft:#4b5563;--bg:#fff;--bg-soft:#f7fafa;--border:#d3dfea;--card-shadow:0 1px 3px rgba(47,95,143,.14);--radius:10px;--warn-bg:#fff8e6;--warn-border:#f0d58c}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg-soft);color:var(--ink);line-height:1.6}
+a{color:var(--accent-dark);text-decoration:none}a:hover{text-decoration:underline}
+.layout{display:flex;max-width:1200px;margin:0 auto;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:var(--bg);border-right:1px solid var(--border);padding:20px 16px}
+.sidebar h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:18px 0 8px}
+.sidebar h3:first-child{margin-top:0}
+.sidebar ol,.sidebar ul{list-style:none;margin:0 0 6px;padding:0}
+.sidebar li{margin:2px 0}
+.sidebar a{display:block;padding:7px 10px;border-radius:8px;color:var(--ink);font-size:.92rem}
+.sidebar a:hover{background:var(--accent-light);text-decoration:none}
+.sidebar a.active{background:var(--accent);color:#fff;font-weight:600}
+.sidebar .home-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--accent-dark);margin-bottom:14px;font-size:1.02rem}
+.content{flex:1;padding:28px 36px 60px;min-width:0}
+.breadcrumb{font-size:.82rem;color:var(--ink-soft);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-soft)}
+h1{font-size:1.7rem;color:var(--accent-dark);margin:0 0 6px}
+h1 .unit-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--accent);color:#fff;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-right:10px}
+.subtitle{color:var(--ink-soft);margin-bottom:26px}
+h2{font-size:1.22rem;color:var(--accent-dark);margin:34px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light)}
+h3{font-size:1.02rem;color:var(--ink);margin:20px 0 8px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:18px 20px;margin:14px 0}
+.callout{background:var(--accent-light);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.94rem}
+.callout.source{font-style:italic;color:var(--ink-soft)}
+.callout.warn{background:var(--warn-bg);border-left-color:#d9a916;border:1px solid var(--warn-border)}
+dl.term-list{margin:0}dl.term-list dt{font-weight:700;color:var(--accent-dark);margin-top:14px}
+dl.term-list dd{margin:3px 0 0 0;color:var(--ink-soft)}
+ol.q-list{padding-left:22px}ol.q-list li{margin:10px 0}
+details.answer-reveal{margin-top:6px}
+details.answer-reveal summary{cursor:pointer;color:var(--accent-dark);font-size:.86rem;font-weight:600;user-select:none}
+details.answer-reveal .answer-box{background:var(--accent-light);border-radius:8px;padding:10px 14px;margin-top:6px;font-size:.92rem}
+table.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+table.compare th,table.compare td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+table.compare th{background:var(--accent-light);color:var(--accent-dark)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:18px 0}
+.topic-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--card-shadow);padding:16px 18px;color:var(--ink)}
+.topic-card:hover{border-color:var(--accent);text-decoration:none}
+.topic-card .n{font-size:.72rem;color:var(--accent);font-weight:700;text-transform:uppercase}
+.topic-card .t{font-size:1.02rem;font-weight:600;margin-top:4px}
+.page-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:.9rem}
+@media (max-width:800px){.layout{flex-direction:column}.sidebar{width:auto;border-right:none;border-bottom:1px solid var(--border)}.content{padding:20px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="sidebar">
+        <a class="home-link" href="../../../index.html">&#8962; MBA Study Guide</a>
+        <h3>Statistics for Management</h3>
+        <ul><li><a href="../../index.html">Course Home</a></li></ul>
+        <h3>Unit 1 &middot; Probability and Probability Distributions</h3>
+        <ol>
+          <li><a class="active" href="topic1-basic-concepts-of-probability.html">1. Basic Concepts of Probability</a></li><li><a href="topic2-counting-rules-sample-space-events.html">2. Counting Rules, Sample Space and Events</a></li><li><a href="topic3-theorems-conditional-probability-bayes.html">3. Theorems of Probability, Conditional Probability and Bayes' Theorem</a></li><li><a href="topic4-random-variables-probability-distributions.html">4. Random Variables and Probability Distributions</a></li><li><a href="topic5-binomial-poisson-distributions.html">5. Binomial and Poisson Distributions</a></li><li><a href="topic6-normal-distribution.html">6. Normal Distribution</a></li>
+        </ol>
+        </nav>
+  <main class="content">
+    <div class="breadcrumb"><a href="../../index.html">Statistics for Management</a> &rsaquo; <a href="index.html">Unit 1</a> &rsaquo; Topic 1</div>
+    <h1><span class="unit-tag">Unit 1</span>Basic Concepts of Probability</h1>
+    <p class="subtitle">Book: <em>Statistics for Management</em> (BA4101, Anna University MBA Sem I, Regulation 2021)</p>
+    
+    <h2>1. Overview</h2>
+    <div class="card"><p>This opening topic introduces probability itself &mdash; what it means, how it is used in management decision-making, and the three approaches used to assign a probability value to an event.</p></div>
+
+    <h2>2. Detailed Notes</h2>
+    
+<h3>1.1 Concept and Meaning of Probability</h3>
+<p>Probability is a numerical measure, between 0 and 1, of the likelihood that a particular event will occur. A probability of 0 means the event is impossible; a probability of 1 means the event is certain.</p>
+<p>For any event A, the probability is written <strong>P(A)</strong>, where <strong>0 &le; P(A) &le; 1</strong>.</p>
+
+<h3>1.2 Characteristics of the Probability Function P(A)</h3>
+<ul>
+<li>The probability of any event lies between 0 and 1, inclusive.</li>
+<li>The probability of the entire sample space (a certain event) is 1.</li>
+<li>The probability of an impossible event is 0.</li>
+<li>The sum of probabilities of all mutually exclusive outcomes in a sample space equals 1.</li>
+</ul>
+
+<h3>1.3 Applications of Probability in Decision-Making</h3>
+<ul>
+<li>Assessing the risk of a business decision before committing resources.</li>
+<li>Quality control &mdash; estimating the chance of a defective item in a production batch.</li>
+<li>Forecasting demand, sales or market outcomes under uncertainty.</li>
+<li>Supporting decisions in finance, such as the likelihood of a project meeting its target return.</li>
+</ul>
+
+<h3>1.4 Uses and Rules of Probability</h3>
+<p>Probability provides a disciplined way to quantify uncertainty so that decisions are not based purely on intuition. The basic rules that all probability values must satisfy are the characteristics listed in Section 1.2 above, and they form the foundation for every probability calculation covered later in this unit.</p>
+
+<h3>1.5 Approaches to Probability Theory</h3>
+<table class="compare">
+<tr><th>Approach</th><th>Description</th></tr>
+<tr><td><strong>Classical (A Priori) Probability</strong></td><td>Based on equally likely outcomes, calculated before any experiment is run: P(A) = (Number of favourable outcomes) &divide; (Total number of possible outcomes). Used when outcomes can be reasoned about in advance, e.g. a fair coin toss or die roll.</td></tr>
+<tr><td><strong>Relative Frequency (Empirical) Probability</strong></td><td>Based on observed data from repeated trials: P(A) = (Number of times A occurred) &divide; (Total number of trials). Used when outcomes are determined from actual past experience or experimentation.</td></tr>
+<tr><td><strong>Subjective Probability</strong></td><td>Based on personal judgement, experience, or belief, used when neither equally likely outcomes nor sufficient past data are available, e.g. a manager's estimate of the probability a new product will succeed.</td></tr>
+</table>
+
+<h3>1.6 Business Applications of Probability</h3>
+<p>Businesses use probability to evaluate alternatives under uncertainty &mdash; for example, estimating the probability of various demand levels before setting a production quantity, or the probability that a supplier will deliver on time before finalising a procurement contract.</p>
+
+
+    <h2>3. Key Terms</h2>
+    <dl class="term-list"><dt>Probability</dt><dd>A numerical measure between 0 and 1 of the likelihood that a particular event will occur.</dd><dt>Classical Probability</dt><dd>Probability based on equally likely outcomes, calculated as favourable outcomes divided by total possible outcomes.</dd><dt>Empirical (Relative Frequency) Probability</dt><dd>Probability based on the observed frequency of an event across repeated trials.</dd><dt>Subjective Probability</dt><dd>Probability based on personal judgement or belief, used when equally likely outcomes or sufficient data are unavailable.</dd></dl>
+
+    <h2>4. Exam-Prep Summary</h2>
+    <div class="callout"><ul><li>Probability: 0 &le; P(A) &le; 1; P(certain event) = 1; P(impossible event) = 0; sum of all mutually exclusive outcomes = 1.</li><li>Classical probability = favourable outcomes &divide; total outcomes (equally likely, a priori).</li><li>Empirical probability = observed occurrences &divide; total trials (based on data).</li><li>Subjective probability = based on personal judgement when neither of the above applies.</li></ul></div>
+
+    <h2>5. Practice Questions</h2>
+    <ol class="q-list"><li>Define probability. State its characteristics.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Probability is a numerical measure between 0 and 1 of the likelihood an event will occur. Its characteristics: every probability lies between 0 and 1; a certain event has probability 1; an impossible event has probability 0; and the probabilities of all mutually exclusive outcomes in a sample space sum to 1.</div></details></li><li>Explain the three approaches to probability theory.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Classical probability assumes equally likely outcomes and is calculated as favourable outcomes over total outcomes, before any experiment. Empirical (relative frequency) probability is based on the observed frequency of an event over repeated trials. Subjective probability is based on personal judgement or belief when neither equally likely outcomes nor sufficient data exist.</div></details></li><li>Discuss the applications of probability in business decision-making.<details class="answer-reveal"><summary>Show model answer</summary><div class="answer-box">Probability helps assess the risk of a decision before committing resources, supports quality control by estimating defect likelihood, aids demand forecasting under uncertainty, and supports financial decisions such as estimating the likelihood a project meets its target return.</div></details></li></ol>
+
+    <p class="callout source">Grounded in Unit 1 ("Probability and Probability Distributions") of the course textbook &mdash; Statistics for Management (BA4101).</p>
+
+    <div class="page-nav"><span></span><a href="topic2-counting-rules-sample-space-events.html">Counting Rules, Sample Space and Events &rarr;</a></div>
+  </main>
+</div>
+</body>
+</html>
